@@ -1,6 +1,9 @@
-.md-header__button.md-logo img, .md-header__button.md-logo svg {
-    height: 5rem;
-    max-height: 5rem;
+.md-header {
+background: #0087FF;
+}
+
+.md-tabs__link {
+    font-size: 1rem;
 }
 .green {
     color: green !important;

@@ -11,8 +11,8 @@
       
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
+      <link rel="icon" href="/cloudcon/assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
     
     
       
@@ -20,10 +20,10 @@
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.a40c8224.min.css">
+      <link rel="stylesheet" href="/cloudcon/assets/stylesheets/main.342714a4.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="/cloudcon/assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -42,9 +42,9 @@
       
     
     
-      <link rel="stylesheet" href="/overrides/assets/stylesheets/extra.css">
+      <link rel="stylesheet" href="/cloudcon/overrides/assets/stylesheets/extra.css">
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("/cloudcon/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,22 +78,21 @@
   
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="CloudCon 2025" class="md-header__button md-logo" aria-label="CloudCon 2025" data-md-component="logo">
-      
-  <img src="/images/cloudcon_logo.png" alt="logo">
-
+    <a href="/cloudcon">
+        <img src="/cloudcon/images/cloudcon_logo.png" style="max-height: 15em; display: block; margin-top: 2em; margin-bottom: -1em; margin-left: auto; margin-right: auto;"/>
     </a>
-    <label class="md-header__button md-icon" for="__drawer">
+  <nav class="md-header__inner md-grid md_header" aria-label="Header">
+    <!-- <label class="md-header__button md-icon" for="__drawer">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
-    </label>
+    </label> -->
     <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
+      <div class="md-header">
         <div class="md-header__topic">
-          <span class="md-ellipsis">
-            CloudCon 2025
-          </span>
+            
+          <!-- <span>
+            <a href="/">CloudCon 2025</a>
+          </span> -->
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
@@ -109,6 +108,25 @@
     
     
     
+    <!--
+    <nav style="display: flex; gap: 1.5rem; align-items: center;">
+      
+        <h3><a href="/cloudcon" style="text-decoration: none; font-weight: 1000; color: inherit; " class="menu_item">Home</a></h3>
+      
+        <h3><a href="./info" style="text-decoration: none; font-weight: 1000; color: inherit; " class="menu_item">Info</a></h3>
+      
+        <h3><a href="./speakers" style="text-decoration: none; font-weight: 1000; color: inherit; " class="menu_item">Speakers & Call for Papers</a></h3>
+      
+        <h3><a href="./sponsors" style="text-decoration: none; font-weight: 1000; color: inherit; " class="menu_item">Sponsors</a></h3>
+      
+        <h3><a href="./agenda" style="text-decoration: none; font-weight: 1000; color: inherit; " class="menu_item">Agenda</a></h3>
+      
+        <h3><a href="./about" style="text-decoration: none; font-weight: 1000; color: inherit; " class="menu_item">About</a></h3>
+      
+        <h3><a href="./register" style="text-decoration: none; font-weight: 1000; color: inherit;  margin-right: 4rem; " class="menu_item">Register</a></h3>
+      
+    </nav>
+-->
     
     
   </nav>
@@ -123,9 +141,11 @@
   
   
   
+  
     <li class="md-tabs__item">
-      <a href="/" class="md-tabs__link">
+      <a href="/cloudcon" class="md-tabs__link">
         
+  
   
     
   
@@ -140,9 +160,30 @@
   
   
   
+  
     <li class="md-tabs__item">
-      <a href="/speakers/" class="md-tabs__link">
+      <a href="/cloudcon/./info" class="md-tabs__link">
         
+  
+  
+    
+  
+  Info
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/cloudcon/./speakers" class="md-tabs__link">
+        
+  
   
     
   
@@ -157,9 +198,11 @@
   
   
   
+  
     <li class="md-tabs__item">
-      <a href="/sponsors/" class="md-tabs__link">
+      <a href="/cloudcon/./sponsors" class="md-tabs__link">
         
+  
   
     
   
@@ -174,9 +217,11 @@
   
   
   
+  
     <li class="md-tabs__item">
-      <a href="/agenda/" class="md-tabs__link">
+      <a href="/cloudcon/./agenda" class="md-tabs__link">
         
+  
   
     
   
@@ -191,13 +236,34 @@
   
   
   
+  
     <li class="md-tabs__item">
-      <a href="/register/" class="md-tabs__link">
+      <a href="/cloudcon/./about" class="md-tabs__link">
         
+  
   
     
   
-  Register / Attend
+  About
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="/cloudcon/./register" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Register
 
       </a>
     </li>
@@ -209,6 +275,7 @@
 </nav>
     
   
+
 </header>
     
     <div class="md-container" data-md-component="container">
@@ -232,9 +299,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="CloudCon 2025" class="md-nav__button md-logo" aria-label="CloudCon 2025" data-md-component="logo">
+    <a href="/cloudcon/." title="CloudCon 2025" class="md-nav__button md-logo" aria-label="CloudCon 2025" data-md-component="logo">
       
-  <img src="/images/cloudcon_logo.png" alt="logo">
+  <img src="/cloudcon/assets/logo.png" alt="logo">
 
     </a>
     CloudCon 2025
@@ -249,11 +316,13 @@
   
   
     <li class="md-nav__item">
-      <a href="/" class="md-nav__link">
+      <a href="/cloudcon" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Home
+    
   </span>
   
 
@@ -269,11 +338,35 @@
   
   
     <li class="md-nav__item">
-      <a href="/speakers/" class="md-nav__link">
+      <a href="/cloudcon/./info" class="md-nav__link">
         
+  
+  
+  <span class="md-ellipsis">
+    Info
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/cloudcon/./speakers" class="md-nav__link">
+        
+  
   
   <span class="md-ellipsis">
     Speakers & Call for Papers
+    
   </span>
   
 
@@ -289,11 +382,13 @@
   
   
     <li class="md-nav__item">
-      <a href="/sponsors/" class="md-nav__link">
+      <a href="/cloudcon/./sponsors" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Sponsors
+    
   </span>
   
 
@@ -309,11 +404,13 @@
   
   
     <li class="md-nav__item">
-      <a href="/agenda/" class="md-nav__link">
+      <a href="/cloudcon/./agenda" class="md-nav__link">
         
+  
   
   <span class="md-ellipsis">
     Agenda
+    
   </span>
   
 
@@ -329,11 +426,35 @@
   
   
     <li class="md-nav__item">
-      <a href="/register/" class="md-nav__link">
+      <a href="/cloudcon/./about" class="md-nav__link">
         
   
+  
   <span class="md-ellipsis">
-    Register / Attend
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/cloudcon/./register" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Register
+    
   </span>
   
 
@@ -420,10 +541,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "/", "features": ["navigation.tabs", "navigation.tabs.sticky"], "search": "/assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+      
+      <script id="__config" type="application/json">{"base": "/cloudcon/", "features": ["navigation.tabs", "navigation.tabs.sticky"], "search": "/cloudcon/assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.60a45f97.min.js"></script>
+      <script src="/cloudcon/assets/javascripts/bundle.13a4f30d.min.js"></script>
       
     
   </body>

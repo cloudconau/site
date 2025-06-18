@@ -1,23 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://cloudcon.au/</loc>
+         <loc>https://agardnerit.github.io/cloudcon/</loc>
          <lastmod>2025-06-18</lastmod>
     </url>
     <url>
-         <loc>https://cloudcon.au/agenda/</loc>
+         <loc>https://agardnerit.github.io/cloudcon/about/</loc>
          <lastmod>2025-06-18</lastmod>
     </url>
     <url>
-         <loc>https://cloudcon.au/register/</loc>
+         <loc>https://agardnerit.github.io/cloudcon/agenda/</loc>
          <lastmod>2025-06-18</lastmod>
     </url>
     <url>
-         <loc>https://cloudcon.au/speakers/</loc>
+         <loc>https://agardnerit.github.io/cloudcon/info/</loc>
          <lastmod>2025-06-18</lastmod>
     </url>
     <url>
-         <loc>https://cloudcon.au/sponsors/</loc>
+         <loc>https://agardnerit.github.io/cloudcon/register/</loc>
+         <lastmod>2025-06-18</lastmod>
+    </url>
+    <url>
+         <loc>https://agardnerit.github.io/cloudcon/speakers/</loc>
+         <lastmod>2025-06-18</lastmod>
+    </url>
+    <url>
+         <loc>https://agardnerit.github.io/cloudcon/sponsors/</loc>
          <lastmod>2025-06-18</lastmod>
     </url>
 </urlset>

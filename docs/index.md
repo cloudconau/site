@@ -6,9 +6,14 @@ hide:
 
 # CloudCon Sydney 2025
 
-Join us on 9th & 10th September 2025 for CloudCon Sydney which brings together international and local experts with adopters, developers, and practitioners in an accessible and compact format. CloudCon is designed to promote face-to-face collaboration and deliver rich educational experiences. 
+Don’t miss CloudCon Sydney – happening 9–10 September 2025!
 
-At the event, attendees can engage with the leaders of Kubernetes and other projects and help set direction for the cloud native ecosystem in Australia. CloudCon has both a beginner and an advanced track; about half of the speakers are international experts and half are from the local area.
+This premier cloud native event brings together global visionaries and local innovators for two days of hands-on learning, collaboration, and insight.
+
+Connect directly with leaders from Kubernetes and other cutting-edge projects, explore beginner and advanced tracks, and help shape the future of cloud native in Australia.
+
+!!! success "Speaker Lineup"
+    Half international speakers, half local experts – 100% unmissable.
 
 ![KCD 2024](images/lobby.png)
 

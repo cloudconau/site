@@ -2,10 +2,9 @@ site_name: CloudCon 2025
 theme:
   name: material
   custom_dir: docs/overrides
-  logo: assets/logo.png
+  logo: images/cloudcon_logo.png
   palette:
     primary: white
-    # accent: deep orange
   features:
     - navigation.tabs
     - navigation.tabs.sticky
@@ -20,7 +19,6 @@ nav:
   - Agenda: "agenda.md"
   - Register / Attend: "register.md"
 
-  
 extra:
   social:
       - icon: fontawesome/brands/linkedin 

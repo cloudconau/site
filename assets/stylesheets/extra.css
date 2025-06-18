@@ -1,0 +1,23 @@
+/* .md-header {
+background: orange;
+} */
+
+.md-tabs__link {
+    font-size: 1rem;
+}
+.green {
+    color: green !important;
+}
+.green:hover {
+    color: white !important;
+    background-color: green !important;
+    border-color: green !important;
+}
+.red {
+    color: red !important;
+}
+.red:hover {
+    color: red !important;
+    background-color: white !important;
+    border-color: red !important;
+}

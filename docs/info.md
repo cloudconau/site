@@ -1,29 +1,7 @@
-[Info](#info)
-
-[Venue](#venue)
-
-[ICC Sydney](#icc-sydney)
-
-[Accessibility:](#accessibility:)
-
-[Getting There:](#getting-there:)
-
-[Who Should Attend](#who-should-attend)
-
-[A Hands-On Engineer (Software, Platform, DevOps, SRE, Cloud, Infrastructure):](#a-hands-on-engineer-\(software,-platform,-devops,-sre,-cloud,-infrastructure\):)
-
-[A Cloud & Solutions Architect:](#a-cloud-&-solutions-architect:)
-
-[A Technical Leader & Manager:](#a-technical-leader-&-manager:)
-
-[A Security Professional / Cloud Security Specialist:](#a-security-professional-/-cloud-security-specialist:)
-
-[An AI/ML Engineer or Data Scientist:](#an-ai/ml-engineer-or-data-scientist:)
-
-[A Strategic Decision-Maker or Founder:](#a-strategic-decision-maker-or-founder:)
-
-[Organisations](#organisations)
-
+---
+hide:
+  - navigation
+---
 # Info  {#info}
 
 ## Venue  {#venue}

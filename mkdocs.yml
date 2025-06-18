@@ -15,12 +15,10 @@ plugins: []
 site_url: https://cloudcon.au
 nav:
   - Home: "/"
-  - Info: "info.md"
   - Speakers & Call for Papers: "speakers.md"
   - Sponsors: "sponsors.md"
   - Agenda: "agenda.md"
-  - About: "about.md"
-  - Register: "register.md"
+  - Register / Attend: "register.md"
 
   
 extra:

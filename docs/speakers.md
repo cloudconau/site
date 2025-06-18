@@ -30,6 +30,8 @@ Feel free to submit multiple talk proposals if you have a few ideas to share!
 * Full length talk (15 minutes)
 * Lightning talk (5 minutes)
 
+Please be aware that all expenses related to travel and accommodation will be borne by the Speakers themselves, a Speakers pass will be issued for successfully selected speakers to attend the conference.
+
 ---
 
 # Speakers

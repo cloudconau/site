@@ -17,5 +17,7 @@ hide:
 
 Tickets: $174.90 AUD ($159 + GST)
 
+For company group bookings, please contact `organizers@kcdaustralia.onmicrosoft.com` 
+
 !!! info "How do I buy tickets?"
     The payment page will appear here soon!

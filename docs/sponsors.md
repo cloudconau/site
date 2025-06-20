@@ -70,9 +70,9 @@ hide:
 | Welcome Reception Sponsorship (One only) | $10,000 + GST AUD | [Still Available :fontawesome-solid-paper-plane:](mailto:organizers@kcdaustralia.onmicrosoft.com){ .md-button .green } |
 | CloudCon Sydney 2025 and Sponsor co-branded Drink Bottle for every attendee | $10,000 + GST AUD | [Still Available :fontawesome-solid-paper-plane:](mailto:organizers@kcdaustralia.onmicrosoft.com){ .md-button .green } |
 | CloudCon Sydney 2025 T-shirt with Sponsor logo on Sleeve, gift for every attendee | $20,000 + GST AUD | [Still Available :fontawesome-solid-paper-plane:](mailto:organizers@kcdaustralia.onmicrosoft.com){ .md-button .green } |
-| Pre-Conference Workshop | Diamond and Platinum sponsors have the opportunity to <br />enhance their participation by hosting a 2.5-hour pre-conference workshop<br /> for up to 120 attendees on 9 September 2025. | N/A |
+| Pre-Conference Workshop | Two half-day workshop opportunities exist. <br />If you are interested in runnings  workship, please contact us for more information. | [Still Available :fontawesome-solid-paper-plane:](mailto:organizers@kcdaustralia.onmicrosoft.com){ .md-button .green } |
 
 !!! info "Need More Information?"
-    [Download the sponsorship prospectus :fontawesome-solid-file-pdf:](files/CloudCon-Sydney-2025-sponsor-prospectus.pdf){ .md-button }
+    [Download the sponsorship prospectus :fontawesome-solid-file-pdf:](files/CloudCon_Sydney_2025_sponsor_prospectus.pdf){ .md-button }
 
     For any additional enquiries, please reach out to Brendon Thwaites at [organizers@kcdaustralia.onmicrosoft.com](mailto:organizers@kcdaustralia.onmicrosoft.com)

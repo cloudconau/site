@@ -27,6 +27,7 @@ hide:
 <div class="grid cards" markdown>
 
 * [![mantel group logo](images/mantelgroup.png)](https://mantelgroup.com.au){target=_blank}
+* [![glasswing logo](images/glasswing_logo.png)](https://www.glasswing.cloud){target=_blank}
 * ![Sponsor CloudCon 2025](images/placeholder.jpeg) Sponsorship opportunities are still available...
 
 </div>

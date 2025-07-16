@@ -18,7 +18,7 @@ hide:
 ## Diamond Sponsors
 
 <div class="grid cards" markdown>
-* ![Sponsor CloudCon 2025](images/placeholder.jpeg) Sponsorship opportunities are still available...
+* [![AWS logo](images/aws_logo.png)](https://aws.amazon.com){target=_blank}
 * ![Sponsor CloudCon 2025](images/placeholder.jpeg) Sponsorship opportunities are still available...
 </div>
 
@@ -44,6 +44,7 @@ hide:
 ## Silver Sponsors
 
 <div class="grid cards" markdown>
+* [![elastic logo](images/elastic_logo.png)](https://elastic.co){target=_blank}
 * ![Sponsor CloudCon 2025](images/placeholder.jpeg) Sponsorship opportunities are still available...
 * ![Sponsor CloudCon 2025](images/placeholder.jpeg) Sponsorship opportunities are still available...
 * ![Sponsor CloudCon 2025](images/placeholder.jpeg) Sponsorship opportunities are still available...

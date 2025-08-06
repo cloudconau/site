@@ -15,7 +15,7 @@ Connect directly with leaders from Kubernetes and other cutting-edge projects, e
 !!! success "Speaker Lineup"
     Half international speakers, half local experts – 100% unmissable.
 
-    Speaker details are not yet available, but the [call for papers](speakers.md) is open.
+    Call for papers is now closed. We are evaluating talks. Speaker details will be available soon.
 
 ![KCD 2024](images/lobby.png)
 

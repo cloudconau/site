@@ -4,20 +4,9 @@ hide:
   - navigation
 ---
 
-# Call for Papers
-
-<div class="grid cards" markdown>
-* [Call for Papers: Open Now :fontawesome-solid-paper-plane:](https://www.papercall.io/cloudconsyd){ .md-button .green }
-* Call for Papers: Closes 1st August 2025
-</div>
-
-Please submit talks via  [Papercall](https://www.papercall.io/cloudconsyd){target=_blank}.
-
----
-
 ## Topics and Types
 
-We welcome submissions on the following topics. Don't worry if you're a first time speaker - everyone starts somewhere! We encourage you to submit and we'll help you along the way.
+CloudCon will have sessions on the following areas:
 
 * Kubernetes
 * Artificial Intelligence (AI & ML)
@@ -25,15 +14,10 @@ We welcome submissions on the following topics. Don't worry if you're a first ti
 * Security
 * Other
 
-Feel free to submit multiple talk proposals if you have a few ideas to share!
-
-* Full length talk (15 minutes)
-* Lightning talk (5 minutes)
-
-Please be aware that all expenses related to travel and accommodation will be borne by the Speakers themselves, a Speakers pass will be issued for successfully selected speakers to attend the conference.
-
 ---
 
 # Speakers
 
-_Coming Soon!_
+The Call for Papers is now closed and we'd like to thank everyone for their time and effort submitting. We are currently evaluating talks. Talk abstracts and speaker details will be available soon.
+
+_Watch this space!_

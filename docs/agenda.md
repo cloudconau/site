@@ -34,10 +34,10 @@ hide:
 | Time  | Title | Speaker | Location |
 |---|---|---|---|
 | 8:30 - 9:15 | Delegate Registration | - | Foyer |
-| 9:15 - 10:40| Australian Market Insights | Brendon Thwaites | Cockle Bay |
-| 9:15 - 10:40 | "Unseen Risks: A Security Founder’s View of Cloud, AI, and the Gaps That Still Hurt Us" | Avi Shua - Orca Security | Cockle Bay |
-| 9:15 - 10:40 | TBA | TBA | Cockle Bay |
-| 9:15 - 10:40 | TBA | Sponsor Panel | Cockle Bay |
+| 9:15 - 9:25 | Opening Session | Brendon Thwaites | Cockle Bay |
+| 9:25 - 10:40 | "Observability and Agentic AI - From Observability to Answers (and new challenges)" | Johnny Mirza - Clickhouse | Cockle Bay |
+| 9:25 - 10:40 | "Unseen Risks: A Security Founder’s View of Cloud, AI, and the Gaps That Still Hurt Us" | Avi Shua - Orca Security | Cockle Bay |
+| 9:25 - 10:40 | "The Idle Kubernetes Crisis: Why You're Wasting 70% of Your Compute  " | Anatoly Litovsky - Glasswing | Cockle Bay |
 | 10:40 - 11:10 | Morning Tea | - | Exhibition Hall |
 | 11:10 - 12:25 | "Anatomy of a Kubernetes Release Cycle: A Practical Guide for End Users" | Wendy Ha (Seek) | Cockle Bay |
 | 11:10 - 12:25 | "Building an observability platform for the future" | Sam Dwyer - Nine | Cockle Bay |

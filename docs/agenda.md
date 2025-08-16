@@ -24,7 +24,7 @@ hide:
 | 15:00 - 16:00 | TBA | TBA | Cockle Bay |
 | 15:00 - 16:00 | TBA | TBA | Cockle Bay |
 | 15:00 - 16:00 | TBA | TBA | Cockle Bay |
-| 15:00 - 16:00 | "Our Journey in AI Platform Engineering" | Brad McCoy (CNCF Ambassador) | Cockle Bay |
+| 15:00 - 16:00 | "Our Journey in AI Platform Engineering" | Brad McCoy - CNCF Ambassador | Cockle Bay |
 | 16:30 - 17:30 | Welcome Reception | - | Ground Flour outside ICC |
 
 ## Day 2: Wednesday 10th September 2025
@@ -39,7 +39,7 @@ hide:
 | 9:25 - 10:40 | "Unseen Risks: A Security Founder’s View of Cloud, AI, and the Gaps That Still Hurt Us" | Avi Shua - Orca Security | Cockle Bay |
 | 9:25 - 10:40 | "The Idle Kubernetes Crisis: Why You're Wasting 70% of Your Compute  " | Anatoly Litovsky - Glasswing | Cockle Bay |
 | 10:40 - 11:10 | Morning Tea | - | Exhibition Hall |
-| 11:10 - 12:25 | "Anatomy of a Kubernetes Release Cycle: A Practical Guide for End Users" | Wendy Ha (Seek) | Cockle Bay |
+| 11:10 - 12:25 | "Anatomy of a Kubernetes Release Cycle: A Practical Guide for End Users" | Wendy Ha - Seek | Cockle Bay |
 | 11:10 - 12:25 | "Building an observability platform for the future" | Sam Dwyer - Nine | Cockle Bay |
 | 11:10 - 12:25 | "Eating the Elephant - How to land and expand your Kubernetes knowledge for a better career" | Paul O’Reilly - Octopus Deploy | Cockle Bay |
 | 11:10 - 12:25 | "AI Observability with Envoy AI Gateway: From Black Box to Glass Box" | Adrian Cole - Tetrate.io | Cockle Bay |

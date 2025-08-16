@@ -1,0 +1,10 @@
+# Johnny Mirza, Solutions Architect at ClickHouse
+## Observability and Agentic AI - From Observability to Answers (and new challenges)
+### Abstract
+For years, observability has meant collecting data, writing queries, and stitching together insights. From grepping logs to building dashboards, the process has stayed manual, fragmented, and reactive. Even with standards like OpenTelemetry and languages like SPL or PromQL, engineers still need to know what to look for and how to ask.
+
+This talk explores a shift: from querying data to getting answers. We’ll trace observability’s evolution - from log search to structured telemetry - and show what’s needed to move forward: wide events, unsampled high-cardinality data, and fast, scalable query engines.
+
+We’ll demonstrate how agentic AI systems can guide investigations, interpret anomalies, and troubleshoot using natural language grounded in real telemetry - all based on a standarized model/prompt benchmark against sample datasets. We also look at how AI is changing the core of observability - but also critically where its currently limited and the challenges of relying on agents.
+### Speaker Bio
+[Johnny](https://www.linkedin.com/in/johnnym/) is a Solution Architect with ClickHouse, working with users across APAC. With over 20 years of background in solutions engineering, he’s experienced in architecting and enabling solutions for enterprise clients in the telecommunications, media, insurance, and financial services sectors. Johnny has a high level of expertise of integration between both public cloud and on-premise infrastructure, while focusing on service assurance, monitoring platforms, and open-source technologies.  Prior to ClickHouse, Johnny was part of the solution engineering teams at Confluent, Splunk, and Optus, to name a few.

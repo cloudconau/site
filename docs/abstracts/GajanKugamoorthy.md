@@ -1,5 +1,5 @@
 # Gajan Kugamoorthy - Vivanti
-## Private, Secure, and Scalable: Your Blueprint for Production LLMs on Kubernetes
+## The Self-Hosted LLMs: Secure & Scalable Inference with Kubernetes
 ### Abstract
 For organizations concerned with data privacy, cost control, or model customisation, relying on third-party AI services isn't always an option. This reality places the challenge of building a private, efficient, and secure platform directly onto their engineers, architects, and teams. This talk delivers the technical blueprint to meet that challenge: a practical framework covering the architecture, security guardrails, and scalable operational practices.
 In this talk, you will learn how to build a production-ready LLM inference platform using a powerful, purely open-source stack on Kubernetes. You will learn how to deploy leading models like Llama 3 with high-performance servers, implement dynamic, cost-saving autoscaling with event-driven tools (e.g. KEDA), and enforce robust security guardrails using Kubernetes-native policy engines (e.g. Kyverno).

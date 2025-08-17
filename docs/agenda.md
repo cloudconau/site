@@ -58,7 +58,7 @@
 | | TBA | TBA | Cockle Bay |
 | | TBA | TBA | Cockle Bay |
 | | ["Platform Engineering IS Software Engineering"](abstracts/MiguelEliasdosSantos.md) | Miguel Elias dos Santos - SafetyCulture | Cockle Bay |
-| | TBA | TBA | Cockle Bay |
+| | ["The Self-Hosted LLMs: Secure & Scalable Inference with Kubernetes"](abstracts/GajanKugamoorthy.md) | Gajan Kugamoorthy - Vivanti | Cockle Bay |
 | | ["The Great Internet Mersenne Prime Search: 30 Years of Citizen Science"](abstracts/JamesBannan.md) | James Bannan - CyberCX | Cockle Bay |
 | 17:10 - 17:20 | Raffle draw | - | Cockle Bay |
 | 17:20 - 17:25 | Wrapup and closing | - | Cockle Bay |

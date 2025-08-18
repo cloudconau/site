@@ -21,8 +21,8 @@ Key points:
 
 - `Communicating Upwards`: How to articulate the ROI of Platform improvements and tie your work directly to business objectives.
 ### Speaker Bio
-With 15y of overall experience, Software Engineering background and 11y focusing on Platform Engineering, I have an interesting mixture of programming and infrastructure knowledge that allows me to tackle complex challenges in the cloud infrastructure space without the restriction of just being able to install and operate off-the-shelf tooling.
+With a Software Engineering background of 15y of which 11y focus on Platform Engineering, I have an interesting mixture of programming and infrastructure knowledge that allows me to tackle complex challenges in the cloud infrastructure space without the restriction of just being able to install and operate off-the-shelf tooling.
 
 Interesting facts:
-- My current team sometimes calls me ""MiGo"" whic his a fun twist over [Miguel](https://www.linkedin.com/in/miguel-elias-dos-santos/) + Golang (the programming language) as I keep saying Go is the answer for things :)
+- My current team sometimes calls me "MiGo" which is a fun twist over [Miguel](https://www.linkedin.com/in/miguel-elias-dos-santos/) + Go (the programming language) as I keep saying Go is the answer for things :)
 - I'm colourblind for some color mixtures (specially pink,maroon, brown mixes)

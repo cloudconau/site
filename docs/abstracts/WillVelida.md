@@ -1,5 +1,5 @@
 # Will Velida - Microsoft
-## Building effective AI Agents with Dapr Agents
+## Building AI Agents with Dapr
 ### Abstract
 "Dapr Agents provides developers with a framework to build production-grade resilient AI Agents. Using Dapr Agents, we can build AI Agents that can work with Large Language Models to achieve complex tasks over stateful workflows.
 

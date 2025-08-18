@@ -15,7 +15,7 @@
 | 12:30 - 13:30 | Networking Lunch | - | Exhibition Hall |
 | 13:30 - 13:45 | Opening Session | Conference Organisers | Cockle Bay |
 | | TBA | TBA | Cockle Bay |
-| | TBA | TBA | Cockle Bay |
+| | ["Building AI Agents with Dapr"](abstracts/WillVelida.md) | Will Velida - Microsoft | Cockle Bay |
 | | TBA | TBA | Cockle Bay |
 | 14:30 - 15:00 | Afternoon Tea | - | Exhibition Hall |
 | | TBA | TBA | Cockle Bay |
@@ -56,7 +56,7 @@
 | | ["Gateway API - 5 things about the future of Ingress, in 5"](abstracts/LeonSeng.md) | Leon Seng - F5 | Cockle Bay |
 | 14:55 - 15:25 | Afternoon Tea | - | Exhibition Hall |
 | | TBA | TBA | Cockle Bay |
-| | TBA | TBA | Cockle Bay |
+| | ["AI-Powered Platform Engineering: Lessons from Octopus"](abstracts/MatthewCasperson.md) | Matthew Casperson - Octopus Deploy | Cockle Bay |
 | | ["Platform Engineering IS Software Engineering"](abstracts/MiguelEliasdosSantos.md) | Miguel Elias dos Santos - SafetyCulture | Cockle Bay |
 | | ["The Self-Hosted LLMs: Secure & Scalable Inference with Kubernetes"](abstracts/GajanKugamoorthy.md) | Gajan Kugamoorthy - Vivanti | Cockle Bay |
 | | ["The Great Internet Mersenne Prime Search: 30 Years of Citizen Science"](abstracts/JamesBannan.md) | James Bannan - CyberCX | Cockle Bay |

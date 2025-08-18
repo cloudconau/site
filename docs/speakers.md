@@ -29,6 +29,7 @@ CloudCon will have sessions on the following areas:
 * [Johnny Mirza](abstracts/JohnnyMirza.md)
 * [James Bannan](abstracts/JamesBannan.md)
 * [Leon Seng](abstracts/LeonSeng.md)
+* [Mathhew Casperson](abstracts/MatthewCasperson.md)
 * [Michael Fornaro](abstracts/MichaelFornaro.md)
 * [Miguel Elias dos Santos](abstracts/MiguelEliasdosSantos.md)
 * [Paul O'Reilly](abstracts/PaulOReilly.md)
@@ -36,3 +37,4 @@ CloudCon will have sessions on the following areas:
 * [Sam Dwyer](abstracts/SamDwyer.md)
 * [Tatsat (Tats) Mishra](abstracts/TatsatMishra.md)
 * [Wendy Ha](abstracts/WendyHa.md)
+* [Will Velida](abstracts/WillVelida.md)

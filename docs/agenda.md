@@ -14,11 +14,11 @@
 |---|---|---|---|
 | 12:30 - 13:30 | Networking Lunch | - | Exhibition Hall |
 | 13:30 - 13:45 | Opening Session | Conference Organisers | Cockle Bay |
-| | TBA | TBA | Cockle Bay |
+| | ["Building a scalable Edge Gateway Platform using istio and kubernetes"](abstracts/HarpreetSingh.md) | Harpreet Singh - Staff Software Engineer at Rokt | Cockle Bay |
 | | ["Building AI Agents with Dapr"](abstracts/WillVelida.md) | Will Velida - Microsoft | Cockle Bay |
 | | TBA | TBA | Cockle Bay |
 | 14:30 - 15:00 | Afternoon Tea | - | Exhibition Hall |
-| | TBA | TBA | Cockle Bay |
+| | ["Architecting Production-Ready AI Agents with Open Source on Kubernetes"](abstracts/FrankFan.md) | Frank Fan & Faisal Masood | Cockle Bay |
 | | TBA | TBA | Cockle Bay |
 | | TBA | TBA | Cockle Bay |
 | | ["Our Journey in AI Platform Engineering"](abstracts/BradMcCoy.md) | Brad McCoy - CNCF Ambassador | Cockle Bay |

@@ -1,5 +1,5 @@
-# Harpreet Singh - Rokt
-## Edge Gateway Platform using Kubernetes & Istio Service Mesh
+# Harpreet Singh | Staff Software Engineer at Rokt | Infrastructure and Platform Engineering
+## Building a scalable Edge Gateway Platform using Istio and Kubernetes
 ### Abstract:
 "Optimizing Global Traffic Management with Rokt’s Edge Gateway Platform
 

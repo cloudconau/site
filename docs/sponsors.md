@@ -19,8 +19,10 @@ hide:
 
 <div class="grid cards" markdown>
 * [![AWS logo](images/aws_logo.png)](https://aws.amazon.com){target=_blank}
-* ![Sponsor CloudCon 2025](images/placeholder.jpeg) Sponsorship opportunities are still available...
+<!-- * ![Sponsor CloudCon 2025](images/placeholder.jpeg) Sponsorship opportunities are still available... -->
 </div>
+
+<hr />
 
 ## Platinum Sponsors
 
@@ -28,7 +30,7 @@ hide:
 
 * [![mantel group logo](images/mantelgroup.png)](https://mantelgroup.com.au){target=_blank}
 * [![glasswing logo](images/glasswing_logo.png)](https://www.glasswing.cloud){target=_blank}
-* ![Sponsor CloudCon 2025](images/placeholder.jpeg) Sponsorship opportunities are still available...
+<!-- * ![Sponsor CloudCon 2025](images/placeholder.jpeg) Sponsorship opportunities are still available... -->
 
 </div>
 
@@ -37,8 +39,8 @@ hide:
 <div class="grid cards" markdown>
 * [![f5 logo](images/f5.png)](https://f5.com){target=_blank}
 * [![clickhouse](images/clickhouse_logo.png)](https://clickhouse.com){target=_blank}
-* ![Sponsor CloudCon 2025](images/placeholder.jpeg) Sponsorship opportunities are still available...
-* ![Sponsor CloudCon 2025](images/placeholder.jpeg) Sponsorship opportunities are still available...
+<!-- * ![Sponsor CloudCon 2025](images/placeholder.jpeg) Sponsorship opportunities are still available...
+* ![Sponsor CloudCon 2025](images/placeholder.jpeg) Sponsorship opportunities are still available...-->
 </div>
 
 ## Silver Sponsors
@@ -46,13 +48,16 @@ hide:
 <div class="grid cards" markdown>
 * [![elastic logo](images/elastic_logo.png)](https://elastic.co){target=_blank}
 * [![orca security logo](images/orca_security.png)](https://orca.security){target=_blank}
+<!--
 * ![Sponsor CloudCon 2025](images/placeholder.jpeg) Sponsorship opportunities are still available...
 * ![Sponsor CloudCon 2025](images/placeholder.jpeg) Sponsorship opportunities are still available...
 * ![Sponsor CloudCon 2025](images/placeholder.jpeg) Sponsorship opportunities are still available...
 * ![Sponsor CloudCon 2025](images/placeholder.jpeg) Sponsorship opportunities are still available...
 * ![Sponsor CloudCon 2025](images/placeholder.jpeg) Sponsorship opportunities are still available...
+-->
 </div>
 
+<!--
 ## Startup Sponsors
 
 <div class="grid cards" markdown>
@@ -61,13 +66,18 @@ hide:
 * ![Sponsor CloudCon 2025](images/placeholder.jpeg) Sponsorship opportunities are still available...
 * ![Sponsor CloudCon 2025](images/placeholder.jpeg) Sponsorship opportunities are still available...
 </div>
+-->
 
 ## Additional Sponsors
 
+<div class="grid cards" markdown>
+- [![Dynatrace](images/dynatrace_logo.png) Coffee Cart & Lanyards](https://dynatrace.com)
+- [![](images/placeholder.jpeg)]()
+- [![](images/placeholder.jpeg)]()
+</div>
+
 | Opportunity | Price | Sponsor |
 |-------------|-------|---------|
-| Coffee Cart Sponsorship – includes branding on coffee cart.<br />Branded coffee cups to be supplied by sponsor | $5,000 + GST AUD | [Still Available :fontawesome-solid-paper-plane:](mailto:organizers@kcdaustralia.onmicrosoft.com){ .md-button .green } |
-| CloudCon and Sponsor co-branded Lanyards | $7,000 + GST AUD | [Still Available :fontawesome-solid-paper-plane:](mailto:organizers@kcdaustralia.onmicrosoft.com){ .md-button .green } |
 | Speaker / Sponsor Dinner (One only)  | $10,000 + GST AUD | [Still Available :fontawesome-solid-paper-plane:](mailto:organizers@kcdaustralia.onmicrosoft.com){ .md-button .green } |
 | Welcome Reception Sponsorship (One only) | $10,000 + GST AUD | [Still Available :fontawesome-solid-paper-plane:](mailto:organizers@kcdaustralia.onmicrosoft.com){ .md-button .green } |
 | CloudCon Sydney 2025 and Sponsor co-branded Drink Bottle for every attendee | $10,000 + GST AUD | [Still Available :fontawesome-solid-paper-plane:](mailto:organizers@kcdaustralia.onmicrosoft.com){ .md-button .green } |

@@ -23,7 +23,7 @@ CloudCon will have sessions on the following areas:
 - [![Adrian Cole](images/speakers/headshots/AdrianCole.png) Adrian Cole](abstracts/AdrianCole.md)
 - [![Anatoly Litovsky](images/speakers/headshots/AnatolyLitovsky.png) Anatoly Litovsky](abstracts/AnatolyLitovsky.md)
 - [![Artur Rajski](images/speakers/headshots/ArturRajski.png) Artur Rajski](abstracts/ArturRajski.md)
-- [![Avi Shua](images/speakers/headshots/placeholder.png) Avi Shua](abstracts/AviShua.md)
+- [![Avi Shua](images/speakers/headshots/AviShua.png) Avi Shua](abstracts/AviShua.md)
 - [![Bojan Zivic](images/speakers/headshots/placeholder.png) Bojan Zivic](abstracts/BojanZivic.md)
 - [![Brad McCoy](images/speakers/headshots/placeholder.png) Brad McCoy](abstracts/BradMcCoy.md)
 - [![Carlos Santana](images/speakers/headshots/CarlosSantana.png) Carlos Santana](abstracts/CarlosSantana.md)

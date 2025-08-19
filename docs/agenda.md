@@ -1,3 +1,9 @@
+---
+hide:
+  - toc
+  - navigation
+---
+
 ## Day 1: Tuesday 9th September 2025
 
 ### Morning Session

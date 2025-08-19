@@ -9,7 +9,8 @@ Whether you're building a platform team or evaluating tools, this session will h
 
 Learn from anti-patterns and real-world implementation pitfalls as we explore both the dark and light sides of OSS platform engineering—and uncover who the true Darth Vader of your stack might be.
 ### Speaker Bio
-[Prithvi Raj](https://www.linkedin.com/in/prithvi1307/) is a Community Manager & Developer Advocate at Mirantis working with the Open Source Program Office team. He is a CNCF Ambassador with 5+ years of experience who helped scale a CNCF incubating project in LitmusChaos and runs the Platform & Resilience Engineering Meetup group. He is an active member at SIG Project Reviews and is currently leading the community efforts for the k0s project, k0rdent, OpenSDN, and the other OSS initiatives Mirantis is contributing to.
+[Prithvi Raj](https://www.linkedin.com/in/prithvi1307/){target=_blank} is a Community Manager & Developer Advocate at Mirantis working with the Open Source Program Office team. He is a CNCF Ambassador with 5+ years of experience who helped scale a CNCF incubating project in LitmusChaos and runs the Platform & Resilience Engineering Meetup group. He is an active member at SIG Project Reviews and is currently leading the community efforts for the k0s project, k0rdent, OpenSDN, and the other OSS initiatives Mirantis is contributing to.
 
 He is a co-organizer to KCD Bengaluru, and previously did Chaos Carnival, LitmusChaosCon and KCD Chennai.
+
 He was previously at Harness, ChaosNative, and MayaData.

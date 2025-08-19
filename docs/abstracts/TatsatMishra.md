@@ -19,8 +19,10 @@ What You'll Take Away
 - Various one-click scenarios and ease one can diagnose through this extension
 - Practical approaches to designing tools that people genuinely want to use
 - Fresh perspectives on connecting the developer experience with infrastructure reality
+
 ### Speaker Bio
-[Tatsat Mishra](https://github.com/Tatsinnit) is a Senior Software Engineer at Microsoft, where he focuses on improving developer and platform experiences in the cloud-native ecosystem. Amongst various other things he is one of core maintainer of the VS Code Kubernetes and AKS extensions, helping bridge the gap between developers and complex infrastructure by bringing Kubernetes closer to everyday developer workflows.
+
+[Tatsat Mishra](https://github.com/Tatsinnit){target=_blank} is a Senior Software Engineer at Microsoft, where he focuses on improving developer and platform experiences in the cloud-native ecosystem. Amongst various other things he is one of core maintainer of the VS Code Kubernetes and AKS extensions, helping bridge the gap between developers and complex infrastructure by bringing Kubernetes closer to everyday developer workflows.
 
 Tatsat has spent the past several years collaborating across teams and communities to simplify Kubernetes usage, particularly in the Azure ecosystem. His work has contributed to CNCF sandbox acceptance and is actively used by developers worldwide.
 

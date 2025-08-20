@@ -26,7 +26,7 @@ hide:
 | 14:30 - 15:00 | Afternoon Tea | - | Exhibition Hall |
 | | ["Architecting Production-Ready AI Agents with Open Source on Kubernetes"](abstracts/FrankFan.md) | Frank Fan & Faisal Masood - AWS | Cockle Bay |
 | | [Maximizing Cloud Efficiency - Minor Tweaks, Bigger Impact](abstracts/PraneetChandra.md) | Praneet Chandra - CloudKeeper | Cockle Bay |
-| | TBA | TBA | Cockle Bay |
+| | ["Death by Snowflakes"](abstracts/GeraldBachlmayr.md) | Gerald Bachlmayr - Patterned Security | Cockle Bay |
 | | ["Our Journey in AI Platform Engineering"](abstracts/BradMcCoy.md) | Brad McCoy - Cuscal | Cockle Bay |
 | 16:30 - 17:30 | Welcome Reception | - | Ground Flour outside ICC |
 
@@ -62,9 +62,6 @@ hide:
 | 14:55 - 15:25 | Afternoon Tea | - | Exhibition Hall |
 | | ["Gateway API - 5 things about the future of Ingress, in 5"](abstracts/LeonSeng.md) | Leon Seng - F5 | Cockle Bay |
 | | ["Building a scalable Edge Gateway Platform using istio and kubernetes"](abstracts/HarpreetSingh.md) | Harpreet Singh - Staff Software Engineer at Rokt | Cockle Bay |
-| 14:55 - 15:25 | Afternoon Tea | - | Exhibition Hall |
-| | TBA | TBA | Cockle Bay |
-| | ["Building a scalable Edge Gateway Platform using istio and kubernetes"](abstracts/HarpreetSingh.md) | Harpreet Singh - Rokt | Cockle Bay |
 | | ["Platform Engineering IS Software Engineering"](abstracts/MiguelEliasdosSantos.md) | Miguel Elias dos Santos - SafetyCulture | Cockle Bay |
 | | ["The Self-Hosted LLMs: Secure & Scalable Inference with Kubernetes"](abstracts/GajanKugamoorthy.md) | Gajan Kugamoorthy - Vivanti | Cockle Bay |
 | | ["The Great Internet Mersenne Prime Search: 30 Years of Citizen Science"](abstracts/JamesBannan.md) | James Bannan - CyberCX | Cockle Bay |

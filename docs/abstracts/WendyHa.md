@@ -1,6 +1,9 @@
-# Wendy Ha - SEEK
+# ![](../images/speakers/headshots/WendyHa.png){ width="200" } Wendy Ha - SEEK
+
 ## Anatomy of a Kubernetes Release Cycle: A Practical Guide for End Users
+
 ### Abstract
+
 Upstream Kubernetes is the open-source core of Kubernetes, maintained by the Cloud Native Computing Foundation (CNCF). It contains the pure source code and documentation for orchestrating containers, without vendor-specific extensions, and is fully open for anyone to inspect, contribute to, or redistribute.
 
 Because of its open-source nature, anyone can ""fork"" the core Kubernetes codebase to create their own version. Over the past 11 years, many organizations, including vendors and cloud providers, have created “fork” versions of Kubernetes, modify upstream code to meet their own needs, then package and offer it as proprietary Kubernetes distributions.

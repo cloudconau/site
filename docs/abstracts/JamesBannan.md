@@ -1,4 +1,4 @@
-# James Bannan - CyberCX
+# ![](../images/speakers/headshots/JamesBannan.png){ width="200" } James Bannan - CyberCX
 
 ## The Great Internet Mersenne Prime Search: 30 Years of Citizen Science
 

@@ -12,51 +12,37 @@ hide:
 
 Address: 14 Darling Dr, Sydney NSW 2000, Australia 
 
+Room: Our sessions will take place in / around the [Cockle Bay Room](https://iccsydney.com.au/wp-content/uploads/2023/06/venue-levels-map.pdf){target=_blank}.
+
 The International Convention Centre Sydney (ICC Sydney) is Australia's first fully integrated convention, events, exhibition, and entertainment precinct, offering a world-class experience for delegates and exhibitors. Located in the heart of Darling Harbour, ICC Sydney boasts striking contemporary design, leading technology, and flexible meeting and exhibition spaces. It's also conveniently located near Sydney's CBD, Barangaroo, and various cultural and academic hubs. 
 
 ### Accessibility:   {#accessibility:}
 
-\- Equitable and step-free access to all areas 
-
-\- Wheelchair and ambulant accessible toilets throughout 
-
-\- Ramps and spacious passenger lifts 
-
-\- Braille on room door and directional signage 
-
-\- Infra-red hearing augmentation systems in meeting rooms and theatres 
-
-\- Wheelchairs available for hire 
-
-\- Designated accessible seating areas 
-
-\- Quiet Rooms 
-
-\- Changing Places facility 
+* Equitable and step-free access to all areas
+* Wheelchair and ambulant accessible toilets throughout 
+* Ramps and spacious passenger lifts 
+* Braille on room door and directional signage 
+* Infra-red hearing augmentation systems in meeting rooms and theatres 
+* Wheelchairs available for hire 
+* Designated accessible seating areas 
+* Quiet Rooms 
+* Changing Places facility 
 
  
 
 ### Getting There:  {#getting-there:}
 
-\- ICC Sydney is easily accessible by: 
+ICC Sydney is easily accessible by: 
 
-\- Public Transport:  
-
-\- Light rail (ICC Sydney stops) 
-
-\- Train (10-minute walk from Central and Town Hall stations) 
-
-\- Ferry (Barangaroo Wharf or Pyrmont Bay Wharf) 
-
-\- Bus (routes 389 and 501\) 
-
- 
-
- 
+* Public Transport:  
+* Light rail (ICC Sydney stops) 
+* Train (10-minute walk from Central and Town Hall stations) 
+* Ferry (Barangaroo Wharf or Pyrmont Bay Wharf) 
+* Bus (routes 389 and 501) 
 
 ## Who Should Attend  {#who-should-attend}
 
-CloudCon Sydney 2025 is aimed at a diverse and technical audience, eager to advance their cloud-native expertise, collaborate with peers, and explore the cutting edge of industry best practices in Australia. If you're passionate about shaping the future of digital infrastructure and applications, this conference is for you.  
+CloudCon Sydney 2025 is aimed at a diverse and technical audience, eager to advance their cloud native expertise, collaborate with peers, and explore the cutting edge of industry best practices in Australia. If you're passionate about shaping the future of digital infrastructure and applications, this conference is for you.  
 
 Our program delves into critical themes of Kubernetes, AI & ML, Platform Engineering, and Security, making it an essential event for various roles across a wide range of organizations.  
 
@@ -102,15 +88,12 @@ Your Focus: You are setting the strategic direction for your organisation's clou
 
 Our attendees come from a broad spectrum of industries, including:  
 
-Leading Financial Institutions: Banks, payment providers, and investment firms adopting cloud-native for scale and security   
+* **Leading Financial Institutions**: Banks, payment providers, and investment firms adopting cloud-native for scale and security   
+* **Major Technology and Cloud Providers**: Companies building and enabling the cloud ecosystem  
+* **Large Enterprises and Digital Innovators**: Organisations across retail, media, healthcare, and services leveraging cloud for competitive edge  
+* **Government & Research Institutions**: Public sector and academic bodies utilising cloud for data and services   
 
-Major Technology and Cloud Providers: Companies building and enabling the cloud ecosystem  
-
-Large Enterprises and Digital Innovators: Organisations across retail, media, healthcare, and services leveraging cloud for competitive edge  
-
-Government & Research Institutions: Public sector and academic bodies utilising cloud for data and services   
-
-Dynamic Startups & Consulting Firms: Agile companies driving innovation and assisting others in their cloud transformation   
+* **Dynamic Startups & Consulting Firms**: Agile companies driving innovation and assisting others in their cloud transformation   
 
 
-CloudCon Sydney 2025 is where the cloud-native community converges. Join us to gain actionable insights, discover innovative solutions, and connect with the vibrant minds shaping the future of technology\! 
+CloudCon Sydney 2025 is where the cloud-native community converges. Join us to gain actionable insights, discover innovative solutions, and connect with the vibrant minds shaping the future of technology! 

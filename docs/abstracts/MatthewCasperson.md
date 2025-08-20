@@ -1,4 +1,5 @@
-# Matthew Casperson - Octopus Deploy
+# ![](../images/speakers/headshots/MatthewCasperson.png){ width="200" } Matthew Casperson - Octopus Deploy
+
 ## AI-Powered Platform Engineering: Lessons from Octopus
 ### Abstract
 Platform engineering has emerged as a critical discipline for organizations seeking to streamline their development workflows and enhance developer experience. This talk builds on the concepts presented in the book DevEx as a Service to show how Octopus integrated artificial intelligence into its platform engineering practices.

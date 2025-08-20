@@ -1,5 +1,7 @@
-# Avi Shua - Orca Security
+# ![](../images/speakers/headshots/AviShua.png){ width="200" } Avi Shua - Orca Security
+
 ## Unseen Risks: A Security Founder’s View of Cloud, AI, and the Gaps That Still Hurt Us
+
 ### Abstract
 Cloud security was (is?) broken - and not for the reasons you think. Avi Shua, Co-Founder of Orca Security, shares how his experience as a security leader led him to challenge the status quo and rethink how we secure modern cloud environments. This session blends the personal journey of building Orca with exclusive insights from the 2025 State of Cloud Security Report, highlighting the most dangerous (and often overlooked) gaps between security and engineering teams.
 

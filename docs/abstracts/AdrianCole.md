@@ -1,4 +1,4 @@
-# ![Adrian's headshot](../images/speakers/headshots/AdrianCole.png){ width="200" } Adrian Cole - Tetrate
+# ![](../images/speakers/headshots/AdrianCole.png){ width="200" } Adrian Cole - Tetrate
 
 ## AI Observability with Envoy AI Gateway: From Black Box to Glass Box
 

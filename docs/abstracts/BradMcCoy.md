@@ -1,4 +1,5 @@
-# Brad McCoy - CNCF
+# ![](../images/speakers/headshots/BradMcCoy.png){ width="200" } Brad McCoy - Cuscal
+
 ## Our Journey in AI Platform Engineering
 
 ### Abstract

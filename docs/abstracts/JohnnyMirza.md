@@ -1,4 +1,4 @@
-# ![Carlos' headshot](../images/speakers/headshots/CarlosSantana.png){ width="200" } Johnny Mirza - ClickHouse
+# ![](../images/speakers/headshots/JohnnyMirza.png){ width="200" } Johnny Mirza - ClickHouse
 
 ## Observability and Agentic AI - From Observability to Answers (and new challenges)
 

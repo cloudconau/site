@@ -24,10 +24,10 @@ hide:
 | | ["Building AI Agents with Dapr"](abstracts/WillVelida.md) | Will Velida - Microsoft | Cockle Bay |
 | | TBA | TBA | Cockle Bay |
 | 14:30 - 15:00 | Afternoon Tea | - | Exhibition Hall |
-| | ["Architecting Production-Ready AI Agents with Open Source on Kubernetes"](abstracts/FrankFan.md) | Frank Fan & Faisal Masood | Cockle Bay |
+| | ["Architecting Production-Ready AI Agents with Open Source on Kubernetes"](abstracts/FrankFan.md) | Frank Fan & Faisal Masood - AWS | Cockle Bay |
 | | TBA | TBA | Cockle Bay |
 | | TBA | TBA | Cockle Bay |
-| | ["Our Journey in AI Platform Engineering"](abstracts/BradMcCoy.md) | Brad McCoy - CNCF Ambassador | Cockle Bay |
+| | ["Our Journey in AI Platform Engineering"](abstracts/BradMcCoy.md) | Brad McCoy - Cuscal | Cockle Bay |
 | 16:30 - 17:30 | Welcome Reception | - | Ground Flour outside ICC |
 
 ## Day 2: Wednesday 10th September 2025
@@ -54,7 +54,7 @@ hide:
 | Time  | Title | Speaker | Location |
 |---|---|---|---|
 | | ["Argo at Enterprise Scale: Automating Hundreds of Cluster Deployments with GitOps"](abstracts/CarlosSantana.md) | Carlos Santana - AWS | Cockle Bay |
-| | ["From Failure to Success: Architecting Away Cloud Native Anti-Patterns"](abstracts/BojanZivic.md) | Bojan Zivic - AWS Ambassador | Cockle Bay |
+| | ["From Failure to Success: Architecting Away Cloud Native Anti-Patterns"](abstracts/BojanZivic.md) | Bojan Zivic - V2.AI | Cockle Bay |
 | | ["Gitless GitOps with FluxCD"](abstracts/MichaelFornaro.md) | Michael Fornaro - EasyGo | Cockle Bay |
 | | ["Golden Paths or Spaghetti Pipelines: The Darth Vader of Platformers"](abstracts/PrithviRaj.md) | Prithvi Raj - Mirantis | Cockle Bay |
 | | ["Implementing custom rate limiting with Istio"](abstracts/ArturRajski.md) | Artur Rajski - Zepto | Cockle Bay |
@@ -62,7 +62,7 @@ hide:
 | | ["Gateway API - 5 things about the future of Ingress, in 5"](abstracts/LeonSeng.md) | Leon Seng - F5 | Cockle Bay |
 | 14:55 - 15:25 | Afternoon Tea | - | Exhibition Hall |
 | | TBA | TBA | Cockle Bay |
-| | ["Building a scalable Edge Gateway Platform using istio and kubernetes"](abstracts/HarpreetSingh.md) | Harpreet Singh - Staff Software Engineer at Rokt | Cockle Bay |
+| | ["Building a scalable Edge Gateway Platform using istio and kubernetes"](abstracts/HarpreetSingh.md) | Harpreet Singh - Rokt | Cockle Bay |
 | | ["Platform Engineering IS Software Engineering"](abstracts/MiguelEliasdosSantos.md) | Miguel Elias dos Santos - SafetyCulture | Cockle Bay |
 | | ["The Self-Hosted LLMs: Secure & Scalable Inference with Kubernetes"](abstracts/GajanKugamoorthy.md) | Gajan Kugamoorthy - Vivanti | Cockle Bay |
 | | ["The Great Internet Mersenne Prime Search: 30 Years of Citizen Science"](abstracts/JamesBannan.md) | James Bannan - CyberCX | Cockle Bay |

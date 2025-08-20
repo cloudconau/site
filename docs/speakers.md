@@ -30,8 +30,8 @@ CloudCon will have sessions on the following areas:
 - [![Frank Fan](images/speakers/headshots/FrankFan.png) Frank Fan](abstracts/FrankFan.md)
 - [![Gajan Kugamoorthy](images/speakers/headshots/GajanKugamoorthy.png) Gajan Kugamoorthy](abstracts/GajanKugamoorthy.md)
 - [![Harpreet Singh](images/speakers/headshots/HarpreetSingh.png) Harpreet Singh](abstracts/HarpreetSingh.md)
-- [![Johnny Mirza](images/speakers/headshots/JohnnyMirza.png) Johnny Mirza](abstracts/JohnnyMirza.md)
 - [![James Bannan](images/speakers/headshots/JamesBannan.png) James Bannan](abstracts/JamesBannan.md)
+- [![Johnny Mirza](images/speakers/headshots/JohnnyMirza.png) Johnny Mirza](abstracts/JohnnyMirza.md)
 - [![Leon Seng](images/speakers/headshots/LeonSeng.png) Leon Seng](abstracts/LeonSeng.md)
 - [![Matthew Casperson](images/speakers/headshots/MatthewCasperson.png) Matthew Casperson](abstracts/MatthewCasperson.md)
 - [![Michael Fornaro](images/speakers/headshots/MichaelFornaro.png) Michael Fornaro](abstracts/MichaelFornaro.md)
@@ -40,7 +40,7 @@ CloudCon will have sessions on the following areas:
 - [![Prithvi Raj](images/speakers/headshots/PrithviRaj.png) Prithvi Raj](abstracts/PrithviRaj.md)
 - [![Sam Dwyer](images/speakers/headshots/SamDwyer.png) Sam Dwyer](abstracts/SamDwyer.md)
 - [![Tatsat (Tats) Mishra](images/speakers/headshots/TatsatMishra.png) Tatsat (Tats) Mishra](abstracts/TatsatMishra.md)
-- [![Wendy Ha](images/speakers/headshots/WendyHa.png) Wendy Ha](abstracts/AdrianCole.md)
+- [![Wendy Ha](images/speakers/headshots/WendyHa.png) Wendy Ha](abstracts/WendyHa.md)
 - [![Will Velida](images/speakers/headshots/WillVelida.png) Will Velida](abstracts/WillVelida.md)
 
 </div>

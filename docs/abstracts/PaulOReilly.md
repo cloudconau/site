@@ -1,5 +1,7 @@
-# Paul O'Reilly - Octopus Deploy
+# ![](../images/speakers/headshots/PaulOReilly.png){ width="200" } Paul O'Reilly - Octopus Deploy
+
 ## Eating the Elephant - How to land and expand your Kubernetes knowledge for a better career.
+
 ### Abstract
 "Kuberenets can be a daunting area to learn, with the infamous ""Kubernetes Iceburg"" ensuring that no matter how long you've worked with it, or what level of skill you have, imposter syndrome is always just a bad yaml file away. There's no easy way to learn all the parts, and little guidance on what's useful to learn.
 

@@ -1,4 +1,5 @@
-# Miguel Elias dos Santos - SafetyCulture
+# ![](../images/speakers/headshots/MiguelEliasdosSantos.png){ width="200" }Miguel Elias dos Santos - SafetyCulture
+
 ## Platform Engineering IS Software Engineering
 ### Abstract
 Many engineering teams still view their internal platforms as a cost center - a necessary layer of Infrastructure managed by a siloed Ops team. Let's defy that.

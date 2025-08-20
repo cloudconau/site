@@ -1,4 +1,4 @@
-# ![Artur's headshot](../images/speakers/headshots/ArturRajski.png){ width="200" } Artur Rajski - Zepto
+# ![](../images/speakers/headshots/ArturRajski.png){ width="200" } Artur Rajski - Zepto
 
 ## Implementing custom rate limiting with Istio
 ### Abstract

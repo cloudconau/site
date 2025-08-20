@@ -1,4 +1,4 @@
-# Anatoly Litovsky - Glasswing
+# ![](../images/speakers/headshots/AnatolyLitovsky.png){ width="200" } Anatoly Litovsky - Glasswing
 
 ## The Idle Kubernetes Crisis: Why You're Wasting 70% of Your Compute  
 

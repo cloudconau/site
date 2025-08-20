@@ -1,4 +1,4 @@
-# Michael Fornaro
+# Michael Fornaro - Easygo
 
 ## Gitless GitOps with FluxCD
 

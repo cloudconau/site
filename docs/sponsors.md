@@ -39,6 +39,7 @@ hide:
 <div class="grid cards" markdown>
 * [![f5 logo](images/f5.png)](https://f5.com){target=_blank}
 * [![clickhouse](images/clickhouse_logo.png)](https://clickhouse.com){target=_blank}
+* [![cloudkeeper](images/cloudkeeper_logo.png)] (https://www.cloudkeeper.com/){target=_blank}
 <!-- * ![Sponsor CloudCon 2025](images/placeholder.jpeg) Sponsorship opportunities are still available...
 * ![Sponsor CloudCon 2025](images/placeholder.jpeg) Sponsorship opportunities are still available...-->
 </div>
@@ -82,7 +83,6 @@ hide:
 | Welcome Reception Sponsorship (One only) | $10,000 + GST AUD | [Still Available :fontawesome-solid-paper-plane:](mailto:organizers@kcdaustralia.onmicrosoft.com){ .md-button .green } |
 | CloudCon Sydney 2025 and Sponsor co-branded Drink Bottle for every attendee | $10,000 + GST AUD | [Still Available :fontawesome-solid-paper-plane:](mailto:organizers@kcdaustralia.onmicrosoft.com){ .md-button .green } |
 | CloudCon Sydney 2025 T-shirt with Sponsor logo on Sleeve, gift for every attendee | $20,000 + GST AUD | [Still Available :fontawesome-solid-paper-plane:](mailto:organizers@kcdaustralia.onmicrosoft.com){ .md-button .green } |
-| Pre-Conference Workshop | Two half-day workshop opportunities exist. <br />If you are interested in runnings  workship, please contact us for more information. | [Still Available :fontawesome-solid-paper-plane:](mailto:organizers@kcdaustralia.onmicrosoft.com){ .md-button .green } |
 
 !!! info "Need More Information?"
     [Download the sponsorship prospectus :fontawesome-solid-file-pdf:](files/CloudCon_Sydney_2025_sponsor_prospectus.pdf){ .md-button }

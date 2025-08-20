@@ -25,7 +25,7 @@ hide:
 | | TBA | TBA | Cockle Bay |
 | 14:30 - 15:00 | Afternoon Tea | - | Exhibition Hall |
 | | ["Architecting Production-Ready AI Agents with Open Source on Kubernetes"](abstracts/FrankFan.md) | Frank Fan & Faisal Masood - AWS | Cockle Bay |
-| | TBA | TBA | Cockle Bay |
+| | [Maximizing Cloud Efficiency - Minor Tweaks, Bigger Impact](abstracts/PraneetChandra.md) | Praneet Chandra - CloudKeeper | Cockle Bay |
 | | TBA | TBA | Cockle Bay |
 | | ["Our Journey in AI Platform Engineering"](abstracts/BradMcCoy.md) | Brad McCoy - Cuscal | Cockle Bay |
 | 16:30 - 17:30 | Welcome Reception | - | Ground Flour outside ICC |

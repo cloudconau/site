@@ -8,7 +8,7 @@
       
       
       
-        <link rel="canonical" href="https://cloudcon.au/abstracts/LeonSeng/">
+        <link rel="canonical" href="https://cloudcon.au/abstracts/GeraldBachlmayr/">
       
       
       
@@ -18,7 +18,7 @@
     
     
       
-        <title>Leon Seng - F5 - CloudCon 2025</title>
+        <title>Gerald Bachlmayr - Patterned Security - CloudCon 2025</title>
       
     
     
@@ -70,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#leon-seng-f5" class="md-skip">
+        <a href="#gerald-bachlmayr-patterned-security" class="md-skip">
           Skip to content
         </a>
       
@@ -105,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Leon Seng - F5
+              Gerald Bachlmayr - Patterned Security
             
           </span>
         </div>
@@ -478,13 +478,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#gateway-api-5-things-about-the-future-of-ingress-in-5" class="md-nav__link">
+  <a href="#death-by-snowflakes" class="md-nav__link">
     <span class="md-ellipsis">
-      Gateway API - 5 things about the future of Ingress, in 5
+      Death by Snowflakes
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Gateway API - 5 things about the future of Ingress, in 5">
+    <nav class="md-nav" aria-label="Death by Snowflakes">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -493,57 +493,6 @@
       Abstract
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Abstract">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#what-is-gateway-api-and-why" class="md-nav__link">
-    <span class="md-ellipsis">
-      What is Gateway API and why
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#who-and-why-should-you-care" class="md-nav__link">
-    <span class="md-ellipsis">
-      Who and why should you care
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#what-is-missing-vs-ingress" class="md-nav__link">
-    <span class="md-ellipsis">
-      What is missing vs Ingress
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#what-other-initiatives-around-gateway-api" class="md-nav__link">
-    <span class="md-ellipsis">
-      What other initiatives around Gateway API
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#how-to-make-the-transition" class="md-nav__link">
-    <span class="md-ellipsis">
-      How to make the transition
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -577,32 +526,17 @@
 
 
 
-<h1 id="leon-seng-f5"><img alt="" src="../../images/speakers/headshots/LeonSeng.png" width="200" /> Leon Seng - F5</h1>
-<h2 id="gateway-api-5-things-about-the-future-of-ingress-in-5">Gateway API - 5 things about the future of Ingress, in 5</h2>
+<h1 id="gerald-bachlmayr-patterned-security"><img alt="" src="../../images/speakers/headshots/GeraldBachlmayr.png" width="200" /> Gerald Bachlmayr - Patterned Security</h1>
+<h2 id="death-by-snowflakes">Death by Snowflakes</h2>
 <h3 id="abstract">Abstract</h3>
-<p>While there are many mature Kubernetes deployments out there, many are not aware of the fact that Ingress API has been frozen for almost 2 years, as well as the existence of Gateway API as the eventual replacement.</p>
-<p>Purpose of this talk is to give a TLDR on Gateway API, empowering practitioners to give Gateway API a closer look and understand the changes to managing traffic in and out of Kubernetes clusters, brought by the Ingress replacement.</p>
-<h4 id="what-is-gateway-api-and-why">What is Gateway API and why</h4>
-<p>Eventual replacement for Ingress</p>
-<h4 id="who-and-why-should-you-care">Who and why should you care</h4>
-<p>Things to be aware of as platform engineering team or app developers
-Experience with adding new features via annotation
-Impacts, changes in workflows</p>
-<h4 id="what-is-missing-vs-ingress">What is missing vs Ingress</h4>
-<p>Not everything is sunshine and roses, not all features have been/or will be carried over</p>
-<h4 id="what-other-initiatives-around-gateway-api">What other initiatives around Gateway API</h4>
-<ul>
-<li>GAMMA</li>
-<li>Inference extension</li>
-</ul>
-<h4 id="how-to-make-the-transition">How to make the transition</h4>
-<p>Implementations
-Experimenting by deploying side by side with ingress controller
-migration tool - ingress2gateway</p>
+<p>In the race to scale cloud-native systems, many organisations unknowingly fall into the trap of creating "snowflake environments" - infrastructure and platform setups that are not fully automated and dangerously inconsistent across stages and teams.</p>
+<p>These snowflakes might seem like business-aligned one-off solutions, but they silently accumulate configuration drift, obscure bugs, inconsistent security postures, and massive cognitive overhead for developers and operations. This presentation examines the Snowflake anti-pattern and its adverse effects on business agility, security, and reliability. We'll trace how snowflake environments originate and why they are so difficult to reverse once they are embedded in culture and pipelines.</p>
+<p>You will learn how to recognise the warning signs of this anti-pattern and understand the long-term costs these inconsistencies impose. Through real-world examples and hard-learned lessons, this talk offers practical guidance on reestablishing consistency by applying platform engineering principles, infrastructure as code, policy as code, and other best practices.</p>
+<p>Whether you're building a new platform or modernising an existing one, this session offers a compelling argument for investing in consistency as a first-class feature. Attendees will leave equipped with good practices and strategies to prevent snowflake sprawl and foster a platform that enables speed, scale, security, and operational excellence.</p>
 <h3 id="speaker-bio">Speaker Bio</h3>
-<p>At F5, <a href="https://www.linkedin.com/in/leonseng/" target="_blank">Leon</a> is a solutions engineer and part-time developer advocate specializing in Kubernetes traffic management and application security with NGINX across the ANZ region.</p>
-<p>Having come from a background of telco networking and operating a 5G mobile core on Kubernetes, he now advises on traffic delivery and security architectures for modern applications and APIs.</p>
-<p>He is also an occasional blogger on emerging tech (the ones that piques his interests anyway), and solving business problems through technology.</p>
+<p><a href="https://www.linkedin.com/in/bachlmayr/" target="_blank">Gerald Bachlmayr</a> is an experienced cloud strategist and DevSecOps professional with over 25 years of experience in IT.</p>
+<p>Gerald spent many years as a software engineer before moving into various roles, including team lead, principal cloud architect, and chief cloud architect. He designed and implemented cloud native solutions for various industries, including financial services, tertiary education, and government organisations. As a security practitioner, he ensures that blueprints meet security, resilience, and regulatory requirements.</p>
+<p>Gerald is a passionate AWS Community Builder. As an experienced consultant, he has witnessed many things going wrong, which also inspired him to write the book “Cloud Native Anti-Patterns,” published by Packt earlier this year. Gerald is eager to share his insights and learnings with the community, making the cloud an even better place.</p>
 
 
 

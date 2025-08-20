@@ -54,7 +54,7 @@ hide:
 | Time  | Title | Speaker | Location |
 |---|---|---|---|
 | | ["Argo at Enterprise Scale: Automating Hundreds of Cluster Deployments with GitOps"](abstracts/CarlosSantana.md) | Carlos Santana - AWS | Cockle Bay |
-| | ["From Failure to Success: Architecting Away Cloud Native Anti-Patterns"](abstracts/BojanZivic.md) | Bojan Zivic - V2.AI | Cockle Bay |
+| | ["From Failure to Success: Architecting Away Cloud Native Anti-Patterns"](abstracts/BojanZivic.md) | Bojan Zivic - AWS Ambassador | Cockle Bay |
 | | ["Gitless GitOps with FluxCD"](abstracts/MichaelFornaro.md) | Michael Fornaro - EasyGo | Cockle Bay |
 | | ["Golden Paths or Spaghetti Pipelines: The Darth Vader of Platformers"](abstracts/PrithviRaj.md) | Prithvi Raj - Mirantis | Cockle Bay |
 | | ["Implementing custom rate limiting with Istio"](abstracts/ArturRajski.md) | Artur Rajski - Zepto | Cockle Bay |

@@ -1,4 +1,4 @@
-# ![](../images/speakers/headshots/BojanZivic.png){ width="200" } Bojan Zivic - V2.AI
+# ![](../images/speakers/headshots/BojanZivic.png){ width="200" } Bojan Zivic - AWS Ambassador
 ## From Failure to Success: Architecting Away Cloud Native Anti-Patterns
 ### Abstract
 Many organizations struggle with their cloud-native transformations. Applications break unexpectedly, costs spiral out of control, security gaps emerge, and teams become frustrated with complex deployments. The issue isn't the technology, it's the anti-patterns we unknowingly build into our systems.

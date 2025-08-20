@@ -1,4 +1,4 @@
-# ![Gajan's headshot](../images/speakers/headshots/GajanKugamoorthy.png){ width="200" } Gajan Kugamoorthy - Vivanti
+# ![](../images/speakers/headshots/GajanKugamoorthy.png){ width="200" } Gajan Kugamoorthy - Vivanti
 
 ## The Self-Hosted LLMs: Secure & Scalable Inference with Kubernetes
 

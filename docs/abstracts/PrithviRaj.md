@@ -1,4 +1,4 @@
-# ![Prithvi's headshot](../images/speakers/headshots/PrithviRaj.png){ width="200" } Prithvi Raj - Mirantis
+# ![](../images/speakers/headshots/PrithviRaj.png){ width="200" } Prithvi Raj - Mirantis
 
 ## Golden Paths or Spaghetti Pipelines: The Darth Vader of Platformers
 

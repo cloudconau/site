@@ -1,5 +1,5 @@
 
-# ![Carlos' headshot](../images/speakers/headshots/CarlosSantana.png){ width="200" } Carlos Santana - AWS 
+# ![](../images/speakers/headshots/CarlosSantana.png){ width="200" } Carlos Santana - AWS 
 
 ## Argo at Enterprise Scale: Automating Hundreds of Cluster Deployments with GitOps
 ### Abstract

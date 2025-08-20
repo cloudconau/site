@@ -1,4 +1,4 @@
-# ![Frank's headshot](../images/speakers/headshots/FrankFan.png){ width="200" } Frank Fan & Faisal Masood - AWS
+# ![](../images/speakers/headshots/FrankFan.png){ width="200" } Frank Fan & Faisal Masood - AWS
 ## Architecting Production-Ready AI Agents with Open Source on Kubernetes
 ### Abstract
 This session introduces a framework for deploying production-grade AI agents on Kubernetes, addressing critical challenges in security, scalability, and performance optimization. Learn proven patterns for comprehensive observability, efficient inference management, and systematic evaluation methodologies. Through demonstrations on Amazon EKS, we'll showcase how this open-source framework tackles real-world use cases, enabling you to confidently deploy AI agents in production environments. Perfect for architects and engineers looking to bridge the gap between AI prototypes and production-ready systems.

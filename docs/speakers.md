@@ -29,6 +29,7 @@ CloudCon will have sessions on the following areas:
 - [![Carlos Santana](images/speakers/headshots/CarlosSantana.png) Carlos Santana](abstracts/CarlosSantana.md)
 - [![Frank Fan](images/speakers/headshots/FrankFan.png) Frank Fan](abstracts/FrankFan.md)
 - [![Gajan Kugamoorthy](images/speakers/headshots/GajanKugamoorthy.png) Gajan Kugamoorthy](abstracts/GajanKugamoorthy.md)
+- [![Gerald Bachlmayr](images/speakers/headshots/GeraldBachlmayr.png) Gerald Bachlmayr](abstracts/GeraldBachlmayr.md)
 - [![Harpreet Singh](images/speakers/headshots/HarpreetSingh.png) Harpreet Singh](abstracts/HarpreetSingh.md)
 - [![James Bannan](images/speakers/headshots/JamesBannan.png) James Bannan](abstracts/JamesBannan.md)
 - [![Johnny Mirza](images/speakers/headshots/JohnnyMirza.png) Johnny Mirza](abstracts/JohnnyMirza.md)

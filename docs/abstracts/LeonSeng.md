@@ -1,4 +1,4 @@
-# ![Leon's headshot](../images/speakers/headshots/LeonSeng.png){ width="200" } Leon Seng - F5
+# ![](../images/speakers/headshots/LeonSeng.png){ width="200" } Leon Seng - F5
 
 ## Gateway API - 5 things about the future of Ingress, in 5
 ### Abstract

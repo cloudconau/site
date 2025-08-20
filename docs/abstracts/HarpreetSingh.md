@@ -1,4 +1,4 @@
-# ![Harpreet's headshot](../images/speakers/headshots/HarpreetSingh.png){ width="200" } Harpreet Singh - Rokt
+# ![](../images/speakers/headshots/HarpreetSingh.png){ width="200" } Harpreet Singh - Rokt
 
 ## Building a scalable Edge Gateway Platform using Istio and Kubernetes
 

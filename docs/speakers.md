@@ -20,6 +20,7 @@ CloudCon will have sessions on the following areas:
 
 <div class="grid cards" markdown>
 
+- [![Adam Cassar](images/speakers/headshots/AdamCassar.png) Adam Cassar](abstracts/AdamCassar.md)
 - [![Adrian Cole](images/speakers/headshots/AdrianCole.png) Adrian Cole](abstracts/AdrianCole.md)
 - [![Anatoly Litovsky](images/speakers/headshots/AnatolyLitovsky.png) Anatoly Litovsky](abstracts/AnatolyLitovsky.md)
 - [![Artur Rajski](images/speakers/headshots/ArturRajski.png) Artur Rajski](abstracts/ArturRajski.md)
@@ -27,6 +28,7 @@ CloudCon will have sessions on the following areas:
 - [![Bojan Zivic](images/speakers/headshots/BojanZivic.png) Bojan Zivic](abstracts/BojanZivic.md)
 - [![Brad McCoy](images/speakers/headshots/BradMcCoy.png) Brad McCoy](abstracts/BradMcCoy.md)
 - [![Carlos Santana](images/speakers/headshots/CarlosSantana.png) Carlos Santana](abstracts/CarlosSantana.md)
+- [![Faisal Masood](images/speakers/headshots/FaisalMasood.png) Faisal Masood](abstracts/FrankFan.md)
 - [![Frank Fan](images/speakers/headshots/FrankFan.png) Frank Fan](abstracts/FrankFan.md)
 - [![Gajan Kugamoorthy](images/speakers/headshots/GajanKugamoorthy.png) Gajan Kugamoorthy](abstracts/GajanKugamoorthy.md)
 - [![Gerald Bachlmayr](images/speakers/headshots/GeraldBachlmayr.png) Gerald Bachlmayr](abstracts/GeraldBachlmayr.md)
@@ -38,6 +40,7 @@ CloudCon will have sessions on the following areas:
 - [![Michael Fornaro](images/speakers/headshots/MichaelFornaro.png) Michael Fornaro](abstracts/MichaelFornaro.md)
 - [![Miguel Elias dos Santos](images/speakers/headshots/MiguelEliasdosSantos.png) Miguel Elias dos Santos](abstracts/MiguelEliasdosSantos.md)
 - [![Paul O'Reilly](images/speakers/headshots/PaulOReilly.png) Paul O'Reilly](abstracts/PaulOReilly.md)
+- [![Praneet Chandra](image/speakers/headshots/PraneetChandra.png) Praneet Chandra](abstracts/PraneetChandra.md)
 - [![Prithvi Raj](images/speakers/headshots/PrithviRaj.png) Prithvi Raj](abstracts/PrithviRaj.md)
 - [![Sam Dwyer](images/speakers/headshots/SamDwyer.png) Sam Dwyer](abstracts/SamDwyer.md)
 - [![Tatsat (Tats) Mishra](images/speakers/headshots/TatsatMishra.png) Tatsat (Tats) Mishra](abstracts/TatsatMishra.md)

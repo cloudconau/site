@@ -11,8 +11,8 @@ hide:
 | Time  | Title | Speaker | Location |
 |---|---|---|---|
 | 8:30 - 9:30 | Delegate Registration | - | Foyer |
-| 9:30 - 12:30 | Workshop: GitOps Meets AIOps: Building Next-Gen Kubernetes Platforms | AWS | Cockle Bay Room 1 |
-| 9:30 - 12:30 | Workshop: ClickStack in Action: Building Real-Time Observability for Developers | Clickhouse | Cockle Bay Room 2 |
+| 9:30 - 12:30 | [Workshop: GitOps Meets AIOps: Building Next-Gen Kubernetes Platforms](abstracts/AWSWorkshop.md) | AWS | Cockle Bay Room 1 |
+| 9:30 - 12:30 | [Workshop: ClickStack in Action: Building Real-Time Observability for Developers](abstracts/ClickhouseWorkshop.md) | Clickhouse | Cockle Bay Room 2 |
 
 ### Afternoon Session
 
@@ -22,7 +22,7 @@ hide:
 | 13:30 - 13:45 | Opening Session | Conference Organisers | Cockle Bay |
 | | ["AI-Powered Platform Engineering: Lessons from Octopus"](abstracts/MatthewCasperson.md) | Matthew Casperson - Octopus Deploy | Cockle Bay |
 | | ["Building AI Agents with Dapr"](abstracts/WillVelida.md) | Will Velida - Microsoft | Cockle Bay |
-| | TBA | TBA | Cockle Bay |
+| | ["Don't Pay for Noise: Strategic Traffic Management to Slash Your Cloud Bills"](abstracts/AdamCassar.md) | Adam Cassar - Peakhour.IO | Cockle Bay |
 | 14:30 - 15:00 | Afternoon Tea | - | Exhibition Hall |
 | | ["Architecting Production-Ready AI Agents with Open Source on Kubernetes"](abstracts/FrankFan.md) | Frank Fan & Faisal Masood - AWS | Cockle Bay |
 | | [Maximizing Cloud Efficiency - Minor Tweaks, Bigger Impact](abstracts/PraneetChandra.md) | Praneet Chandra - CloudKeeper | Cockle Bay |
@@ -59,7 +59,9 @@ hide:
 | | ["Golden Paths or Spaghetti Pipelines: The Darth Vader of Platformers"](abstracts/PrithviRaj.md) | Prithvi Raj - Mirantis | Cockle Bay |
 | | ["Implementing custom rate limiting with Istio"](abstracts/ArturRajski.md) | Artur Rajski - Zepto | Cockle Bay |
 | | ["Simplifying Kubernetes with AKS VS Code Extension"](abstracts/TatsatMishra.md) | Tatsat Mishra - Microsoft | Cockle Bay |
+| 14:55 - 15:25 | Afternoon Tea | - | Exhibition Hall |
 | | ["Gateway API - 5 things about the future of Ingress, in 5"](abstracts/LeonSeng.md) | Leon Seng - F5 | Cockle Bay |
+| | ["Building a scalable Edge Gateway Platform using istio and kubernetes"](abstracts/HarpreetSingh.md) | Harpreet Singh - Staff Software Engineer at Rokt | Cockle Bay |
 | 14:55 - 15:25 | Afternoon Tea | - | Exhibition Hall |
 | | TBA | TBA | Cockle Bay |
 | | ["Building a scalable Edge Gateway Platform using istio and kubernetes"](abstracts/HarpreetSingh.md) | Harpreet Singh - Rokt | Cockle Bay |

@@ -72,7 +72,7 @@ hide:
 ## Additional Sponsors
 
 <div class="grid cards" markdown>
-- [![Dynatrace](images/dynatrace_logo.png) Coffee Cart & Lanyards](https://dynatrace.com)
+- [![Dynatrace](images/dynatrace_logo.png) Coffee Cart & Lanyards](https://www.dynatrace.com)
 - [![](images/placeholder.jpeg)]()
 - [![](images/placeholder.jpeg)]()
 </div>

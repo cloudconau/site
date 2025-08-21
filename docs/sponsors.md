@@ -39,7 +39,7 @@ hide:
 <div class="grid cards" markdown>
 * [![f5 logo](images/f5.png)](https://f5.com){target=_blank}
 * [![clickhouse](images/clickhouse_logo.png)](https://clickhouse.com){target=_blank}
-* [![cloudkeeper](images/cloudkeeper_logo.png)] (https://www.cloudkeeper.com/){target=_blank}
+* [![cloudkeeper](images/cloudkeeper_logo.png)](https://www.cloudkeeper.com/){target=_blank}
 <!-- * ![Sponsor CloudCon 2025](images/placeholder.jpeg) Sponsorship opportunities are still available...
 * ![Sponsor CloudCon 2025](images/placeholder.jpeg) Sponsorship opportunities are still available...-->
 </div>

@@ -1,6 +1,14 @@
 # GitOps Meets AIOps: Building Next-Gen Kubernetes Platforms
 ## AWS Workshop facilitated by Carlos Santana,  Fauzan Khan, Sheng Chen
 
+### Meet the Instructors
+
+<div class="grid cards" markdown>
+* ![](../images/speakers/headshots/CarlosSantana.png){ width="200" }<br />Carlos Santana
+* ![](../images/speakers/headshots/FaisalMasood.png){ width="200" }<br />Faisal Masood
+* ![](../images/speakers/headshots/ShengChen.png){ width="200" }<br />Sheng Chen
+</div>
+
 ### Abstract
 Master the future of cloud-native operations in this intensive hands-on workshop combining GitOps, AI troubleshooting, and EKS observability. Through expertly guided labs, participants will gain practical experience implementing GitOps workflows for infrastructure management while mastering AI-powered diagnostics with MCP server integration. You'll establish robust observability practices for EKS environments, ensuring optimal performance and reliability across your cloud infrastructure. Walk away with battle-tested best practices for automated deployments, AI-assisted troubleshooting, and comprehensive observability strategies that transform your cloud-native operations.
 

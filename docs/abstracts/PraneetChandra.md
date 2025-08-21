@@ -1,4 +1,4 @@
-# Praneet Chandra - Senior Director of Cloud Economics at CloudKeeper
+# ![](../images/speakers/headshots/PraneetChandra.png){ width="200" } Praneet Chandra - CloudKeeper
 ## Maximizing Cloud Efficiency - Minor Tweaks, Bigger Impact
 
 ### Abstract

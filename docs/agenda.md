@@ -24,7 +24,7 @@ hide:
 | 1400 - 1415 | ["Building AI Agents with Dapr"](abstracts/WillVelida.md) | Will Velida - Microsoft | Cockle Bay |
 | 1415 - 1430 | ["Don't Pay for Noise: Strategic Traffic Management to Slash Your Cloud Bills"](abstracts/AdamCassar.md) | Adam Cassar - Peakhour.IO | Cockle Bay |
 | 1430 - 1500 | Afternoon Tea | - | Exhibition Hall |
-| 1500 - 1515 | ["Architecting Production-Ready AI Agents with Open Source on Kubernetes"](abstracts/FrankFan.md) | Frank Fan & Faisal Masood - AWS | Cockle Bay |
+| 1500 - 1515 | ["Architecting Production-Ready AI Agents with Open Source on Kubernetes"](abstracts/FrankFanFaisalMasood.md) | Frank Fan & Faisal Masood - AWS | Cockle Bay |
 | 1515 - 1530 | [Maximizing Cloud Efficiency - Minor Tweaks, Bigger Impact](abstracts/PraneetChandra.md) | Praneet Chandra - CloudKeeper | Cockle Bay |
 | 1530 - 1545 | ["Death by Snowflakes"](abstracts/GeraldBachlmayr.md) | Gerald Bachlmayr - Patterned Security | Cockle Bay |
 | 1545 - 1600 | ["Our Journey in AI Platform Engineering"](abstracts/BradMcCoy.md) | Brad McCoy - Cuscal | Cockle Bay |

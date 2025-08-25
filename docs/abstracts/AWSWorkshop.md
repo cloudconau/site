@@ -5,7 +5,7 @@
 
 <div class="grid cards" markdown>
 * ![](../images/speakers/headshots/CarlosSantana.png){ width="200" }<br />Carlos Santana
-* ![](../images/speakers/headshots/FaisalMasood.png){ width="200" }<br />Faisal Masood
+* ![](../images/speakers/headshots/FauzanKhan.png){ width="200" }<br />Fauzan Khan
 * ![](../images/speakers/headshots/ShengChen.png){ width="200" }<br />Sheng Chen
 </div>
 

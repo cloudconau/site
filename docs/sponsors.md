@@ -73,16 +73,12 @@ hide:
 
 <div class="grid cards" markdown>
 - [![Dynatrace](images/dynatrace_logo.png) Coffee Cart & Lanyards](https://www.dynatrace.com)
-- [![](images/placeholder.jpeg)]()
-- [![](images/placeholder.jpeg)]()
+- [![Preacta](images/preacta.jpeg) Sponsor Dinner and T-Shirts ](https://www.preacta.com/)
 </div>
 
 | Opportunity | Price | Sponsor |
 |-------------|-------|---------|
-| Speaker / Sponsor Dinner (One only)  | $10,000 + GST AUD | [Still Available :fontawesome-solid-paper-plane:](mailto:organizers@kcdaustralia.onmicrosoft.com){ .md-button .green } |
 | Welcome Reception Sponsorship (One only) | $10,000 + GST AUD | [Still Available :fontawesome-solid-paper-plane:](mailto:organizers@kcdaustralia.onmicrosoft.com){ .md-button .green } |
-| CloudCon Sydney 2025 and Sponsor co-branded Drink Bottle for every attendee | $10,000 + GST AUD | [Still Available :fontawesome-solid-paper-plane:](mailto:organizers@kcdaustralia.onmicrosoft.com){ .md-button .green } |
-| CloudCon Sydney 2025 T-shirt with Sponsor logo on Sleeve, gift for every attendee | $20,000 + GST AUD | [Still Available :fontawesome-solid-paper-plane:](mailto:organizers@kcdaustralia.onmicrosoft.com){ .md-button .green } |
 
 !!! info "Need More Information?"
     [Download the sponsorship prospectus :fontawesome-solid-file-pdf:](files/CloudCon_Sydney_2025_sponsor_prospectus.pdf){ .md-button }

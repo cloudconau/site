@@ -22,7 +22,7 @@ hide:
 | 1330 - 1345 | Opening Session | Conference Organisers | Cockle Bay |
 | 1345 - 1400 | ["AI-Powered Platform Engineering: Lessons from Octopus"](abstracts/MatthewCasperson.md) | Matthew Casperson - Octopus Deploy | Cockle Bay |
 | 1400 - 1415 | ["Building AI Agents with Dapr"](abstracts/WillVelida.md) | Will Velida - Microsoft | Cockle Bay |
-| 1415 - 1430 | ["Don't Pay for Noise: Strategic Traffic Management to Slash Your Cloud Bills"](abstracts/AdamCassar.md) | Adam Cassar - Peakhour.IO | Cockle Bay |
+| 1415 - 1430 | ["Golden Paths or Spaghetti Pipelines: The Darth Vader of Platformers"](abstracts/PrithviRaj.md) | Prithvi Raj - Mirantis | Cockle Bay |
 | 1430 - 1500 | Afternoon Tea | - | Exhibition Hall |
 | 1500 - 1515 | ["Architecting Production-Ready AI Agents with Open Source on Kubernetes"](abstracts/FrankFanFaisalMasood.md) | Frank Fan & Faisal Masood - AWS | Cockle Bay |
 | 1515 - 1530 | [Maximizing Cloud Efficiency - Minor Tweaks, Bigger Impact](abstracts/PraneetChandra.md) | Praneet Chandra - CloudKeeper | Cockle Bay |
@@ -41,7 +41,7 @@ hide:
 | 925 - 940 | ["Observability and Agentic AI - From Observability to Answers (and new challenges)"](abstracts/JohnnyMirza.md) | Johnny Mirza - Clickhouse | Cockle Bay |
 | 940 - 1000 | ["Unseen Risks: A Security Founder’s View of Cloud, AI, and the Gaps That Still Hurt Us"](abstracts/AviShua.md) | Avi Shua - Orca Security | Cockle Bay |
 | 1000 - 1015 | ["The Idle Kubernetes Crisis: Why You're Wasting 70% of Your Compute"](abstracts/AnatolyLitovsky.md) | Anatoly Litovsky - Glasswing | Cockle Bay |
-| 1015 - 1040 | TBA | Sponsor Panel | Cockle Bay |
+| 1015 - 1040 | Sponsor Panel | Sponsor Panel | Cockle Bay |
 | 1040 - 1110 | Morning Tea | - | Exhibition Hall |
 | 1110 - 1140 | ["Anatomy of a Kubernetes Release Cycle: A Practical Guide for End Users"](abstracts/WendyHa.md) | Wendy Ha - SEEK | Cockle Bay |
 | 1140 - 1155 | ["Building an observability platform for the future"](abstracts/SamDwyer.md) | Sam Dwyer - Nine | Cockle Bay |
@@ -56,9 +56,9 @@ hide:
 | 1325 - 1345 | ["Argo at Enterprise Scale: Automating Hundreds of Cluster Deployments with GitOps"](abstracts/CarlosSantana.md) | Carlos Santana - AWS | Cockle Bay |
 | 1345 - 1400 | ["From Failure to Success: Architecting Away Cloud Native Anti-Patterns"](abstracts/BojanZivic.md) | Bojan Zivic - AWS Ambassador | Cockle Bay |
 | 1400 - 1415 | ["Gitless GitOps with FluxCD"](abstracts/MichaelFornaro.md) | Michael Fornaro - EasyGo | Cockle Bay |
-| 1415 - 1430 | ["Golden Paths or Spaghetti Pipelines: The Darth Vader of Platformers"](abstracts/PrithviRaj.md) | Prithvi Raj - Mirantis | Cockle Bay |
+| 1415 - 1430 | ["Don't Pay for Noise: Strategic Traffic Management to Slash Your Cloud Bills"](abstracts/AdamCassar.md) | Adam Cassar - Peakhour.IO | Cockle Bay |
 | 1430 - 1445 | ["Implementing custom rate limiting with Istio"](abstracts/ArturRajski.md) | Artur Rajski - Zepto | Cockle Bay |
-| 1445 - 1500 | ["Simplifying Kubernetes with AKS VS Code Extension"](abstracts/TatsatMishra.md) | Tatsat Mishra - Microsoft | Cockle Bay |
+| 1445 - 1500 | ["Cloud at Speed, Security at Scale"](abstracts/RadKanapathipillai.md ) | Rad Kanapathipillai - DevOps1 | Cockle Bay |
 | 1500 - 1530 | Afternoon Tea | - | Exhibition Hall |
 | 1530 - 1545 | ["Gateway API - 5 things about the future of Ingress, in 5"](abstracts/LeonSeng.md) | Leon Seng - F5 | Cockle Bay |
 | 1545 - 1600 | ["Building a scalable Edge Gateway Platform using istio and kubernetes"](abstracts/HarpreetSingh.md) | Harpreet Singh - Staff Software Engineer at Rokt | Cockle Bay |
@@ -66,4 +66,4 @@ hide:
 | 1615 - 1630 | ["The Self-Hosted LLMs: Secure & Scalable Inference with Kubernetes"](abstracts/GajanKugamoorthy.md) | Gajan Kugamoorthy - Vivanti | Cockle Bay |
 | 1630 - 1645 | ["The Great Internet Mersenne Prime Search: 30 Years of Citizen Science"](abstracts/JamesBannan.md) | James Bannan - CyberCX | Cockle Bay |
 | 1645 - 1655 | Raffle draw | - | Cockle Bay |
-| 1655 - 1700 | Wrapup and closing | - | Cockle Bay |
+| 1655 - 1700 | Wrap up and closing | - | Cockle Bay |

@@ -38,10 +38,10 @@ hide:
 |---|---|---|---|
 | 830 - 915 | Delegate Registration | - | Foyer |
 | 915 - 925 | Opening Session | Brendon Thwaites | Cockle Bay |
-| 925 - 940 | ["Observability and Agentic AI - From Observability to Answers (and new challenges)"](abstracts/JohnnyMirza.md) | Johnny Mirza - Clickhouse | Cockle Bay |
-| 940 - 1000 | ["Unseen Risks: A Security Founder’s View of Cloud, AI, and the Gaps That Still Hurt Us"](abstracts/AviShua.md) | Avi Shua - Orca Security | Cockle Bay |
-| 1000 - 1015 | ["The Idle Kubernetes Crisis: Why You're Wasting 70% of Your Compute"](abstracts/AnatolyLitovsky.md) | Anatoly Litovsky - Glasswing | Cockle Bay |
-| 1015 - 1040 | Sponsor Panel | Sponsor Panel | Cockle Bay |
+| 925 - 950 | Sponsor Panel | Sponsor Panel | Cockle Bay |
+| 950 - 1005 | ["Observability and Agentic AI - From Observability to Answers (and new challenges)"](abstracts/JohnnyMirza.md) | Johnny Mirza - Clickhouse | Cockle Bay |
+| 1005 - 1025 | ["Unseen Risks: A Security Founder’s View of Cloud, AI, and the Gaps That Still Hurt Us"](abstracts/AviShua.md) | Avi Shua - Orca Security | Cockle Bay |
+| 1025 - 1040 | ["The Idle Kubernetes Crisis: Why You're Wasting 70% of Your Compute"](abstracts/AnatolyLitovsky.md) | Anatoly Litovsky - Glasswing | Cockle Bay |
 | 1040 - 1110 | Morning Tea | - | Exhibition Hall |
 | 1110 - 1140 | ["Anatomy of a Kubernetes Release Cycle: A Practical Guide for End Users"](abstracts/WendyHa.md) | Wendy Ha - SEEK | Cockle Bay |
 | 1140 - 1155 | ["Building an observability platform for the future"](abstracts/SamDwyer.md) | Sam Dwyer - Nine | Cockle Bay |

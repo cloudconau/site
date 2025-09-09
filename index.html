@@ -523,7 +523,6 @@
 <div id="countdown_container">
     <!-- Display the countdown timer in an element -->
     <h3 id="demo"></h3>
-    <h3>Tickets are selling fast! <a href="https://regonsite.eventsair.com/cloudcon-2025/registration/Site/Register" target="_blank">Purchase your ticket.</a></h3>
 </div>
 
 <script>
@@ -552,7 +551,7 @@ var x = setInterval(function() {
   // If the count down is finished, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    document.getElementById("demo").innerHTML = "<a href=\"https://regonsite.eventsair.com/cloudcon-2025/registration/Site/Register\"><h3>GOT FOMO? Grab a day 2 ticket for $88!</h3></a>";
   }
 }, 1000);
 </script>

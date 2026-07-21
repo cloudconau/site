@@ -6,9 +6,7 @@ hide:
 
 # Register and Attend CloudCon 2025
 
-<div class="grid cards" markdown>
-* [Register for CloudCon 2025](https://regonsite.eventsair.com/cloudcon-2026/registration/Site/Register){ .md-button .green target=_blank }
-</div>
+[Register for CloudCon 2026](https://regonsite.eventsair.com/cloudcon-2026/registration/Site/Register){ .md-button .green target=_blank }
 
 Or scan the QR code below to register:
 

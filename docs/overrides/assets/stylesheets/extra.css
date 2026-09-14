@@ -1,20 +1,443 @@
-.md-header__button.md-logo img, .md-header__button.md-logo svg {
-    height: 5rem;
-    max-height: 5rem;
+/* ===========================================================================
+   CloudCon Sydney — shared look between the standalone homepage (index.html)
+   and the MkDocs Material pages (speakers, abstracts, agenda, ...).
+   Tokens below mirror the :root block in docs/index.html.
+   ======================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --cc-bg: #050d1c;
+  --cc-bg-2: #091525;
+  --cc-bg-card: #0d1f36;
+  --cc-blue: #0099cc;
+  --cc-blue-dark: #007aaa;
+  --cc-blue-light: #33bbee;
+  --cc-text: #ffffff;
+  --cc-text-muted: #a0b4cc;
+  --cc-text-dim: #607080;
+  --cc-border: #162840;
+  --cc-font-head: 'Space Grotesk', sans-serif;
+  --cc-font-body: 'Inter', sans-serif;
 }
+
+/* --- Material colour scheme -------------------------------------------- */
+[data-md-color-scheme="slate"] {
+  --md-hue: 210;
+
+  --md-default-bg-color:          var(--cc-bg);
+  --md-default-bg-color--light:   var(--cc-bg-2);
+  --md-default-bg-color--lighter: var(--cc-bg-card);
+  --md-default-bg-color--lightest: var(--cc-bg-card);
+
+  --md-default-fg-color:          var(--cc-text);
+  --md-default-fg-color--light:   var(--cc-text-muted);
+  --md-default-fg-color--lighter: var(--cc-text-dim);
+  --md-default-fg-color--lightest: var(--cc-border);
+
+  --md-typeset-color:             var(--cc-text);
+  --md-typeset-a-color:           var(--cc-blue-light);
+
+  --md-primary-fg-color:          var(--cc-bg);
+  --md-primary-fg-color--light:   var(--cc-bg-2);
+  --md-primary-fg-color--dark:    var(--cc-bg);
+  --md-primary-bg-color:          var(--cc-text);
+  --md-primary-bg-color--light:   var(--cc-text-muted);
+
+  --md-accent-fg-color:           var(--cc-blue-light);
+  --md-accent-fg-color--transparent: rgba(51, 187, 238, 0.1);
+  --md-accent-bg-color:           var(--cc-bg);
+
+  --md-code-bg-color:             var(--cc-bg-card);
+  --md-code-fg-color:             var(--cc-text-muted);
+
+  --md-footer-bg-color:           var(--cc-bg-2);
+  --md-footer-bg-color--dark:     var(--cc-bg);
+  --md-footer-fg-color:           var(--cc-text);
+  --md-footer-fg-color--light:    var(--cc-text-muted);
+  --md-footer-fg-color--lighter:  var(--cc-text-dim);
+}
+
+/* --- Typography --------------------------------------------------------- */
+body,
+.md-typeset {
+  font-family: var(--cc-font-body);
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6,
+.md-header__topic,
+.md-tabs__link,
+.md-nav__title {
+  font-family: var(--cc-font-head);
+  font-weight: 700;
+}
+
+.md-typeset h1 {
+  color: var(--cc-text);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.md-typeset h2 {
+  color: var(--cc-text);
+  border-bottom: 1px solid var(--cc-border);
+  padding-bottom: 0.35em;
+}
+
+.md-typeset h3 {
+  color: var(--cc-blue-light);
+}
+
+.md-typeset a:hover {
+  color: var(--cc-blue);
+}
+
+/* --- Header, tabs, footer ---------------------------------------------- */
+.md-header {
+  background-color: var(--cc-bg);
+  border-bottom: 1px solid var(--cc-border);
+  box-shadow: none;
+}
+
+.md-tabs {
+  background-color: var(--cc-bg);
+  border-bottom: 1px solid var(--cc-border);
+}
+
+.md-tabs__link {
+  opacity: 1;
+  color: var(--cc-text-muted);
+}
+
+.md-tabs__link:hover,
+.md-tabs__link--active {
+  color: var(--cc-blue-light);
+}
+
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+  height: 2.4rem;
+  max-height: 2.4rem;
+}
+
+.md-search__form {
+  background-color: var(--cc-bg-card);
+}
+
+.md-search__form:hover {
+  background-color: var(--cc-border);
+}
+
+.md-footer-meta {
+  background-color: var(--cc-bg);
+  border-top: 1px solid var(--cc-border);
+}
+
+/* --- Speaker / talk headshots on abstract pages ------------------------- */
+.md-typeset h1 img {
+  border-radius: 50%;
+  border: 2px solid var(--cc-border);
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+
+/* --- Speaker grid (speakers.md "grid cards") ---------------------------- */
+.md-typeset .grid.cards > ul > li,
+.md-typeset .grid > .card {
+  background: var(--cc-bg-card);
+  border: 1px solid var(--cc-border);
+  border-radius: 14px;
+  padding: 1.25rem 1rem;
+  text-align: center;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.md-typeset .grid.cards > ul > li:hover {
+  border-color: var(--cc-blue);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 153, 204, 0.12);
+}
+
+.md-typeset .grid.cards > ul > li img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--cc-border);
+  margin-bottom: 0.75rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.md-typeset .grid.cards > ul > li a {
+  font-family: var(--cc-font-head);
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--cc-text);
+}
+
+.md-typeset .grid.cards > ul > li:hover a {
+  color: var(--cc-blue-light);
+}
+
+/* --- Tables (sessions list, agenda) ------------------------------------ */
+.md-typeset table:not([class]) {
+  background: var(--cc-bg-card);
+  border: 1px solid var(--cc-border);
+  border-radius: 14px;
+  overflow: hidden;
+  font-size: 0.75rem;
+}
+
+.md-typeset table:not([class]) th {
+  background: var(--cc-blue);
+  color: #fff;
+  font-family: var(--cc-font-head);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.68rem;
+}
+
+.md-typeset table:not([class]) td {
+  border-top: 1px solid var(--cc-border);
+  color: var(--cc-text-muted);
+}
+
+.md-typeset table:not([class]) tr:hover {
+  background: rgba(0, 153, 204, 0.06);
+}
+
+/* --- Misc --------------------------------------------------------------- */
+.md-typeset hr {
+  border-bottom: 1px solid var(--cc-border);
+}
+
+.md-typeset blockquote {
+  border-left: 3px solid var(--cc-blue);
+  color: var(--cc-text-muted);
+}
+
 .green {
-    color: green !important;
+  color: green !important;
 }
+
 .green:hover {
-    color: white !important;
-    background-color: green !important;
-    border-color: green !important;
+  color: white !important;
+  background-color: green !important;
+  border-color: green !important;
 }
+
 .red {
-    color: red !important;
+  color: red !important;
 }
+
 .red:hover {
-    color: red !important;
-    background-color: white !important;
-    border-color: red !important;
+  color: red !important;
+  background-color: white !important;
+  border-color: red !important;
+}
+
+/* --- Shared top banner (docs/overrides/partials/header.html) ------------
+   Mirrors the fixed nav in docs/index.html so the banner does not change
+   when you click through from the homepage to a speaker page.            */
+.cc-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(5, 13, 28, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--cc-border);
+  box-shadow: none;
+  color: var(--cc-text);
+}
+
+.cc-nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 76px;
+}
+
+.cc-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.cc-brand img {
+  height: 52px;
+  width: auto;
+}
+
+.cc-brand span {
+  font-family: var(--cc-font-head);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #fff;
+  letter-spacing: -0.01em;
+}
+
+.cc-links {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.cc-links > a {
+  white-space: nowrap;
+  font-family: var(--cc-font-head);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--cc-text-muted);
+  text-decoration: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  transition: color 0.2s, background 0.2s;
+}
+
+.cc-links > a:hover {
+  color: var(--cc-blue-light);
+  background: rgba(0, 153, 204, 0.08);
+}
+
+.cc-links > a.cc-cta {
+  margin-left: 1rem;
+  white-space: nowrap;
+  background: var(--cc-blue);
+  color: #fff;
+  font-weight: 600;
+  padding: 0.5rem 1.1rem;
+}
+
+.cc-links > a.cc-cta:hover {
+  background: var(--cc-blue-dark);
+  color: #fff;
+}
+
+.cc-burger {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: var(--cc-text-muted);
+  border: 1px solid var(--cc-border);
+  border-radius: 6px;
+  padding: 0.45rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .cc-links { display: none; }
+  .cc-burger { display: flex; }
+  .cc-nav { height: 64px; }
+  .cc-brand img { height: 40px; }
+}
+
+/* Material reserves space for its own header height; match ours. */
+.md-container { padding-top: 0; }
+
+/* --- Layout: match the homepage ----------------------------------------
+   The banner above carries the navigation, so Material's left nav sidebar
+   is redundant on desktop. It stays available as the drawer on narrow
+   viewports, where the banner collapses to a hamburger.                  */
+@media screen and (min-width: 76.25em) {
+  .md-sidebar--primary { display: none; }
+}
+
+/* Homepage content column is 1200px wide; match it here. */
+.md-grid {
+  max-width: 1200px;
+}
+
+.md-main__inner {
+  margin-top: 1.5rem;
+}
+
+/* --- Abstract page header ----------------------------------------------- */
+.md-typeset .cc-heads {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.md-typeset .cc-heads img,
+.md-typeset img.cc-head {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--cc-border);
+}
+
+.md-typeset .cc-byline {
+  color: var(--cc-text-muted);
+  font-size: 0.85rem;
+  line-height: 1.9;
+  margin-top: -0.4rem;
+}
+
+.md-typeset .cc-byline strong {
+  color: var(--cc-blue-light);
+  font-family: var(--cc-font-head);
+}
+
+/* --- Share row on abstract pages ---------------------------------------- */
+.md-typeset .cc-header-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.25rem;
+}
+
+.md-typeset .cc-share-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.md-typeset .cc-share-label {
+  font-family: var(--cc-font-head);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--cc-text-dim);
+}
+
+.md-typeset a.cc-share {
+  width: 36px;
+  height: 36px;
+  border-radius: 9px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--cc-border);
+  color: var(--cc-text-muted);
+  text-decoration: none;
+  font-family: var(--cc-font-head);
+  font-weight: 700;
+  font-size: 0.85rem;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+}
+
+.md-typeset a.cc-share:hover {
+  color: #fff;
+  border-color: var(--cc-blue);
+  background: rgba(0, 153, 204, 0.18);
 }

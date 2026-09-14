@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{#-
+  Open Graph / Twitter card tags so that a shared talk page renders a proper
+  preview on LinkedIn, Facebook and X instead of a bare link. Per-page values
+  come from the front matter written by the abstract generator; everything
+  else falls back to the event defaults.
+-#}
+{% block extrahead %}
+  {% set base = config.site_url | default('', true) | trim('/') %}
+  {% set og_title = page.meta.get('title', page.title) if page.meta else page.title %}
+  {% set og_desc = page.meta.get('description', config.site_description) if page.meta else config.site_description %}
+  {% set og_image = page.meta.get('image', 'images/cloudcon2026banner.jpeg') if page.meta else 'images/cloudcon2026banner.jpeg' %}
+  {% set og_card = page.meta.get('card', 'summary_large_image') if page.meta else 'summary_large_image' %}
+
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="CloudCon Sydney 2026" />
+  <meta property="og:title" content="{{ og_title }}" />
+  {% if og_desc %}<meta property="og:description" content="{{ og_desc }}" />{% endif %}
+  <meta property="og:url" content="{{ page.canonical_url }}" />
+  <meta property="og:image" content="{{ base }}/{{ og_image }}" />
+
+  <meta name="twitter:card" content="{{ og_card }}" />
+  <meta name="twitter:title" content="{{ og_title }}" />
+  {% if og_desc %}<meta name="twitter:description" content="{{ og_desc }}" />{% endif %}
+  <meta name="twitter:image" content="{{ base }}/{{ og_image }}" />
+{% endblock %}

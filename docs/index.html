@@ -216,6 +216,33 @@
     .speaker-title { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 0.25rem; line-height: 1.4; }
     .speaker-company { font-size: 0.8rem; color: var(--blue-light); font-weight: 600; }
 
+    /* ─── Talk Cards ────────────────────────────────────────────────────── */
+    .talk-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.4rem 1.35rem;
+      transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+    .talk-card:hover { border-color: var(--blue); transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,153,204,0.12); }
+    .talk-format {
+      display: inline-block;
+      font-family: var(--font-head);
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--blue-light);
+      background: rgba(0,153,204,0.12);
+      border: 1px solid rgba(0,153,204,0.3);
+      border-radius: 999px;
+      padding: 0.25rem 0.7rem;
+      margin-bottom: 0.85rem;
+    }
+    .talk-title { font-family: var(--font-head); font-weight: 700; font-size: 1rem; color: var(--text); line-height: 1.4; margin-bottom: 0.5rem; }
+    a.talk-card, a.speaker-card { display: block; text-decoration: none; color: inherit; }
+    .talk-speakers { font-size: 0.82rem; color: var(--text-muted); line-height: 1.5; }
+
     /* ─── Schedule / Timetable ──────────────────────────────────────────── */
     .timetable { border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
     .timetable-header {
@@ -428,79 +455,6 @@
       0%, 100% { opacity: 1; transform: scale(1); }
       50% { opacity: 0.4; transform: scale(0.75); }
     }
-    /* ─── Registration disabled state ──────────────────────────────────── */
-    .btn-disabled {
-      background: rgba(255,255,255,0.06);
-      color: var(--text-muted);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      font-family: var(--font-head);
-      font-weight: 600;
-      font-size: 0.875rem;
-      padding: 0.55rem 1.35rem;
-      cursor: default;
-      pointer-events: none;
-      letter-spacing: 0.02em;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.5rem;
-      white-space: nowrap;
-    }
-    .btn-disabled-lg {
-      font-size: 1rem;
-      padding: 0.9rem 2.25rem;
-    }
-    /* Notify Modal */
-    .modal-overlay {
-      display: none;
-      position: fixed;
-      inset: 0;
-      z-index: 200;
-      background: rgba(5,13,28,0.9);
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
-      align-items: center;
-      justify-content: center;
-      padding: 1.5rem;
-    }
-    .modal-overlay.open { display: flex; }
-    .modal-content {
-      background: var(--bg-card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 2rem;
-      max-width: 420px;
-      width: 100%;
-      position: relative;
-    }
-    .modal-close {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      background: transparent;
-      border: none;
-      color: var(--text-muted);
-      cursor: pointer;
-      padding: 0.25rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: color 0.2s;
-    }
-    .modal-close:hover { color: #fff; }
-    .modal-input {
-      width: 100%;
-      padding: 0.75rem 1rem;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      color: var(--text);
-      font-family: var(--font-body);
-      font-size: 0.95rem;
-      margin: 1rem 0;
-    }
-    .modal-input:focus { outline: none; border-color: var(--blue); }
-    .modal-input::placeholder { color: var(--text-dim); }
   </style>
 </head>
 
@@ -522,12 +476,13 @@
       <div id="nav-desktop" style="display:flex; align-items:center; gap:0.25rem;">
         <a href="#about" class="nav-link">About</a>
         <a href="#speakers" class="nav-link">Speakers</a>
+        <a href="#sessions" class="nav-link">Sessions</a>
         <a href="#schedule" class="nav-link">Schedule</a>
         <a href="#sponsors" class="nav-link">Sponsors</a>
         <a href="#venue" class="nav-link">Venue</a>
         <a href="#cfp" class="nav-link">CFP</a>
         <a href="#faq" class="nav-link">FAQ</a>
-        <span class="btn-disabled" style="margin-left:1rem;"><span style="width:7px;height:7px;border-radius:50%;background:var(--blue);display:inline-block;animation:pulse 1.8s ease-in-out infinite;"></span>Registration Opening Soon</span>
+        <a href="javascript:void(0)" onclick="openRegister()" class="btn-primary" style="margin-left:1rem; font-size:0.85rem; padding:0.5rem 1.1rem;">Register Now →</a>
       </div>
 
       <!-- Hamburger (mobile only, hidden by default) -->
@@ -553,7 +508,7 @@
       📍 ICC Sydney
     </span>
     <span style="display:inline-flex; align-items:center; gap:0.4rem; font-family:var(--font-head); font-size:0.75rem; font-weight:600; color:var(--text-muted); background:rgba(255,255,255,0.05); border:1px solid var(--border); border-radius:999px; padding:0.2rem 0.85rem;">
-      🎤 26 Speakers
+      🎤 20+ Speakers
     </span>
     <span style="display:inline-flex; align-items:center; gap:0.4rem; font-family:var(--font-head); font-size:0.75rem; font-weight:600; color:var(--text-muted); background:rgba(255,255,255,0.05); border:1px solid var(--border); border-radius:999px; padding:0.2rem 0.85rem;">
       🗂 5 Tracks
@@ -576,8 +531,7 @@
         CloudCon Sydney  &nbsp;·&nbsp; 9–10 Nov 2026  &nbsp;·&nbsp; ICC Sydney
       </p>
       <div style="display:flex; gap:0.75rem; align-items:center;">
-        <span class="btn-disabled"><span style="width:7px;height:7px;border-radius:50%;background:var(--blue);display:inline-block;animation:pulse 1.8s ease-in-out infinite;"></span>Registration Opening Soon</span>
-        <a href="#notify-modal" onclick="document.getElementById('notify-modal').style.display='flex'; return false;" class="btn-notify" style="font-size:0.8rem; padding:0.5rem 1rem;">🔔 Notify Me</a>
+        <a href="javascript:void(0)" onclick="openRegister()" class="btn-primary" style="font-size:0.8rem; padding:0.5rem 1rem;">Register Now →</a>
       </div>
     </div>
   </div>
@@ -604,6 +558,7 @@
       <a href="#hero" class="nav-link" style="font-size:1.15rem; font-weight:600; color:#fff; padding:0.75rem 0.5rem; border-bottom:1px solid var(--border);" onclick="closeMobileMenu()">Home</a>
       <a href="#about" class="nav-link" style="font-size:1.15rem; font-weight:600; padding:0.75rem 0.5rem; border-bottom:1px solid var(--border);" onclick="closeMobileMenu()">About</a>
       <a href="#speakers" class="nav-link" style="font-size:1.15rem; font-weight:600; padding:0.75rem 0.5rem; border-bottom:1px solid var(--border);" onclick="closeMobileMenu()">Speakers</a>
+      <a href="#sessions" class="nav-link" style="font-size:1.15rem; font-weight:600; padding:0.75rem 0.5rem; border-bottom:1px solid var(--border);" onclick="closeMobileMenu()">Sessions</a>
       <a href="#schedule" class="nav-link" style="font-size:1.15rem; font-weight:600; padding:0.75rem 0.5rem; border-bottom:1px solid var(--border);" onclick="closeMobileMenu()">Schedule</a>
       <a href="#sponsors" class="nav-link" style="font-size:1.15rem; font-weight:600; padding:0.75rem 0.5rem; border-bottom:1px solid var(--border);" onclick="closeMobileMenu()">Sponsors</a>
       <a href="#venue" class="nav-link" style="font-size:1.15rem; font-weight:600; padding:0.75rem 0.5rem; border-bottom:1px solid var(--border);" onclick="closeMobileMenu()">Venue</a>
@@ -612,8 +567,7 @@
     </nav>
     <!-- CTA -->
     <div style="margin-top:2rem; display:flex; flex-direction:column; gap:0.75rem;">
-      <span class="btn-disabled" style="width:100%; justify-content:center; padding:1rem 2rem; font-size:1rem;"><span style="width:8px;height:8px;border-radius:50%;background:var(--blue);display:inline-block;animation:pulse 1.8s ease-in-out infinite;"></span>Registration Opening Soon</span>
-      <a href="#notify-modal" onclick="closeMobileMenu(); document.getElementById('notify-modal').style.display='flex'; return false;" class="btn-notify" style="width:100%; justify-content:center; padding:0.9rem 2rem; font-size:1rem;">🔔 Notify Me When Registration Opens</a>
+      <a href="javascript:void(0)" onclick="closeMobileMenu(); openRegister();" class="btn-primary" style="width:100%; justify-content:center; padding:0.9rem 2rem; font-size:1rem;">Register Now →</a>
     </div>
   </div>
 
@@ -670,13 +624,18 @@
 
       <!-- CTA Buttons -->
       <div style="display:flex; flex-wrap:wrap; gap:1rem; justify-content:center; margin-top:0.5rem;">
-        <span class="btn-disabled btn-disabled-lg"><span style="width:8px;height:8px;border-radius:50%;background:var(--blue);display:inline-block;animation:pulse 1.8s ease-in-out infinite;"></span>Registration Opening Soon</span>
-        <a href="#notify-modal" onclick="document.getElementById('notify-modal').style.display='flex'; return false;" class="btn-notify">
-          🔔 Notify Me
+        <a href="javascript:void(0)" onclick="openRegister()" class="btn-primary" style="font-size:1rem; padding:0.9rem 2.25rem;">
+          Register Now →
         </a>
-        <a href="https://sessionize.com/cloudcon-syd-2026/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size:1rem; padding:0.9rem 2.25rem;">
+        <a href="https://sessionize.com/cloudcon-syd-2026/" target="_blank" rel="noopener noreferrer" class="btn-notify">
           Submit a Talk →
         </a>
+      </div>
+
+      <!-- Scan to register -->
+      <div style="display:flex; align-items:center; gap:0.85rem; margin-top:0.5rem;">
+        <img src="images/registration_qr.png" alt="QR code to register for CloudCon 2026" style="width:84px; height:84px; border-radius:8px; border:1px solid var(--border); background:#fff; padding:4px;" />
+        <span style="color:var(--text-muted); font-size:0.85rem; max-width:150px; line-height:1.4;">Scan to register on your phone</span>
       </div>
 
     </div>
@@ -743,7 +702,7 @@
           <div style="font-size:2.5rem; margin-bottom:1.1rem;">🎤</div>
           <h3 style="font-family:var(--font-head); font-size:1.15rem; font-weight:700; color:var(--text); margin-bottom:0.65rem;">Real-World Talks</h3>
           <p style="font-size:0.9rem; color:var(--text-muted); line-height:1.75; margin:0;">
-            Practitioners sharing what works in production, not vendor pitches. 26 speakers across 5 tracks.
+            Practitioners sharing what works in production, not vendor pitches. 20+ speakers across 5 tracks.
           </p>
         </div>
 
@@ -956,9 +915,270 @@
 <section id="speakers" class="section section-alt reveal">
   <div class="container">
     <div class="section-tag">SPEAKERS</div>
+    <h2 class="section-title">Confirmed Speakers</h2>
+    <div class="accent-line"></div>
+    <p class="section-lead">20 practitioners confirmed for CloudCon Sydney 2026. More speakers are announced as talks are accepted.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 1.25rem; margin-top: 2.5rem;">
+
+      <a class="speaker-card" href="abstracts/2026/AdamCassarDanielDAlessandro/" data-talk="the-bot-might-be-your-customer">
+        <img src="images/speakers/headshots/AdamCassar.png" alt="Adam Cassar" loading="lazy" onerror="this.src='images/speakers/headshots/placeholder.png'">
+        <div class="speaker-name">Adam Cassar</div>
+        <div class="speaker-title">Co-Founder &amp; Head of Security Engineering</div>
+        <div class="speaker-company">Peakhour.io</div>
+      </a>
+
+      <a class="speaker-card" href="abstracts/2026/AlexEze/" data-talk="operators-as-data-why-lifecycle">
+        <img src="images/speakers/headshots/AlexEze.png" alt="Alex Eze" loading="lazy" onerror="this.src='images/speakers/headshots/placeholder.png'">
+        <div class="speaker-name">Alex Eze</div>
+        <div class="speaker-title">Infrastructure Developer</div>
+        <div class="speaker-company">NHS</div>
+      </a>
+
+      <a class="speaker-card" href="abstracts/2026/AndrewJeffree/" data-talk="argocd-16-000-apps">
+        <img src="images/speakers/headshots/AndrewJeffree.png" alt="Andrew Jeffree" loading="lazy" onerror="this.src='images/speakers/headshots/placeholder.png'">
+        <div class="speaker-name">Andrew Jeffree</div>
+        <div class="speaker-title">Senior Staff Engineer</div>
+        <div class="speaker-company">SafetyCulture</div>
+      </a>
+
+      <a class="speaker-card" href="abstracts/2026/AnupamPhoghat/" data-talk="the-telemetry-trap-building-meaningful-open">
+        <img src="images/speakers/headshots/AnupamPhoghat.png" alt="Anupam Phoghat" loading="lazy" onerror="this.src='images/speakers/headshots/placeholder.png'">
+        <div class="speaker-name">Anupam Phoghat</div>
+        <div class="speaker-title">Principal</div>
+        <div class="speaker-company">Core-X</div>
+      </a>
+
+      <a class="speaker-card" href="abstracts/2026/AshanSenevirathne/" data-talk="telstra-s-gitops-journey-scaling-reliable">
+        <img src="images/speakers/headshots/AshanSenevirathne.png" alt="Ashan Senevirathne" loading="lazy" onerror="this.src='images/speakers/headshots/placeholder.png'">
+        <div class="speaker-name">Ashan Senevirathne</div>
+        <div class="speaker-title">Technical Product Owner</div>
+        <div class="speaker-company">Telstra</div>
+      </a>
+
+      <a class="speaker-card" href="abstracts/2026/AyushGoyal/" data-talk="who-load-tests-the-load-tester">
+        <img src="images/speakers/headshots/AyushGoyal.png" alt="Ayush Goyal" loading="lazy" onerror="this.src='images/speakers/headshots/placeholder.png'">
+        <div class="speaker-name">Ayush Goyal</div>
+        <div class="speaker-title">Senior Software Engineer</div>
+        <div class="speaker-company">Grafana Labs</div>
+      </a>
+
+      <a class="speaker-card" href="abstracts/2026/CharlotteFleming/" data-talk="ai-and-platform-maturity-the-foundations">
+        <img src="images/speakers/headshots/CharlotteFleming.png" alt="Charlotte Fleming" loading="lazy" onerror="this.src='images/speakers/headshots/placeholder.png'">
+        <div class="speaker-name">Charlotte Fleming</div>
+        <div class="speaker-title">Researcher, Developer Relations</div>
+        <div class="speaker-company">Octopus Deploy</div>
+      </a>
+
+      <a class="speaker-card" href="abstracts/2026/ChrisPorter/" data-talk="cloud-native-global-load-balancing">
+        <img src="images/speakers/headshots/ChrisPorter.png" alt="Chris Porter" loading="lazy" onerror="this.src='images/speakers/headshots/placeholder.png'">
+        <div class="speaker-name">Chris Porter</div>
+        <div class="speaker-title">Principal Solutions Architect – Cloud Native</div>
+        <div class="speaker-company">Nutanix</div>
+      </a>
+
+      <a class="speaker-card" href="abstracts/2026/AdamCassarDanielDAlessandro/" data-talk="the-bot-might-be-your-customer">
+        <img src="images/speakers/headshots/DanielDAlessandro.png" alt="Daniel D'Alessandro" loading="lazy" onerror="this.src='images/speakers/headshots/placeholder.png'">
+        <div class="speaker-name">Daniel D'Alessandro</div>
+        <div class="speaker-title">Co-Founder &amp; Head of Performance and Delivery</div>
+        <div class="speaker-company">Peakhour.io</div>
+      </a>
+
+      <a class="speaker-card" href="abstracts/2026/MofesolaBabalolaHannahOlukoye/" data-talk="the-service-mesh-solving-microservice-chaos">
+        <img src="images/speakers/headshots/HannahOlukoye.png" alt="Hannah Olukoye" loading="lazy" onerror="this.src='images/speakers/headshots/placeholder.png'">
+        <div class="speaker-name">Hannah Olukoye</div>
+        <div class="speaker-title">Google Developer Expert | Engineering Manager</div>
+        <div class="speaker-company">mobile.de</div>
+      </a>
+
+      <a class="speaker-card" href="abstracts/2026/JacobTaylorVasiliosSyrakis/" data-talk="i-m-behind-seven-proxies-demystifying">
+        <img src="images/speakers/headshots/JacobTaylor.png" alt="Jacob Taylor" loading="lazy" onerror="this.src='images/speakers/headshots/placeholder.png'">
+        <div class="speaker-name">Jacob Taylor</div>
+        <div class="speaker-title">Staff Engineer</div>
+        <div class="speaker-company">Canva</div>
+      </a>
+
+      <a class="speaker-card" href="abstracts/2026/LizFongJones/" data-talk="building-a-serverless-airplane-tracker">
+        <img src="images/speakers/headshots/LizFongJones.png" alt="Liz Fong-Jones" loading="lazy" onerror="this.src='images/speakers/headshots/placeholder.png'">
+        <div class="speaker-name">Liz Fong-Jones</div>
+        <div class="speaker-title">Technical Fellow</div>
+        <div class="speaker-company">Honeycomb.io</div>
+      </a>
+
+      <a class="speaker-card" href="abstracts/2026/MichaelFornaroSamiAlakus/" data-talk="streaming-under-fire">
+        <img src="images/speakers/headshots/MichaelFornaro.png" alt="Michael Fornaro" loading="lazy" onerror="this.src='images/speakers/headshots/placeholder.png'">
+        <div class="speaker-name">Michael Fornaro</div>
+        <div class="speaker-title">Staff DevOps Engineer</div>
+        <div class="speaker-company">Easygo</div>
+      </a>
+
+      <a class="speaker-card" href="abstracts/2026/MitsuhiroShibuya/" data-talk="when-your-circuit-breaker-backfires-outlier">
+        <img src="images/speakers/headshots/MitsuhiroShibuya.png" alt="Mitsuhiro Shibuya" loading="lazy" onerror="this.src='images/speakers/headshots/placeholder.png'">
+        <div class="speaker-name">Mitsuhiro Shibuya</div>
+        <div class="speaker-title">Site Reliability Engineer</div>
+        <div class="speaker-company">Mercari</div>
+      </a>
+
+      <a class="speaker-card" href="abstracts/2026/MofesolaBabalolaHannahOlukoye/" data-talk="the-service-mesh-solving-microservice-chaos">
+        <img src="images/speakers/headshots/MofesolaBabalola.png" alt="Mofesola Babalola" loading="lazy" onerror="this.src='images/speakers/headshots/placeholder.png'">
+        <div class="speaker-name">Mofesola Babalola</div>
+        <div class="speaker-title">Staff Site Reliability Engineer</div>
+        <div class="speaker-company">Tempo</div>
+      </a>
+
+      <a class="speaker-card" href="abstracts/2026/OlgaMirensky/" data-talk="who-s-stealing-my-cpu-catching">
+        <img src="images/speakers/headshots/OlgaMirensky.png" alt="Olga Mirensky" loading="lazy" onerror="this.src='images/speakers/headshots/placeholder.png'">
+        <div class="speaker-name">Olga Mirensky</div>
+        <div class="speaker-title">Senior Staff Site Reliability Engineer</div>
+        <div class="speaker-company">Ping Identity</div>
+      </a>
+
+      <a class="speaker-card" href="abstracts/2026/OsamaOkunbo/" data-talk="the-day-i-found-out">
+        <img src="images/speakers/headshots/OsamaOkunbo.png" alt="Osama Okunbo" loading="lazy" onerror="this.src='images/speakers/headshots/placeholder.png'">
+        <div class="speaker-name">Osama Okunbo</div>
+        <div class="speaker-title">Security Engineer</div>
+        <div class="speaker-company">Immibuddy</div>
+      </a>
+
+      <a class="speaker-card" href="abstracts/2026/MichaelFornaroSamiAlakus/" data-talk="streaming-under-fire">
+        <img src="images/speakers/headshots/SamiAlakus.png" alt="Sami Alakus" loading="lazy" onerror="this.src='images/speakers/headshots/placeholder.png'">
+        <div class="speaker-name">Sami Alakus</div>
+        <div class="speaker-title">Engineering Manager</div>
+        <div class="speaker-company">Easygo</div>
+      </a>
+
+      <a class="speaker-card" href="abstracts/2026/SaurabhMishra/" data-talk="platform-patterns-for-ai-on-k8s">
+        <img src="images/speakers/headshots/SaurabhMishra.png" alt="Saurabh Mishra" loading="lazy" onerror="this.src='images/speakers/headshots/placeholder.png'">
+        <div class="speaker-name">Saurabh Mishra</div>
+        <div class="speaker-title">Lead Consultant</div>
+        <div class="speaker-company">Vodafone</div>
+      </a>
+
+      <a class="speaker-card" href="abstracts/2026/JacobTaylorVasiliosSyrakis/" data-talk="i-m-behind-seven-proxies-demystifying">
+        <img src="images/speakers/headshots/VasiliosSyrakis.png" alt="Vasilios Syrakis" loading="lazy" onerror="this.src='images/speakers/headshots/placeholder.png'">
+        <div class="speaker-name">Vasilios Syrakis</div>
+        <div class="speaker-title">Senior Systems Engineer</div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5b: Announced Sessions -->
+<section id="sessions" class="section reveal">
+  <div class="container">
+    <div class="section-tag">PROGRAM</div>
+    <h2 class="section-title">Announced Sessions</h2>
+    <div class="accent-line"></div>
+    <p class="section-lead">16 talks confirmed for 9&ndash;10 November 2026. Session times and rooms are published with the full schedule.</p>
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.25rem; margin-top: 2.5rem;">
+
+      <a class="talk-card" href="abstracts/2026/ChrisPorter/" data-talk="cloud-native-global-load-balancing">
+        <div class="talk-format">20 min</div>
+        <div class="talk-title">Cloud Native Global Load Balancing with K8gb</div>
+        <div class="talk-speakers">Chris Porter, Nutanix</div>
+      </a>
+
+      <a class="talk-card" href="abstracts/2026/LizFongJones/" data-talk="building-a-serverless-airplane-tracker">
+        <div class="talk-format">20 min</div>
+        <div class="talk-title">Building a serverless airplane tracker</div>
+        <div class="talk-speakers">Liz Fong-Jones, Honeycomb.io</div>
+      </a>
+
+      <a class="talk-card" href="abstracts/2026/OlgaMirensky/" data-talk="who-s-stealing-my-cpu-catching">
+        <div class="talk-format">20 min</div>
+        <div class="talk-title">Who's Stealing My CPU? Catching Noisy Neighbours with eBPF on Kubernetes</div>
+        <div class="talk-speakers">Olga Mirensky, Ping Identity</div>
+      </a>
+
+      <a class="talk-card" href="abstracts/2026/MitsuhiroShibuya/" data-talk="when-your-circuit-breaker-backfires-outlier">
+        <div class="talk-format">20 min</div>
+        <div class="talk-title">When your circuit breaker backfires — outlier detection in Istio and Envoy</div>
+        <div class="talk-speakers">Mitsuhiro Shibuya, Mercari</div>
+      </a>
+
+      <a class="talk-card" href="abstracts/2026/CharlotteFleming/" data-talk="ai-and-platform-maturity-the-foundations">
+        <div class="talk-format">Lightning · 5 min</div>
+        <div class="talk-title">AI and platform maturity: the foundations that help AI deliver</div>
+        <div class="talk-speakers">Charlotte Fleming, Octopus Deploy</div>
+      </a>
+
+      <a class="talk-card" href="abstracts/2026/AdamCassarDanielDAlessandro/" data-talk="the-bot-might-be-your-customer">
+        <div class="talk-format">20 min</div>
+        <div class="talk-title">The Bot Might Be Your Customer - Rethinking Traffic Management</div>
+        <div class="talk-speakers">Adam Cassar, Peakhour.io &amp; Daniel D'Alessandro, Peakhour.io</div>
+      </a>
+
+      <a class="talk-card" href="abstracts/2026/JacobTaylorVasiliosSyrakis/" data-talk="i-m-behind-seven-proxies-demystifying">
+        <div class="talk-format">20 min</div>
+        <div class="talk-title">I'm Behind Seven Proxies: Demystifying Envoy on Kubernetes</div>
+        <div class="talk-speakers">Jacob Taylor, Canva &amp; Vasilios Syrakis</div>
+      </a>
+
+      <a class="talk-card" href="abstracts/2026/AshanSenevirathne/" data-talk="telstra-s-gitops-journey-scaling-reliable">
+        <div class="talk-format">20 min</div>
+        <div class="talk-title">Telstra's GitOps Journey: Scaling Reliable Mobile Core Operations with Kubernetes</div>
+        <div class="talk-speakers">Ashan Senevirathne, Telstra</div>
+      </a>
+
+      <a class="talk-card" href="abstracts/2026/AnupamPhoghat/" data-talk="the-telemetry-trap-building-meaningful-open">
+        <div class="talk-format">20 min</div>
+        <div class="talk-title">The Telemetry Trap: Building Meaningful Open-Source Observability for Multi-Agent Systems</div>
+        <div class="talk-speakers">Anupam Phoghat, Core-X</div>
+      </a>
+
+      <a class="talk-card" href="abstracts/2026/AlexEze/" data-talk="operators-as-data-why-lifecycle">
+        <div class="talk-format">Lightning · 5 min</div>
+        <div class="talk-title">Operators as Data: Why Lifecycle is Not a Separate Problem</div>
+        <div class="talk-speakers">Alex Eze, NHS</div>
+      </a>
+
+      <a class="talk-card" href="abstracts/2026/AyushGoyal/" data-talk="who-load-tests-the-load-tester">
+        <div class="talk-format">20 min</div>
+        <div class="talk-title">Who Load-Tests the Load Tester? 25 Million VUs and Everything That Broke</div>
+        <div class="talk-speakers">Ayush Goyal, Grafana Labs</div>
+      </a>
+
+      <a class="talk-card" href="abstracts/2026/OsamaOkunbo/" data-talk="the-day-i-found-out">
+        <div class="talk-format">20 min</div>
+        <div class="talk-title">The Day I Found Out My Policies Were Off</div>
+        <div class="talk-speakers">Osama Okunbo, Immibuddy</div>
+      </a>
+
+      <a class="talk-card" href="abstracts/2026/MichaelFornaroSamiAlakus/" data-talk="streaming-under-fire">
+        <div class="talk-format">20 min</div>
+        <div class="talk-title">Streaming Under Fire</div>
+        <div class="talk-speakers">Michael Fornaro, Easygo &amp; Sami Alakus, Easygo</div>
+      </a>
+
+      <a class="talk-card" href="abstracts/2026/MofesolaBabalolaHannahOlukoye/" data-talk="the-service-mesh-solving-microservice-chaos">
+        <div class="talk-format">20 min</div>
+        <div class="talk-title">The Service Mesh: Solving Microservice Chaos (And When You Actually Need One)</div>
+        <div class="talk-speakers">Mofesola Babalola, Tempo &amp; Hannah Olukoye, mobile.de</div>
+      </a>
+
+      <a class="talk-card" href="abstracts/2026/SaurabhMishra/" data-talk="platform-patterns-for-ai-on-k8s">
+        <div class="talk-format">20 min</div>
+        <div class="talk-title">Platform Patterns for AI on K8s: Admission, Isolation &amp; Observability That Work</div>
+        <div class="talk-speakers">Saurabh Mishra, Vodafone</div>
+      </a>
+
+      <a class="talk-card" href="abstracts/2026/AndrewJeffree/" data-talk="argocd-16-000-apps">
+        <div class="talk-format">20 min</div>
+        <div class="talk-title">ArgoCD, 16,000 Apps, and a Trail of Questionable Decisions</div>
+        <div class="talk-speakers">Andrew Jeffree, SafetyCulture</div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5c: Past Speakers -->
+<section id="past-speakers" class="section section-alt reveal">
+  <div class="container">
+    <div class="section-tag">ALUMNI</div>
     <h2 class="section-title">Past Speakers (CloudCon 2025)</h2>
     <div class="accent-line"></div>
-    <p class="section-lead">27 practitioners who shared real-world cloud-native experience at CloudCon Sydney 2025.</p>
+    <p class="section-lead">Practitioners who shared real-world cloud-native experience at CloudCon Sydney 2025.</p>
     <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 1.25rem; margin-top: 2.5rem;">
 
       <div class="speaker-card">
@@ -1167,7 +1387,7 @@
     <div style="text-align:center; padding: 3.5rem 1.5rem 4rem; background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; margin-top: 2rem;">
       <div style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.6;">📅</div>
       <p style="font-family: var(--font-head); font-size: 1.35rem; font-weight: 700; color: var(--text); margin-bottom: 0.75rem;">Schedule To Be Announced</p>
-      <p style="color: var(--text-muted); font-size: 0.975rem; max-width: 480px; margin: 0 auto 1.75rem; line-height: 1.7;">Our full two-day programme is being finalised. Sessions, speakers and timings will be published here once confirmed.</p>
+      <p style="color: var(--text-muted); font-size: 0.975rem; max-width: 480px; margin: 0 auto 1.75rem; line-height: 1.7;">Talks are being announced &mdash; see <a href="#sessions" style="color:var(--blue-light);">Announced Sessions</a> for the confirmed line-up. Session times and rooms will be published here once the two-day programme is finalised.</p>
       <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(0,153,204,0.12); border: 1px solid rgba(0,153,204,0.3); border-radius: 999px; padding: 0.5rem 1.25rem;">
         <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--blue); display: inline-block; animation: pulse 1.8s ease-in-out infinite;"></span>
         <span style="font-family: var(--font-head); font-size: 0.875rem; color: var(--blue-light); font-weight: 600; letter-spacing: 0.03em;">9-10 November 2026 · ICC Sydney</span>
@@ -1788,7 +2008,7 @@
           <span class="faq-icon" id="faq-icon-4">+</span>
         </button>
         <div class="faq-answer" id="faq-answer-4">
-          <div class="faq-answer-inner">Registration for CloudCon Sydney 2026 will open shortly. Keep an eye on this page or follow us on <a href="https://www.linkedin.com/company/cloudnativesydney" target="_blank" rel="noopener noreferrer" style="color:var(--blue-light)">LinkedIn</a> for the announcement.</div>
+          <div class="faq-answer-inner">Registration is open! <a href="javascript:void(0)" onclick="openRegister()" style="color:var(--blue-light)">Register here</a>, or scan the QR code at the top of this page.</div>
         </div>
       </div>
 
@@ -1868,7 +2088,7 @@
         <p style="font-family:var(--font-head); font-weight:700; font-size:0.95rem; margin-bottom:1rem;">Contact</p>
         <a href="tel:+61455198736" style="color:var(--text-muted); font-size:0.875rem; display:block; margin-bottom:0.5rem; transition:color 0.2s;" onmouseover="this.style.color='var(--blue-light)'" onmouseout="this.style.color=''">+61 455 198 736</a>
         <a href="mailto:team@cloudcon.au" style="color:var(--text-muted); font-size:0.875rem; display:block; margin-bottom:1rem; word-break:break-all; transition:color 0.2s;" onmouseover="this.style.color='var(--blue-light)'" onmouseout="this.style.color=''">team@cloudcon.au</a>
-        <span class="btn-disabled"><span style="width:7px;height:7px;border-radius:50%;background:var(--blue);display:inline-block;animation:pulse 1.8s ease-in-out infinite;"></span>Registration Opening Soon</span>
+        <a href="javascript:void(0)" onclick="openRegister()" class="btn-primary" style="font-size:0.85rem; padding:0.5rem 1.1rem;">Register Now →</a>
       </div>
 
     </div>
@@ -1909,6 +2129,11 @@ const REGISTER_URL       = "https://regonsite.eventsair.com/cloudcon-2026/regist
 /* openCFP — opens CFP URL in new tab */
 function openCFP() {
   window.open(CFP_SESSIONIZE_URL, '_blank', 'noopener,noreferrer');
+}
+
+/* openRegister — opens registration URL in new tab */
+function openRegister() {
+  window.open(REGISTER_URL, '_blank', 'noopener,noreferrer');
 }
 
 /* switchDay — schedule day tabs */
@@ -2056,37 +2281,370 @@ function toggleFaq(i) {
   check();
 })();
 
-/* Notify Modal */
-function openNotifyModal() { document.getElementById('notify-modal').classList.add('open'); }
-function closeNotifyModal() { document.getElementById('notify-modal').classList.remove('open'); }
-function handleNotifySubmit(e) {
-  e.preventDefault();
-  var email = e.target.querySelector('input[type="email"]').value;
-  // TODO: Replace with your email service (e.g., Formspree, Mailchimp, etc.)
-  console.log('Notify request for:', email);
-  document.getElementById('notify-form').style.display = 'none';
-  document.getElementById('notify-success').style.display = 'block';
-}
 </script>
 
-<!-- Notify Modal -->
-<div id="notify-modal" class="modal-overlay" onclick="if(event.target===this) closeNotifyModal();">
-  <div class="modal-content">
-    <button class="modal-close" onclick="closeNotifyModal()" aria-label="Close">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-        <line x1="18" y1="6" x2="6" y2="18"/>
-        <line x1="6" y1="6" x2="18" y2="18"/>
+<!-- TALK MODAL START -->
+<style>
+  /* ─── Talk Modal ───────────────────────────────────────────────────── */
+  #talk-overlay {
+    position: fixed; inset: 0; z-index: 200;
+    background: rgba(3, 8, 18, 0.8);
+    backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+    display: none; align-items: center; justify-content: center;
+    padding: 2rem 1.5rem;
+    opacity: 0; transition: opacity 0.18s ease;
+  }
+  #talk-overlay.open { display: flex; opacity: 1; }
+
+  #talk-dialog {
+    position: relative;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    width: 100%; max-width: 760px;
+    max-height: 88vh;
+    display: flex; flex-direction: column;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+    transform: translateY(12px) scale(0.985);
+    transition: transform 0.18s ease;
+  }
+  #talk-overlay.open #talk-dialog { transform: none; }
+
+  #talk-close {
+    position: absolute; top: 0.9rem; right: 0.9rem;
+    width: 44px; height: 44px;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border); border-radius: 10px;
+    color: var(--text-muted); cursor: pointer;
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+  }
+  #talk-close:hover { color: var(--text); border-color: var(--blue); background: rgba(0,153,204,0.12); }
+
+  #talk-body { overflow-y: auto; padding: 2rem 2rem 1.5rem; }
+
+  .talk-modal-top {
+    display: flex; align-items: flex-start; justify-content: space-between;
+    gap: 1rem; flex-wrap: wrap; margin-bottom: 1.1rem; padding-right: 3.25rem;
+  }
+  .talk-modal-heads { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+  .talk-modal-actions { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+  .talk-share-label {
+    font-family: var(--font-head); font-size: 0.7rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim);
+    margin-right: 0.1rem;
+  }
+  .talk-share {
+    width: 36px; height: 36px; border-radius: 9px;
+    display: inline-flex; align-items: center; justify-content: center;
+    background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+    color: var(--text-muted); cursor: pointer; text-decoration: none;
+    transition: color 0.2s, border-color 0.2s, background 0.2s;
+  }
+  .talk-share:hover { color: #fff; border-color: var(--blue); background: rgba(0,153,204,0.18); }
+  .talk-share svg { width: 17px; height: 17px; }
+
+  .talk-share--x:hover  { background: #000; border-color: #2a2a2a; color: #fff; }
+  .talk-share--fb:hover { background: #1877f2; border-color: #1877f2; color: #fff; }
+
+  /* LinkedIn is the focal point: it is the action that creates something
+     that does not otherwise exist (reach), and the one a speaker comes
+     looking for. Labelled rather than icon-only so the offer is explicit. */
+  .talk-share--li {
+    width: auto; gap: 0.45rem; padding: 0 0.95rem; height: 38px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #0a66c2 0%, #2a85dd 100%);
+    border-color: rgba(42,133,221,0.6);
+    color: #fff; font-family: var(--font-head); font-weight: 700; font-size: 0.8rem;
+    box-shadow: 0 6px 22px rgba(10,102,194,0.42);
+    transition: box-shadow 0.25s ease, transform 0.2s ease, filter 0.2s ease;
+  }
+  .talk-share--li:hover {
+    background: linear-gradient(135deg, #0a66c2 0%, #2a85dd 100%);
+    border-color: rgba(42,133,221,0.8); color: #fff;
+    filter: brightness(1.08); transform: translateY(-1px);
+    box-shadow: 0 0 0 4px rgba(42,133,221,0.18), 0 10px 28px rgba(10,102,194,0.55);
+  }
+  .talk-share--li:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+
+  /* One-shot entrance: draws the eye to the actions once, then settles.
+     Deliberately not a looping sheen - persistent motion next to body copy
+     competes with reading. */
+  @keyframes cc-actions-in {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: none; }
+  }
+  .talk-modal-actions { animation: cc-actions-in 260ms ease 120ms both; }
+  #talk-fullpage-top {
+    display: inline-flex; align-items: center; gap: 0.35rem;
+    font-family: var(--font-head); font-size: 0.78rem; font-weight: 600;
+    color: var(--text-dim); text-decoration: none;
+    padding: 0.5rem 0.25rem; white-space: nowrap;
+    transition: color 0.2s ease;
+  }
+  #talk-fullpage-top:hover { color: var(--blue-light); }
+  #talk-fullpage-top:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+  #talk-copied {
+    font-size: 0.75rem; color: var(--blue-light); font-weight: 600;
+    opacity: 0; transition: opacity 0.2s;
+  }
+  #talk-copied.show { opacity: 1; }
+  .talk-modal-heads img {
+    width: 84px; height: 84px; object-fit: cover;
+    border-radius: 50%; border: 2px solid var(--border);
+  }
+  #talk-badge {
+    display: inline-block; font-family: var(--font-head);
+    font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;
+    color: var(--blue-light); background: rgba(0,153,204,0.12);
+    border: 1px solid rgba(0,153,204,0.3); border-radius: 999px;
+    padding: 0.25rem 0.7rem; margin-bottom: 0.8rem;
+  }
+  #talk-title {
+    font-family: var(--font-head); font-weight: 800; font-size: 1.5rem;
+    line-height: 1.25; color: var(--text); margin: 0 0 0.85rem;
+  }
+  .talk-modal-byline { font-size: 0.85rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem; }
+  .talk-modal-byline strong { font-family: var(--font-head); color: var(--blue-light); font-weight: 700; }
+
+  #talk-body h4 {
+    font-family: var(--font-head); font-size: 0.78rem; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.1em;
+    color: var(--text-dim); margin: 1.75rem 0 0.75rem;
+    padding-top: 1.25rem; border-top: 1px solid var(--border);
+  }
+  #talk-body h4:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }
+  #talk-body p { color: var(--text-muted); line-height: 1.75; margin: 0 0 1rem; font-size: 0.925rem; }
+  #talk-body ul { color: var(--text-muted); line-height: 1.75; margin: 0 0 1rem; padding-left: 1.2rem; font-size: 0.925rem; }
+  #talk-body li { margin-bottom: 0.4rem; }
+  #talk-body strong { color: var(--text); }
+
+  #talk-footer {
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    padding: 1rem 2rem; border-top: 1px solid var(--border);
+    background: rgba(255,255,255,0.015);
+    border-radius: 0 0 18px 18px;
+  }
+  .talk-nav-btn {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    font-family: var(--font-head); font-size: 0.82rem; font-weight: 600;
+    color: var(--text-muted); background: transparent;
+    border: 1px solid var(--border); border-radius: 8px;
+    padding: 0.5rem 0.9rem; cursor: pointer;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .talk-nav-btn:hover { color: var(--blue-light); border-color: var(--blue); }
+  #talk-fullpage { font-size: 0.82rem; color: var(--text-muted); text-decoration: none; white-space: nowrap; }
+  #talk-fullpage:hover { color: var(--blue-light); }
+
+  body.talk-open { overflow: hidden; }
+
+  @media (max-width: 640px) {
+    #talk-overlay { padding: 0; align-items: flex-end; }
+    #talk-dialog {
+      max-width: 100%; max-height: 100%; height: 100%;
+      border-radius: 0; border: none;
+      transform: translateY(100%);
+      transition: transform 0.22s ease;
+    }
+    #talk-overlay.open #talk-dialog { transform: none; }
+    #talk-body { padding: 1.5rem 1.25rem 1rem; }
+    #talk-footer { padding: 0.85rem 1.25rem; }
+    #talk-title { font-size: 1.25rem; }
+    .talk-modal-top { padding-right: 3.25rem; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    #talk-overlay, #talk-dialog { transition: none; }
+    .talk-modal-actions { animation: none; }
+  }
+</style>
+
+<div id="talk-overlay" role="dialog" aria-modal="true" aria-labelledby="talk-title" hidden>
+  <div id="talk-dialog">
+    <button id="talk-close" type="button" aria-label="Close">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <line x1="5" y1="5" x2="19" y2="19"/><line x1="19" y1="5" x2="5" y2="19"/>
       </svg>
     </button>
-    <h3 style="font-family: var(--font-head); font-weight: 700; font-size: 1.25rem; color: var(--text); margin-bottom: 0.5rem;">Get Notified</h3>
-    <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin: 0 0 1rem;">Be the first to know when registration opens for CloudCon Sydney 2026.</p>
-    <form id="notify-form" onsubmit="handleNotifySubmit(event);">
-      <input type="email" class="modal-input" placeholder="Enter your email" required />
-      <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">Notify Me</button>
-    </form>
-    <p id="notify-success" style="display: none; color: var(--blue-light); font-size: 0.875rem; margin-top: 1rem; text-align: center;">Thanks! We'll notify you when registration opens.</p>
+    <div id="talk-body"></div>
+    <div id="talk-footer">
+      <button class="talk-nav-btn" id="talk-prev" type="button">&lsaquo;&nbsp; Previous</button>
+      <span id="talk-copied">Link copied</span>
+      <button class="talk-nav-btn" id="talk-next" type="button">Next &nbsp;&rsaquo;</button>
+    </div>
   </div>
 </div>
 
+<script type="application/json" id="talk-data">[{"hash":"cloud-native-global-load-balancing","path":"abstracts/2026/ChrisPorter/","title":"Cloud Native Global Load Balancing with K8gb","badge":"20 min","format":"Full length talk (20 minutes)","abstract":"<p>In this session, learn how organisations big and small can provide availability for Kubernetes apps between multiple datacenters, cities and even across the globe!</p><p>k8gb is an open source global load balancer that recently moved from CNCF sandbox to incubating. Its a powerful tool that works seamlessly with kubernetes resources to provide availability for disperse environments.</p>","speakers":[{"name":"Chris Porter","role":"Principal Solutions Architect – Cloud Native, Nutanix","img":"images/speakers/headshots/ChrisPorter.png","bio":"<p>Chris Porter (he/him) is a Brit masquerading as an Australian, who specialises in cloud native technologies as a Principal Solutions Architect at Nutanix. Despite his British roots, he can correctly pronounces \"data\" and \"router\", but struggles with the use of Z instead of S in words such as \"specialises\". Chris' career in IT spans many decades, working in both end-user and vendor roles, including a 4 year stint at AWS prior to joining Nutanix. He has spoken at many events across the globe, and delights in communicating technical concepts to audiences. Outside of work, you might find him singing karaoke, cycling his road bike, following F1 and Coventry City FC, driving his kids to various sports activities, or tinkering with his homelab.</p>"}]},{"hash":"building-a-serverless-airplane-tracker","path":"abstracts/2026/LizFongJones/","title":"Building a serverless airplane tracker","badge":"20 min","format":"Lightning Talk (5 mins) / Full length talk (20 minutes)","abstract":"<p>I live in Ashfield, under the flightpath of the SYD 34L RICHMOND departure SID. The jets roar directly over my house, but I want to learn about the cool airplanes that are about to come overhead so I can pop outside and planespot, before they're already gone. I built a fully serverless pipeline to notify me of planes via an IoT LED display, and would love to show and tell.</p>","speakers":[{"name":"Liz Fong-Jones","role":"Technical Fellow, Honeycomb.io","img":"images/speakers/headshots/LizFongJones.png","bio":"<p>Liz is a developer advocate, labor and ethics organizer, and Site Reliability Engineer (SRE) with over two decades of experience. She is currently a Technical Fellow at honeycomb.io, and previously was an SRE working on products ranging from the Google Cloud Load Balancer to Google Flights.</p>"}]},{"hash":"who-s-stealing-my-cpu-catching","path":"abstracts/2026/OlgaMirensky/","title":"Who's Stealing My CPU? Catching Noisy Neighbours with eBPF on Kubernetes","badge":"20 min","format":"Full length talk (20 minutes)","abstract":"<p>Your pod's CPU usage looks green. Requests and limits are set correctly, and kubectl top shows nothing alarming. Yet application latency is spiking. The hidden cause? A noisy neighbour sharing the same node is winning scheduling, and standard Kubernetes metrics are completely blind to it.</p><p>Standard metrics track CPU utilisation and throttling, but they cannot measure CPU contention - the delay an application experiences waiting in the kernel run-queue to get CPU time. Building on Netflix's eBPF research into measuring kernel run-queue latency, this talk bridges the gap between raw eBPF code and a practical Kubernetes pattern, complete with monitoring dashboards.</p><p>I'll walk through deploying an eBPF collector via a Kubernetes DaemonSet that aggregates scheduling latency directly inside the kernel with minimal overhead, then export these metrics into Prometheus and explore them on live dashboards.</p><p>You'll leave with an open-source end-to-end pattern you can deploy in your own clusters, along with an understanding of how eBPF opens up visibility into other invisible node-level bottlenecks - from disk I/O queuing to memory contention.</p>","speakers":[{"name":"Olga Mirensky","role":"Senior Staff Site Reliability Engineer, Ping Identity","img":"images/speakers/headshots/OlgaMirensky.png","bio":"<p>Olga is a Senior Staff SRE at Ping Identity with deep roots in Kubernetes, GitOps, FinOps, performance and cloud-native systems. She has spent her career building platforms and developer tooling across large enterprises in tech and financial services industries. When she's not working on side projects or tinkering on her never-ending side projects, or playing with new DGX Spark, she is either running half marathons with friends or camping in the woods.</p>"}]},{"hash":"when-your-circuit-breaker-backfires-outlier","path":"abstracts/2026/MitsuhiroShibuya/","title":"When your circuit breaker backfires — outlier detection in Istio and Envoy","badge":"20 min","format":"Full length talk (20 minutes)","abstract":"<p>We turned on a circuit breaker to make one of our services more reliable. Minutes later it was making things worse, and not only there: errors spread to services that had nothing to do with the change, and traffic kept concentrating onto fewer and fewer pods until they were overwhelmed and crashed. The safety net we had just added had become the problem. Yet nothing was really misconfigured: the setting looked reasonable and passed every automated policy check. What caused the incident was how three things interacted: how the mesh ejects unhealthy pods, how traffic then shifts onto the pods that remain, and what clients do when requests start to fail. Each piece was doing its job; together, they caused a cascade. And the one signal that would have made it obvious was not being collected.</p><p>This talk uses that real incident to show how those pieces interact, and then turns to the practical side: how Istio's outlier detection actually behaves, and why Envoy calls it passive health checking rather than circuit breaking. We will look at the settings that make it dangerous, how to combine it with the right load balancing and a retry budget so it contains a failure instead of spreading it, and how to make it observable. You will leave knowing how to use outlier detection safely, without it causing the very failures it is meant to prevent. For anyone running Istio and Envoy on Kubernetes, with no deep service-mesh knowledge required.</p>","speakers":[{"name":"Mitsuhiro Shibuya","role":"Site Reliability Engineer, Mercari","img":"images/speakers/headshots/MitsuhiroShibuya.png","bio":"<p>Mitsuhiro Shibuya is a Tokyo-based Site Reliability Engineer with nearly a decade of experience dedicated to the art of keeping complex systems running. He began his career as a Backend Engineer with a lasting love for Ruby, and keeps that passion alive through modest contributions to open-source projects. Cat enthusiast.</p>"}]},{"hash":"ai-and-platform-maturity-the-foundations","path":"abstracts/2026/CharlotteFleming/","title":"AI and platform maturity: the foundations that help AI deliver","badge":"Lightning · 5 min","format":"Lightning Talk (5 mins)","abstract":"<p>AI has spread rapidly across development and delivery practices, with the benefits teams report differing widely. The question worth asking is what separates the teams seeing real gains from those left with more noise than value. Drawing on Octopus Deploy's Future of Platform Engineering research report, alongside the broader AI literature, this talk makes the case that the platform foundation beneath AI determines whether it pays off.</p><p>We found that the more mature platforms are also the ones reporting positive AI impact on software delivery speed and stability, organizational performance, and strong positive associations with job satisfaction and leadership direction. This aligns with DORA's finding that AI amplifies existing strengths when added to a well-designed system, compounding its value.</p><p>The more interesting finding is where that impact does and doesn't reach. Teams reporting a positive impact of AI on delivery speed and stability, legacy modernization, and organizational performance are more likely to be high performers (i.e., delivering on goals). But that same benefit did not extend to how work actually feels: reported AI impact showed no comparable improvement in work-life balance or wellbeing (i.e., burnout). Therefore, the gains are landing on delivery and organizational outcomes, but not on the people actually doing the work, which is worth noting.</p><p>The session connects these findings in broader research, providing a clear perspective on where AI investments are actually delivering results.</p><p>Topics include:</p><ul><li>The positive impact of AI on delivery speed and stability, and organizational performance for mature platforms, correlates with platform goal delivery.</li><li>The association between AI impact and higher job satisfaction and leadership direction, but not with well-being or work-life balance.</li></ul>","speakers":[{"name":"Charlotte Fleming","role":"Researcher, Developer Relations, Octopus Deploy","img":"images/speakers/headshots/CharlotteFleming.png","bio":"<p>Charlotte Fleming is a Researcher in Developer Relations at Octopus Deploy, where she leads research into AI adoption, Platform Engineering, and Continuous Delivery practices. With a PhD in Neuroscience, she brings analytical precision to software development research. She authors Octopus Deploy's AI Pulse and Platform Engineering Pulse reports.</p>"}]},{"hash":"the-bot-might-be-your-customer","path":"abstracts/2026/AdamCassarDanielDAlessandro/","title":"The Bot Might Be Your Customer - Rethinking Traffic Management","badge":"20 min","format":"Full length talk (20 minutes)","abstract":"<p>Automated traffic used to be easy to reason about. A person was a customer; a bot was something to block. That model no longer works.</p><p>A search crawler may bring you business. An AI shopping agent may be acting for a real customer. A partner might call your API thousands of times a day. The same application is also dealing with scrapers, credential stuffing, residential proxy networks and bots running full browsers. They can look similar at the edge, but they should not receive the same response.</p><p>This talk is about making that decision. I'll show how route, account outcomes, network fingerprints, bot signals, cache state and recent behaviour can be used to group traffic without pretending they prove identity. We will then decide what to do with it: let it through, slow it down, serve it from cache, move it to an API, challenge it or block it.</p><p>The examples come from operating these controls in production: IP-based limits defeated by address rotation, useful crawlers overwhelming origins, full-page caching absorbing Layer 7 attacks, and policies that reduced cost without treating every unusual client as an attacker.</p><p>Traffic management is no longer a human-versus-bot filter. It is a way to decide what work a request may do and how much of your application it may consume.</p>","speakers":[{"name":"Adam Cassar","role":"Co-Founder & Head of Security Engineering, Peakhour.io","img":"images/speakers/headshots/AdamCassar.png","bio":"<p>Adam Cassar is Co-Founder and Head of Security Engineering at Peakhour. He has spent more than 20 years working in large-scale infrastructure and software development.</p><p>His work focuses on traffic that is difficult to classify and expensive to get wrong: automated clients, residential proxies, abusive APIs, aggressive crawlers and Layer 7 attacks. He builds and operates controls spanning bot management, network fingerprinting, rate limiting, application security, caching and origin protection.</p><p>Adam speaks and writes about the practical trade-offs in these systems, particularly how to control automation without mistaking a technical signal for identity or blocking useful traffic.</p>"},{"name":"Daniel D'Alessandro","role":"Co-Founder & Head of Performance and Delivery, Peakhour.io","img":"images/speakers/headshots/DanielDAlessandro.png","bio":"<p>Daniel is co-founder of Peakhour.io, an Australian CDN and web application security platform. He has more than 25 years' experience across software development, web performance, cloud infrastructure and application security.</p><p>His current focus is bot and traffic management, including browser and network fingerprinting, residential proxy detection, rate limiting and techniques for identifying abusive automated traffic at the edge. He works closely with organisations dealing with the practical impact of bots, from infrastructure cost and performance problems through to credential stuffing, scraping and application abuse.</p>"}]},{"hash":"i-m-behind-seven-proxies-demystifying","path":"abstracts/2026/JacobTaylorVasiliosSyrakis/","title":"I'm Behind Seven Proxies: Demystifying Envoy on Kubernetes","badge":"20 min","format":"Full length talk (20 minutes)","abstract":"<p>Envoy has become one of the most important building blocks in the cloud-native ecosystem. It powers service meshes, API gateways, ingress controllers and countless bespoke networking platforms through the combination of it's rich feature set paired with runtime reconfiguration through xDS. Yet for many engineers, Envoy remains a black box hidden behind projects like Istio or Envoy Gateway.</p><p>This session is designed for Kubernetes practitioners who want to understand Envoy itself. We'll start by building a mental model of Envoy's architecture, explaining the core configuration resources—listeners, filter chains, routes and clusters—and how requests flow through them. From there we'll explore practical features including HTTP connection management, TLS, extension points and the xDS APIs that enable dynamic configuration.</p><p>Armed with those fundamentals, we'll examine how Kubernetes projects such as Istio and Envoy Gateway assemble these primitives into higher-level platforms, before showing how you can build your own Envoy-powered solutions using native Kubernetes concepts.</p><p>We'll finish with two production case studies that demonstrate how these patterns can be applied to solve real networking problems at scale.</p>","speakers":[{"name":"Jacob Taylor","role":"Staff Engineer, Canva","img":"images/speakers/headshots/JacobTaylor.png","bio":"<p>Jake is a senior network engineer at Canva with over 9 years of experience in the field. He currently yells at Bazel a lot and occasionally builds network infrastructure. Previously, having worked at organisations such as NTT, AWS, and Atlassian, he has been exposed to a variety of different networks and codebases. When he's not looking at a computer, you can find him cooking, walking, playing video games, and shooting arrows at targets with his bow.</p>"},{"name":"Vasilios Syrakis","role":"Senior Systems Engineer","img":"images/speakers/headshots/VasiliosSyrakis.png","bio":"<p>You may remember Vasilios from his viral layoff video where he reflected on the edge infrastructure that he built over 8 years at Atlassian. He's worked extensively with Envoy Proxy, built an xDS control-plane from scratch, open-sourced it, and used it to power complex requirements across teams. In recent years he joined the cult of Rust. Outside the 9-5, he occasionally does live-streams and produces tech content. Soon to be a Dad, and uses Neovim BTW.</p>"}]},{"hash":"telstra-s-gitops-journey-scaling-reliable","path":"abstracts/2026/AshanSenevirathne/","title":"Telstra's GitOps Journey: Scaling Reliable Mobile Core Operations with Kubernetes","badge":"20 min","format":"Full length talk (20 minutes)","abstract":"<p>Modern telecommunications networks operate some of the largest distributed systems in Australia, where reliability and operational consistency are critical.</p><p>As Telstra expanded its cloud-native mobile core on Kubernetes, the challenge was no longer deploying applications. It was onboarding, operating, upgrading, and recovering hundreds of applications consistently without scaling operational effort linearly.</p><p>This talk shares our GitOps journey using Kubernetes, Flux, OpenTelemetry, and reusable platform abstractions to standardise onboarding, observability, and lifecycle management. We'll discuss how declarative workflows reduced deployment lead times, eliminated configuration drift, improved operational reliability, and enabled self-service consumption of common platform capabilities.</p>","speakers":[{"name":"Ashan Senevirathne","role":"Technical Product Owner, Telstra","img":"images/speakers/headshots/AshanSenevirathne.png","bio":"<p>Senior technology leader at Telstra with 10+ years of experience in telecommunications, cloud-native transformation, and site reliability engineering. Driving the design and delivery of cloud-scale architectures for 5G and networks, with a focus on automation and zero-touch operations. Proven expertise in Kubernetes, GitOps, and network orchestration, alongside a strong track record in optimizing release engineering and fostering cross-functional collaboration. Active contributor to global industry forums including CNCF and Linux Foundation Networking.</p>"}]},{"hash":"the-telemetry-trap-building-meaningful-open","path":"abstracts/2026/AnupamPhoghat/","title":"The Telemetry Trap: Building Meaningful Open-Source Observability for Multi-Agent Systems","badge":"20 min","format":"Full length talk (20 minutes)","abstract":"<p>Monitoring traditional microservices is a solved problem. We know how to track CPU, memory, and latency. But how do you monitor the \"reasoning\" of an AI agent? If you can't measure the cost and logic of your GenAI workflows, you are flying blind in production.</p><p>This session explores how to adapt the open-source monitoring tools you already use (like Prometheus and OpenTelemetry) to track the health, infrastructure costs, and hallucination rates of agentic workflows. We will treat LLM calls just like any other microservice dependency, demonstrating how to instrument an AI pipeline, map token usage directly to infrastructure spend, and build dashboards that expose both system health and AI accuracy in real-time. Stop guessing what your agents are doing and start monitoring them like proper engineering assets.</p>","speakers":[{"name":"Anupam Phoghat","role":"Principal, Core-X","img":"images/speakers/headshots/AnupamPhoghat.png","bio":"<p>International speaker with experience speaking at events like Google NEXT in Vegas and I/O connect in China. I am a seasoned IT professional with years of experience in the field. I have extensive experience with Google Cloud Platform (GCP), and currently hold many professional level Google Cloud and other industry certifications. I am also certified in Kubernetes, and have a deep understanding of the core concepts of Kubernetes.</p><p>I am passionate about sharing my knowledge with others by actively participating in GCP community. This also helps me in my own learning and growth in the field.</p>"}]},{"hash":"operators-as-data-why-lifecycle","path":"abstracts/2026/AlexEze/","title":"Operators as Data: Why Lifecycle is Not a Separate Problem","badge":"Lightning · 5 min","format":"Lightning Talk (5 mins)","abstract":"<p>The Operator Lifecycle Manager (OLM) exists because operators were binaries. When the unit of distribution is a binary, lifecycle management—versioning, upgrade, deprecation, deletion—becomes a separate problem that requires a separate system. OLM is that system, but it adds its own controllers, its own CRDs, its own installation lifecycle. The overhead is the necessary cost of the binary constraint.</p><p>This lightning talk introduces a different model: operators as declarative patterns—data. When the operator is data, lifecycle is not an external concern to manage; it is a built-in property of the artifact. The same model that bakes test results into the artifact at publish time (simulation gates + e2e gates, proof in OCI annotations) governs upgrade, deprecation, and deletion. The proof of correctness travels with the artifact. There is no separate lifecycle system to install. You write patterns, and the lifecycle comes with them.</p><p>We'll walk through the full lifecycle: creation (ork validate), testing (ork simulate and ork e2e), distribution (ork push with gated proof), consumption (ork inspect and ork pull), upgrade (versioned imports), deprecation (metadata with migration target), and deletion (declarative deletion protection). The lifecycle is not a process running somewhere; it is a record traveling with the artifact.</p><p>Attendees will leave with a new mental model: when the operator is data, lifecycle is not a separate problem. The same artifact that carries your operator carries its own proof, its own version, and its own deprecation notice. The lifecycle is expressed in the same language as the operator itself.</p><p>This talk will be demonstrated with Orkestra, an open-source declarative runtime for Kubernetes behaviour (Apache 2.0), built on a single idea: operator behaviour is different from operator infrastructure. You declare the behaviour; the runtime provides the infrastructure. All examples and code are from https://github.com/orkspace/orkestra.</p>","speakers":[{"name":"Alex Eze","role":"Infrastructure Developer, NHS","img":"images/speakers/headshots/AlexEze.png","bio":"<p>Alex Eze is the creator of Orkestra, a declarative runtime for Kubernetes operators. A former clinical pharmacist, currently an Infrastructure Engineer with the NHS. He taught himself to code after a job interview revealed a gap in his Kubernetes operator knowledge — and spent the following years closing that gap, not just for himself but for every engineer who has looked at operator boilerplate and walked away. Orkestra is the result: a runtime built on the idea that your CRD is enough.</p>"}]},{"hash":"who-load-tests-the-load-tester","path":"abstracts/2026/AyushGoyal/","title":"Who Load-Tests the Load Tester? 25 Million VUs and Everything That Broke","badge":"20 min","format":"Full length talk (20 minutes)","abstract":"<p>I am going to talk about the method and lessons learned from pushing Grafana's load testing platform, k6, to its limits. The goal was to sustain 25 million concurrent users hitting a real streaming media API. Scaling from 1.6 million to 25 million virtual users became a tour through every layer of the infrastructure that quietly assumes nobody will ever push it this hard.</p><p>Along the way, we ran into several unexpected bottlenecks:</p><ul><li>A single load balancer saturated quite early so we had to use a Network Load Balancer</li><li>Receiving nodes hit kernel-level walls like CPU pinned on softirq, then the connection table filling up, before application code became the bottleneck</li><li>Our mathematical distribution algorithms started taking ~80-90 seconds up from 100-200 ms</li><li>Several control plane issues &amp; timeouts</li></ul><p>Every failure whether in networking, the Linux kernel, distributed algorithms, or the control plane exposed a different scalability assumption that only became visible at extreme scale.</p><p>This talk is a practical walkthrough of what broke, how we diagnosed each issue, and the engineering changes that ultimately allowed us to reach 25 million concurrent virtual users.</p>","speakers":[{"name":"Ayush Goyal","role":"Senior Software Engineer, Grafana Labs","img":"images/speakers/headshots/AyushGoyal.png","bio":"<p>Ayush is a Senior Software Engineer at Grafana Labs. Previously, he was working at Postman and before that, he was the CTO at Anveshan and earlier an SWE at Rippling. He is passionate about building software and also tinkers around with hardware at times. He is also a certified scuba diver and an avid coin collector.</p>"}]},{"hash":"the-day-i-found-out","path":"abstracts/2026/OsamaOkunbo/","title":"The Day I Found Out My Policies Were Off","badge":"20 min","format":"Full length talk (20 minutes)","abstract":"<p>The first time I actually checked which of my admission policies were enforcing, the answer was: not all of them. Namespaces had been excluded that I didn't exclude. Policies I'd set to enforce were sitting in warn only. A webhook config had been deleted and nobody had said anything. The dashboards were green the whole time. I'd been reporting \"enforced\" and enforcing a fraction of it.</p><p>This talk is how that happens, and how I rebuilt it so it stuck.</p><p>It happens because engineers don't hate security, they hate a denied deploy at 2am with a Rego error they can't read. So they take the one-line exit: failurePolicy: Ignore, a namespace exclusion, or deleting the ValidatingWebhookConfiguration outright. If the bypass is cheaper than complying, they bypass. That's not their failure, it's mine — I priced the control wrong, and then I didn't watch whether it stayed on.</p><p>The rebuild had two halves. First, roll out like you mean to keep it: audit mode before anything, so a policy shows me what it would block before it blocks a real deploy; then warn, then enforce, one namespace at a time; exceptions self-service and expiring, because one that never expires is a hole with paperwork on it. Second, and the part I'd missed entirely: instrument the bypasses. A change to a webhook config pages me now. Namespace exclusions get diffed against a baseline. The quiet disable is the one that hurts, so I stopped trusting the dashboard and started watching the exits.</p><p>You'll leave able to check whether your own controls are actually on — most people have never looked — and roll them out so they're still enforcing in six months instead of switched off in six weeks.</p>","speakers":[{"name":"Osama Okunbo","role":"Security Engineer, Immibuddy","img":"images/speakers/headshots/OsamaOkunbo.png","bio":"<p>Osama Okunbo is a Security and Software Engineer who consults with startups and scaleups on cloud-native security, Kubernetes, and compliance. Before working in tech he competed as a professional Judoka and studied Sports Science, eventually transitioning into software engineering through game development before finding his way into cloud security and DevSecOps. He leads security engineering at Immibuddy, a Canadian immigration SaaS platform, and holds consulting clients in fintech and retail. He is the author of Hello Fraud: Why You Feel Like an Impostor in Tech and How to Fix It and holds an MSc in Cybersecurity from the University of Suffolk. He spoke at Manchester Tech Festival 2025 on agentic AI in cybersecurity.</p>"}]},{"hash":"streaming-under-fire","path":"abstracts/2026/MichaelFornaroSamiAlakus/","title":"Streaming Under Fire","badge":"20 min","format":"Full length talk (20 minutes)","abstract":"<p>What's it like to run a platform where something is always on fire? At Kick, live streams are someone's livelihood and live has no undo, no maintenance windows, no second takes, millions watching. At that scale the happy path is a lie; traffic spikes, dependencies fail, deploys go sideways, and someone out there is always trying to knock you over. This is a war-stories talk from the team keeping it online. You'll see how we decide what \"working\" actually means when you can't protect everything equally.</p>","speakers":[{"name":"Michael Fornaro","role":"Staff DevOps Engineer, Easygo","img":"images/speakers/headshots/MichaelFornaro.png","bio":"<p>I'm an OSS enthusiast, I contribute to multiple CNCF projects and co-founded Raspbernetes &amp; K8s@Home. I'm passionate about sharing knowledge, self-development, and inspiring the community about cloud technology's vast potential.</p>"},{"name":"Sami Alakus","role":"Engineering Manager, Easygo","img":"images/speakers/headshots/SamiAlakus.png","bio":"<p>Engineering at Kick. Building resilient platforms and teams at scale.</p>"}]},{"hash":"the-service-mesh-solving-microservice-chaos","path":"abstracts/2026/MofesolaBabalolaHannahOlukoye/","title":"The Service Mesh: Solving Microservice Chaos (And When You Actually Need One)","badge":"20 min","format":"Full length talk (20 minutes)","abstract":"<p>Microservices promised speed and independence, but for many SREs and developers, they delivered network complexity. Suddenly, we're all part-time network engineers. We have to code retry logic, timeouts, and circuit breakers into every service. We struggle to get uniform \"golden signal\" metrics. And how do we enforce that all 50 of our polyglot services are communicating securely over mTLS?</p><p>This is the \"microservice tax,\" and it's holding us back.</p><p>Enter the service mesh. You've heard the buzzwords—Istio, Linkerd—but what is a mesh, and what problems does it actually solve? Is it just hype, or is it the key to taming a complex distributed system?</p><p>In this session, we'll cut through the marketing and get to the SRE truth. We'll start with the \"why,\" exploring the common, painful reliability and security challenges that emerge at scale. Then, we'll dive into the \"what,\" demystifying the service mesh architecture (control plane vs. data plane) and explaining how it moves all that complex networking logic out of your application and into a sidecar proxy.</p><p>We'll cover the three pillars of a mesh:</p><ul><li><strong>Reliability:</strong> Automatic retries, timeouts, and circuit breakers.</li><li><strong>Observability:</strong> Uniform metrics, logging, and tracing for every call.</li><li><strong>Security:</strong> Automatic mTLS (encryption) and fine-grained authorization policies.</li></ul><p>But a mesh isn't a silver bullet. It adds a new layer of complexity and operational overhead. The most important question is: \"Do we need one?\" We'll finish with a practical, hype-free decision-making framework to help you decide when (or if) the benefits of a mesh outweigh the costs for your team. You'll leave knowing what a mesh is, what it does, and whether you should go home and install one.</p>","speakers":[{"name":"Mofesola Babalola","role":"Staff Site Reliability Engineer, Tempo","img":"images/speakers/headshots/MofesolaBabalola.png","bio":"<p>Mofesola Babalola is a Site Reliability Engineering leader at Tempo Software, where he manages large-scale observability and service mesh systems powering over 5 million users. With deep experience in Kubernetes, Istio, ArgoCD, and AWS, he specializes in building resilient platforms and automating infrastructure at scale. Mofesola has led the adoption of ambient mesh in production, and actively works on improving GitOps workflows for platform teams. He is passionate about sharing practical insights from the intersection of DevOps, SRE, and developer experience.</p>"},{"name":"Hannah Olukoye","role":"Google Developer Expert | Engineering Manager, mobile.de","img":"images/speakers/headshots/HannahOlukoye.png","bio":"<p>Hannah is an Engineering Manager who translates complex software engineering concepts into people-centric strategies. Leveraging her background as a software engineer and Google Developer Expert for Android, she now focuses on building platforms that reduce developer cognitive load and empower teams to move faster and safely.</p><p>She remains an active mentor, technical writer, and international speaker dedicated to motivating others, especially women, to pursue careers in tech.</p>"}]},{"hash":"platform-patterns-for-ai-on-k8s","path":"abstracts/2026/SaurabhMishra/","title":"Platform Patterns for AI on K8s: Admission, Isolation & Observability That Work","badge":"20 min","format":"Full length talk (20 minutes)","abstract":"<p>Saurabh presents proven platform patterns for running AI workloads reliably on Kubernetes, with a focus on admission, isolation, and observability. The session dives into how admission policies enforce GPU quotas and fairness, how tenant isolation prevents noisy-neighbor issues, and how observability patterns make AI jobs debuggable in production. Attendees will see real manifests, admission controllers, and quota strategies that balance utilization and stability. The talk also covers service mesh–based isolation with Istio, OpenTelemetry-driven tracing and metrics, and policy frameworks for safe multi-tenant AI. Lessons learned include preventing GPU starvation, reducing operator toil, and improving user trust in GenAI platforms. The session closes with a practical checklist attendees can adopt immediately, built entirely with CNCF and open source tools.</p>","speakers":[{"name":"Saurabh Mishra","role":"Lead Consultant, Vodafone","img":"images/speakers/headshots/SaurabhMishra.png","bio":"<p>Saurabh Mishra is a Cloud Evangelist (GDE) with a deep passion for cloud architecture, DevOps, and automation. He actively engages with the global tech community, sharing insights on cloud-native technologies, security best practices, and multi-cloud strategies. As an experienced speaker and mentor, Saurabh has delivered sessions at conferences, meetups, and workshops, helping teams accelerate their cloud adoption, modernization and optimization journeys.</p>"}]},{"hash":"argocd-16-000-apps","path":"abstracts/2026/AndrewJeffree/","title":"ArgoCD, 16,000 Apps, and a Trail of Questionable Decisions","badge":"20 min","format":"Full length talk (20 minutes)","abstract":"<p>In 2024, we moved to GitOps with ArgoCD. Production went smoothly; development… less so. Turns out managing 16,000 apps on a single cluster is a bit more than the maintainers likely imagined.</p><p>This talk walks through ArgoCD's scaling assumptions, how they hold up, where they break down, and the workarounds that kept things running. Some of those workarounds were good engineering. Some involved making implementation details load-bearing.</p>","speakers":[{"name":"Andrew Jeffree","role":"Senior Staff Engineer, SafetyCulture","img":"images/speakers/headshots/AndrewJeffree.png","bio":"<p>Andrew is a Senior Staff Platform Engineer at SafetyCulture in Sydney, where he owns GitOps, developer platforms, and the various Kubernetes controllers holding them together. He spends most of his work time on ArgoCD, custom operators, and the kind of platform infrastructure that becomes interesting when it stops working. Outside of work, he spends most of his free time reading, averaging over 50 books a year.</p>"}]}]</script>
+<script>
+(function () {
+  var TALKS = JSON.parse(document.getElementById('talk-data').textContent);
+  var byHash = {};
+  TALKS.forEach(function (t, i) { t.index = i; byHash[t.hash] = t; });
+
+  var overlay  = document.getElementById('talk-overlay');
+  var dialog   = document.getElementById('talk-dialog');
+  var body     = document.getElementById('talk-body');
+  var closeBtn = document.getElementById('talk-close');
+  var prevBtn  = document.getElementById('talk-prev');
+  var nextBtn  = document.getElementById('talk-next');
+  var copied   = document.getElementById('talk-copied');
+
+  var ICON = {
+    li:   '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.82-2.05 3.75-2.05 4 0 4.75 2.6 4.75 6V21h-4v-5.5c0-1.3-.03-3-1.85-3-1.85 0-2.13 1.44-2.13 2.9V21H9z"/></svg>',
+    x:    '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 3h3.1l-6.8 7.8L21.8 21h-6.2l-4.9-6.3L5.1 21H2l7.3-8.3L2.5 3h6.3l4.4 5.8zM16.4 19.2h1.7L7.7 4.7H5.9z"/></svg>',
+    fb:   '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H8v3h2v7h3v-7h3l1-3h-4v-2c0-.6.4-1 1-1z"/></svg>',
+    link: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.5.5l2-2a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7.5-.5l-2 2a5 5 0 0 0 7 7l1-1"/></svg>'
+  };
+
+  var current = null;        // talk currently shown
+  var lastFocus = null;      // element to restore focus to on close
+  var pushedState = false;   // did we add a history entry for this modal?
+
+  function render(talk) {
+    var heads = talk.speakers.map(function (s) {
+      return '<img src="' + s.img + '" alt="' + s.name + '" loading="lazy">';
+    }).join('');
+
+    var byline = talk.speakers.map(function (s) {
+      return '<strong>' + s.name + '</strong> &middot; ' + s.role;
+    }).join('<br>');
+
+    var bios = talk.speakers.map(function (s) {
+      var label = talk.speakers.length === 1 ? 'Speaker Bio' : 'About ' + s.name;
+      return '<h4>' + label + '</h4>' + s.bio;
+    }).join('');
+
+    var pageUrl = new URL(talk.path, location.origin + location.pathname).href;
+    var shareText = talk.title + ' — ' +
+      talk.speakers.map(function (s) { return s.name; }).join(' & ') +
+      ' at CloudCon Sydney 2026';
+    var u = encodeURIComponent(pageUrl), t = encodeURIComponent(shareText);
+
+    var actions =
+      '<div class="talk-modal-actions">' +
+        '<a class="talk-share talk-share--li" target="_blank" rel="noopener" aria-label="Share on LinkedIn" ' +
+          'href="https://www.linkedin.com/sharing/share-offsite/?url=' + u + '">' +
+          ICON.li + '<span>Share on LinkedIn</span></a>' +
+        '<a class="talk-share talk-share--x" target="_blank" rel="noopener" aria-label="Share on X" ' +
+          'href="https://twitter.com/intent/tweet?url=' + u + '&text=' + t + '">' + ICON.x + '</a>' +
+        '<a class="talk-share talk-share--fb" target="_blank" rel="noopener" aria-label="Share on Facebook" ' +
+          'href="https://www.facebook.com/sharer/sharer.php?u=' + u + '">' + ICON.fb + '</a>' +
+        '<button class="talk-share" type="button" id="talk-copy" aria-label="Copy link" ' +
+          'data-url="' + pageUrl + '">' + ICON.link + '</button>' +
+        '<a id="talk-fullpage-top" href="' + talk.path + '">Full page &#8599;</a>' +
+      '</div>';
+
+    body.innerHTML =
+      '<div class="talk-modal-top"><div class="talk-modal-heads">' + heads + '</div>' + actions + '</div>' +
+      '<div id="talk-badge">' + talk.badge + '</div>' +
+      '<h2 id="talk-title">' + talk.title + '</h2>' +
+      '<div class="talk-modal-byline">' + byline + '</div>' +
+      '<h4>Abstract</h4>' + talk.abstract + bios;
+
+    body.scrollTop = 0;
+    current = talk;
+  }
+
+  function open(talk, viaHistory) {
+    if (!talk) return;
+    if (!current) lastFocus = document.activeElement;
+    render(talk);
+    overlay.hidden = false;
+    // next frame so the transition runs
+    requestAnimationFrame(function () { overlay.classList.add('open'); });
+    document.body.classList.add('talk-open');
+    closeBtn.focus();
+
+    if (!viaHistory) {
+      var url = '#talk=' + talk.hash;
+      if (pushedState) { history.replaceState({ talk: talk.hash }, '', url); }
+      else { history.pushState({ talk: talk.hash }, '', url); pushedState = true; }
+    }
+  }
+
+  function close(viaHistory) {
+    if (!current) return;
+    overlay.classList.remove('open');
+    document.body.classList.remove('talk-open');
+    current = null;
+    setTimeout(function () { if (!current) overlay.hidden = true; }, 200);
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+    if (!viaHistory && pushedState) { pushedState = false; history.back(); }
+    else { pushedState = false; }
+  }
+
+  function step(delta) {
+    if (!current) return;
+    open(TALKS[(current.index + delta + TALKS.length) % TALKS.length]);
+  }
+
+  // Cards keep their href, so they still work without JS and stay crawlable.
+  document.addEventListener('click', function (e) {
+    var card = e.target.closest ? e.target.closest('[data-talk]') : null;
+    if (!card) return;
+    if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return; // let new-tab through
+    e.preventDefault();
+    open(byHash[card.getAttribute('data-talk')]);
+  });
+
+  body.addEventListener('click', function (e) {
+    var btn = e.target.closest ? e.target.closest('#talk-copy') : null;
+    if (!btn) return;
+    var url = btn.getAttribute('data-url');
+    var done = function () {
+      copied.classList.add('show');
+      setTimeout(function () { copied.classList.remove('show'); }, 1800);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(url).then(done, function () {});
+    } else {
+      var ta = document.createElement('textarea');
+      ta.value = url; document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); done(); } catch (err) {}
+      document.body.removeChild(ta);
+    }
+  });
+
+  closeBtn.addEventListener('click', function () { close(); });
+  prevBtn.addEventListener('click', function () { step(-1); });
+  nextBtn.addEventListener('click', function () { step(1); });
+
+  overlay.addEventListener('click', function (e) {
+    if (e.target === overlay) close();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (!current) return;
+    if (e.key === 'Escape') { close(); return; }
+    if (e.key === 'ArrowLeft')  { step(-1); return; }
+    if (e.key === 'ArrowRight') { step(1); return; }
+    if (e.key !== 'Tab') return;
+    // focus trap
+    var f = dialog.querySelectorAll('a[href], button, [tabindex]:not([tabindex="-1"])');
+    if (!f.length) return;
+    var first = f[0], last = f[f.length - 1];
+    if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+    else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+  });
+
+  // Back/forward and shared deep links
+  window.addEventListener('popstate', function (e) {
+    var hash = (e.state && e.state.talk) || fromHash();
+    if (hash && byHash[hash]) { open(byHash[hash], true); }
+    else { close(true); }
+  });
+
+  function fromHash() {
+    var m = /(?:^|#|&)talk=([^&]+)/.exec(location.hash);
+    return m ? m[1] : null;
+  }
+
+  var initial = fromHash();
+  if (initial && byHash[initial]) open(byHash[initial], true);
+})();
+</script>
+<!-- TALK MODAL END -->
 </body>
 </html>

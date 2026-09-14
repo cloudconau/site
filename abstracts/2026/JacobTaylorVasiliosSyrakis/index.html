@@ -1,0 +1,483 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Envoy has become one of the most important building blocks in the cloud-native ecosystem.">
+      
+      
+      
+        <link rel="canonical" href="https://cloudcon.au/abstracts/2026/JacobTaylorVasiliosSyrakis/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>I'm Behind Seven Proxies: Demystifying Envoy on Kubernetes - CloudCon 2026</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../overrides/assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  
+  
+  
+  
+  
+
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="CloudCon Sydney 2026" />
+  <meta property="og:title" content="I'm Behind Seven Proxies: Demystifying Envoy on Kubernetes" />
+  <meta property="og:description" content="Envoy has become one of the most important building blocks in the cloud-native ecosystem." />
+  <meta property="og:url" content="https://cloudcon.au/abstracts/2026/JacobTaylorVasiliosSyrakis/" />
+  <meta property="og:image" content="https://cloudcon.au/images/speakers/headshots/JacobTaylor.png" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="I'm Behind Seven Proxies: Demystifying Envoy on Kubernetes" />
+  <meta name="twitter:description" content="Envoy has become one of the most important building blocks in the cloud-native ecosystem." />
+  <meta name="twitter:image" content="https://cloudcon.au/images/speakers/headshots/JacobTaylor.png" />
+
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#im-behind-seven-proxies-demystifying-envoy-on-kubernetes" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      <header class="md-header cc-header" data-md-component="header">
+  <nav class="cc-nav" aria-label="Header">
+
+    <a href="/" class="cc-brand">
+      <img src="../../../images/cloudcon_logo.png" alt="CloudCon Logo" />
+      <span>CloudCon Sydney</span>
+    </a>
+
+    <div class="cc-links">
+      <a href="/#about">About</a>
+      <a href="/#speakers">Speakers</a>
+      <a href="/#sessions">Sessions</a>
+      <a href="/#schedule">Schedule</a>
+      <a href="/#sponsors">Sponsors</a>
+      <a href="/#venue">Venue</a>
+      <a href="/#cfp">CFP</a>
+      <a href="/#faq">FAQ</a>
+      <a href="https://regonsite.eventsair.com/cloudcon-2026/registration/Site/Register"
+         target="_blank" rel="noopener noreferrer" class="cc-cta">Register Now →</a>
+    </div><label class="cc-burger" for="__drawer" aria-label="header.menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="18" x2="21" y2="18" />
+      </svg>
+    </label>
+
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="CloudCon 2026" class="md-nav__button md-logo" aria-label="CloudCon 2026" data-md-component="logo">
+      
+  <img src="../../../images/cloudcon_logo.png" alt="logo">
+
+    </a>
+    CloudCon 2026
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Info
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../speakers/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Speakers
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../sponsors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sponsors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../agenda/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Agenda
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://regonsite.eventsair.com/cloudcon-2026/registration/Site/Register" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Register / Attend
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#abstract" class="md-nav__link">
+    <span class="md-ellipsis">
+      Abstract
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-jacob-taylor" class="md-nav__link">
+    <span class="md-ellipsis">
+      About Jacob Taylor
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#about-vasilios-syrakis" class="md-nav__link">
+    <span class="md-ellipsis">
+      About Vasilios Syrakis
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<div class="cc-header-row">
+<div class="cc-heads">
+<p><img alt="Jacob Taylor" class="cc-head" src="../../../images/speakers/headshots/JacobTaylor.png" /> <img alt="Vasilios Syrakis" class="cc-head" src="../../../images/speakers/headshots/VasiliosSyrakis.png" /></p>
+</div>
+<div class="cc-share-row"><span class="cc-share-label">Share</span><a class="cc-share cc-share--li" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fcloudcon.au%2Fabstracts%2F2026%2FJacobTaylorVasiliosSyrakis%2F" target="_blank" rel="noopener" aria-label="Share on LinkedIn">in</a><a class="cc-share cc-share--x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fcloudcon.au%2Fabstracts%2F2026%2FJacobTaylorVasiliosSyrakis%2F&amp;text=I%27m%20Behind%20Seven%20Proxies%3A%20Demystifying%20Envoy%20on%20Kubernetes%20%E2%80%94%20Jacob%20Taylor%20%26%20Vasilios%20Syrakis%20at%20CloudCon%20Sydney%202026" target="_blank" rel="noopener" aria-label="Share on X">X</a><a class="cc-share cc-share--fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcloudcon.au%2Fabstracts%2F2026%2FJacobTaylorVasiliosSyrakis%2F" target="_blank" rel="noopener" aria-label="Share on Facebook">f</a></div>
+</div>
+<h1 id="im-behind-seven-proxies-demystifying-envoy-on-kubernetes">I'm Behind Seven Proxies: Demystifying Envoy on Kubernetes</h1>
+<p class="cc-byline">
+<strong>Jacob Taylor</strong> &middot; Staff Engineer, Canva<br><strong>Vasilios Syrakis</strong> &middot; Senior Systems Engineer
+</p>
+<p><em>Full length talk (20 minutes)</em></p>
+<h2 id="abstract">Abstract</h2>
+<p>Envoy has become one of the most important building blocks in the cloud-native ecosystem. It powers service meshes, API gateways, ingress controllers and countless bespoke networking platforms through the combination of it's rich feature set paired with runtime reconfiguration through xDS. Yet for many engineers, Envoy remains a black box hidden behind projects like Istio or Envoy Gateway.</p>
+<p>This session is designed for Kubernetes practitioners who want to understand Envoy itself. We'll start by building a mental model of Envoy's architecture, explaining the core configuration resources—listeners, filter chains, routes and clusters—and how requests flow through them. From there we'll explore practical features including HTTP connection management, TLS, extension points and the xDS APIs that enable dynamic configuration.</p>
+<p>Armed with those fundamentals, we'll examine how Kubernetes projects such as Istio and Envoy Gateway assemble these primitives into higher-level platforms, before showing how you can build your own Envoy-powered solutions using native Kubernetes concepts.</p>
+<p>We'll finish with two production case studies that demonstrate how these patterns can be applied to solve real networking problems at scale.</p>
+<h2 id="about-jacob-taylor">About Jacob Taylor</h2>
+<p>Jake is a senior network engineer at Canva with over 9 years of experience in the field. He currently yells at Bazel a lot and occasionally builds network infrastructure. Previously, having worked at organisations such as NTT, AWS, and Atlassian, he has been exposed to a variety of different networks and codebases. When he's not looking at a computer, you can find him cooking, walking, playing video games, and shooting arrows at targets with his bow.</p>
+<h2 id="about-vasilios-syrakis">About Vasilios Syrakis</h2>
+<p>You may remember Vasilios from his viral layoff video where he reflected on the edge infrastructure that he built over 8 years at Atlassian. He's worked extensively with Envoy Proxy, built an xDS control-plane from scratch, open-sourced it, and used it to power complex requirements across teams. In recent years he joined the cult of Rust. Outside the 9-5, he occasionally does live-streams and produces tech content. Soon to be a Dad, and uses Neovim BTW.</p>
+<hr />
+<p><a href="../../../speakers/">&larr; All speakers</a></p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/company/cloudnativesydney" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "navigation.tabs.sticky"], "search": "../../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>

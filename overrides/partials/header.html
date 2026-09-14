@@ -1,0 +1,41 @@
+{#-
+  CloudCon Sydney header for the MkDocs Material pages.
+
+  Mirrors the fixed nav bar in docs/index.html so that clicking through from
+  the homepage to a speaker/abstract page keeps the same banner. The section
+  links point back at the homepage anchors, since those sections only exist
+  on the homepage itself.
+-#}
+<header class="md-header cc-header" data-md-component="header">
+  <nav class="cc-nav" aria-label="{{ lang.t('header') }}">
+
+    <a href="{{ '/' | url }}" class="cc-brand">
+      <img src="{{ 'images/cloudcon_logo.png' | url }}" alt="CloudCon Logo" />
+      <span>CloudCon Sydney</span>
+    </a>
+
+    <div class="cc-links">
+      <a href="{{ '/' | url }}#about">About</a>
+      <a href="{{ '/' | url }}#speakers">Speakers</a>
+      <a href="{{ '/' | url }}#sessions">Sessions</a>
+      <a href="{{ '/' | url }}#schedule">Schedule</a>
+      <a href="{{ '/' | url }}#sponsors">Sponsors</a>
+      <a href="{{ '/' | url }}#venue">Venue</a>
+      <a href="{{ '/' | url }}#cfp">CFP</a>
+      <a href="{{ '/' | url }}#faq">FAQ</a>
+      <a href="https://regonsite.eventsair.com/cloudcon-2026/registration/Site/Register"
+         target="_blank" rel="noopener noreferrer" class="cc-cta">Register Now →</a>
+    </div>
+
+    {#- Keeps Material's drawer reachable on narrow viewports -#}
+    <label class="cc-burger" for="__drawer" aria-label="{{ lang.t('header.menu') }}">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <line x1="3" y1="6" x2="21" y2="6" />
+        <line x1="3" y1="12" x2="21" y2="12" />
+        <line x1="3" y1="18" x2="21" y2="18" />
+      </svg>
+    </label>
+
+  </nav>
+</header>

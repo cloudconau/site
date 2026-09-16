@@ -6,11 +6,11 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="The first time I actually checked which of my admission policies were enforcing, the answer was: not all of them. Namespaces had been excluded that I didn't exclude.">
+        <meta name="description" content="The Operator Lifecycle Manager (OLM) exists because operators were binaries. When the unit of distribution is a binary, lifecycle management—versioning, upgrade, deprecation,…">
       
       
       
-        <link rel="canonical" href="https://cloudcon.au/abstracts/2026/OsamaOkunbo/">
+        <link rel="canonical" href="https://cloudcon.au/abstracts/2026/AlexEze/">
       
       
       
@@ -20,7 +20,7 @@
     
     
       
-        <title>The Day I Found Out My Policies Were Off - CloudCon 2026</title>
+        <title>Operators as Data: Why Lifecycle is Not a Separate Problem - CloudCon 2026</title>
       
     
     
@@ -63,15 +63,15 @@
 
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="CloudCon Sydney 2026" />
-  <meta property="og:title" content="The Day I Found Out My Policies Were Off" />
-  <meta property="og:description" content="The first time I actually checked which of my admission policies were enforcing, the answer was: not all of them. Namespaces had been excluded that I didn't exclude." />
-  <meta property="og:url" content="https://cloudcon.au/abstracts/2026/OsamaOkunbo/" />
-  <meta property="og:image" content="https://cloudcon.au/images/speakers/headshots/OsamaOkunbo.png" />
+  <meta property="og:title" content="Operators as Data: Why Lifecycle is Not a Separate Problem" />
+  <meta property="og:description" content="The Operator Lifecycle Manager (OLM) exists because operators were binaries. When the unit of distribution is a binary, lifecycle management—versioning, upgrade, deprecation,…" />
+  <meta property="og:url" content="https://cloudcon.au/abstracts/2026/AlexEze/" />
+  <meta property="og:image" content="https://cloudcon.au/images/speakers/headshots/AlexEze.png" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="The Day I Found Out My Policies Were Off" />
-  <meta name="twitter:description" content="The first time I actually checked which of my admission policies were enforcing, the answer was: not all of them. Namespaces had been excluded that I didn't exclude." />
-  <meta name="twitter:image" content="https://cloudcon.au/images/speakers/headshots/OsamaOkunbo.png" />
+  <meta name="twitter:title" content="Operators as Data: Why Lifecycle is Not a Separate Problem" />
+  <meta name="twitter:description" content="The Operator Lifecycle Manager (OLM) exists because operators were binaries. When the unit of distribution is a binary, lifecycle management—versioning, upgrade, deprecation,…" />
+  <meta name="twitter:image" content="https://cloudcon.au/images/speakers/headshots/AlexEze.png" />
 
   </head>
   
@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#the-day-i-found-out-my-policies-were-off" class="md-skip">
+        <a href="#operators-as-data-why-lifecycle-is-not-a-separate-problem" class="md-skip">
           Skip to content
         </a>
       
@@ -378,23 +378,23 @@
 
 <div class="cc-header-row">
 <div class="cc-heads">
-<p><img alt="Osama Okunbo" class="cc-head" src="../../../images/speakers/headshots/OsamaOkunbo.png" /></p>
+<p><img alt="Alex Eze" class="cc-head" src="../../../images/speakers/headshots/AlexEze.png" /></p>
 </div>
-<div class="cc-share-row"><span class="cc-share-label">Share</span><a class="cc-share cc-share--li" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fcloudcon.au%2Fabstracts%2F2026%2FOsamaOkunbo%2F" target="_blank" rel="noopener" aria-label="Share on LinkedIn">in</a><a class="cc-share cc-share--x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fcloudcon.au%2Fabstracts%2F2026%2FOsamaOkunbo%2F&amp;text=The%20Day%20I%20Found%20Out%20My%20Policies%20Were%20Off%20%E2%80%94%20Osama%20Okunbo%20at%20CloudCon%20Sydney%202026" target="_blank" rel="noopener" aria-label="Share on X">X</a><a class="cc-share cc-share--fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcloudcon.au%2Fabstracts%2F2026%2FOsamaOkunbo%2F" target="_blank" rel="noopener" aria-label="Share on Facebook">f</a></div>
+<div class="cc-share-row"><span class="cc-share-label">Share</span><a class="cc-share cc-share--li" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fcloudcon.au%2Fabstracts%2F2026%2FAlexEze%2F" target="_blank" rel="noopener" aria-label="Share on LinkedIn">in</a><a class="cc-share cc-share--x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fcloudcon.au%2Fabstracts%2F2026%2FAlexEze%2F&amp;text=Operators%20as%20Data%3A%20Why%20Lifecycle%20is%20Not%20a%20Separate%20Problem%20%E2%80%94%20Alex%20Eze%20at%20CloudCon%20Sydney%202026" target="_blank" rel="noopener" aria-label="Share on X">X</a><a class="cc-share cc-share--fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcloudcon.au%2Fabstracts%2F2026%2FAlexEze%2F" target="_blank" rel="noopener" aria-label="Share on Facebook">f</a></div>
 </div>
-<h1 id="the-day-i-found-out-my-policies-were-off">The Day I Found Out My Policies Were Off</h1>
+<h1 id="operators-as-data-why-lifecycle-is-not-a-separate-problem">Operators as Data: Why Lifecycle is Not a Separate Problem</h1>
 <p class="cc-byline">
-<strong>Osama Okunbo</strong> &middot; Security Engineer, Immibuddy
+<strong>Alex Eze</strong> &middot; Infrastructure Developer, NHS
 </p>
-<p><em>Full length talk (20 minutes)</em></p>
+<p><em>Lightning Talk (5 mins)</em></p>
 <h2 id="abstract">Abstract</h2>
-<p>The first time I actually checked which of my admission policies were enforcing, the answer was: not all of them. Namespaces had been excluded that I didn't exclude. Policies I'd set to enforce were sitting in warn only. A webhook config had been deleted and nobody had said anything. The dashboards were green the whole time. I'd been reporting "enforced" and enforcing a fraction of it.</p>
-<p>This talk is how that happens, and how I rebuilt it so it stuck.</p>
-<p>It happens because engineers don't hate security, they hate a denied deploy at 2am with a Rego error they can't read. So they take the one-line exit: failurePolicy: Ignore, a namespace exclusion, or deleting the ValidatingWebhookConfiguration outright. If the bypass is cheaper than complying, they bypass. That's not their failure, it's mine — I priced the control wrong, and then I didn't watch whether it stayed on.</p>
-<p>The rebuild had two halves. First, roll out like you mean to keep it: audit mode before anything, so a policy shows me what it would block before it blocks a real deploy; then warn, then enforce, one namespace at a time; exceptions self-service and expiring, because one that never expires is a hole with paperwork on it. Second, and the part I'd missed entirely: instrument the bypasses. A change to a webhook config pages me now. Namespace exclusions get diffed against a baseline. The quiet disable is the one that hurts, so I stopped trusting the dashboard and started watching the exits.</p>
-<p>You'll leave able to check whether your own controls are actually on — most people have never looked — and roll them out so they're still enforcing in six months instead of switched off in six weeks.</p>
+<p>The Operator Lifecycle Manager (OLM) exists because operators were binaries. When the unit of distribution is a binary, lifecycle management—versioning, upgrade, deprecation, deletion—becomes a separate problem that requires a separate system. OLM is that system, but it adds its own controllers, its own CRDs, its own installation lifecycle. The overhead is the necessary cost of the binary constraint.</p>
+<p>This lightning talk introduces a different model: operators as declarative patterns—data. When the operator is data, lifecycle is not an external concern to manage; it is a built-in property of the artifact. The same model that bakes test results into the artifact at publish time (simulation gates + e2e gates, proof in OCI annotations) governs upgrade, deprecation, and deletion. The proof of correctness travels with the artifact. There is no separate lifecycle system to install. You write patterns, and the lifecycle comes with them.</p>
+<p>We'll walk through the full lifecycle: creation (ork validate), testing (ork simulate and ork e2e), distribution (ork push with gated proof), consumption (ork inspect and ork pull), upgrade (versioned imports), deprecation (metadata with migration target), and deletion (declarative deletion protection). The lifecycle is not a process running somewhere; it is a record traveling with the artifact.</p>
+<p>Attendees will leave with a new mental model: when the operator is data, lifecycle is not a separate problem. The same artifact that carries your operator carries its own proof, its own version, and its own deprecation notice. The lifecycle is expressed in the same language as the operator itself.</p>
+<p>This talk will be demonstrated with Orkestra, an open-source declarative runtime for Kubernetes behaviour (Apache 2.0), built on a single idea: operator behaviour is different from operator infrastructure. You declare the behaviour; the runtime provides the infrastructure. All examples and code are from https://github.com/orkspace/orkestra.</p>
 <h2 id="speaker-bio">Speaker Bio</h2>
-<p>Osama Okunbo is a Security and Software Engineer who consults with startups and scaleups on cloud-native security, Kubernetes, and compliance. Before working in tech he competed as a professional Judoka and studied Sports Science, eventually transitioning into software engineering through game development before finding his way into cloud security and DevSecOps. He leads security engineering at Immibuddy, a Canadian immigration SaaS platform, and holds consulting clients in fintech and retail. He is the author of Hello Fraud: Why You Feel Like an Impostor in Tech and How to Fix It and holds an MSc in Cybersecurity from the University of Suffolk. He spoke at Manchester Tech Festival 2025 on agentic AI in cybersecurity.</p>
+<p>Alex Eze is the creator of Orkestra, a declarative runtime for Kubernetes operators. A former clinical pharmacist, currently an Infrastructure Engineer with the NHS. He taught himself to code after a job interview revealed a gap in his Kubernetes operator knowledge — and spent the following years closing that gap, not just for himself but for every engineer who has looked at operator boilerplate and walked away. Orkestra is the result: a runtime built on the idea that your CRD is enough.</p>
 <hr />
 <p><a href="../../../speakers/">&larr; All speakers</a></p>
 

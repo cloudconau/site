@@ -39,3 +39,7 @@ Pre-conference workshops. Times and details to be announced.
 | 3:40 - 4:00 | [When your circuit breaker backfires — outlier detection in Istio and Envoy](abstracts/2026/MitsuhiroShibuya.md) | Mitsuhiro Shibuya, Mercari | 20 min |
 | 4:00 - 4:05 | [Building a serverless airplane tracker](abstracts/2026/LizFongJones.md) | Liz Fong-Jones, Honeycomb.io | 5 min (lightning) |
 | 4:05 - 4:30 | Prizes and Closing | Conference Organisers | 25 min |
+
+---
+
+The CloudCon Sydney 2025 agenda is kept in the [2025 agenda archive](agenda_2025.md).

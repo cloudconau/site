@@ -18,14 +18,19 @@ theme:
 #   - social
 plugins: []
 site_url: https://cloudcon.au
+# Mirrors the homepage menu, so the drawer on speaker and talk pages offers
+# the same destinations as the banner and the homepage's own mobile menu.
 nav:
   - Home: "/"
-  - Info: "info.md"
-  - Speakers: "speakers.md"
-  - Sponsors: "sponsors.md"
-  - Agenda: "agenda.md"
-  - About: "about.md"
-  - Register / Attend: "https://regonsite.eventsair.com/cloudcon-2026/registration/Site/Register"
+  - About: "/#about"
+  - Speakers: "/#speakers"
+  - Sessions: "/#sessions"
+  - Schedule: "/#schedule"
+  - Sponsors: "/#sponsors"
+  - Venue: "/#venue"
+  - CFP: "/#cfp"
+  - FAQ: "/#faq"
+  - Register Now: "https://regonsite.eventsair.com/cloudcon-2026/registration/Site/Register"
 
 extra:
   social:

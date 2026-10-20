@@ -18,7 +18,7 @@ card: "summary"
 **Liz Fong-Jones** &middot; Technical Fellow, Honeycomb.io
 </p>
 
-*Lightning Talk (5 mins) / Full length talk (20 minutes)*
+*Lightning Talk (5 mins)*
 
 ## Abstract
 

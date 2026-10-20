@@ -6,7 +6,7 @@ hide:
 
 # Schedule
 
-Single track: every talk is in the same room.
+Single track: every talk is in the Cockle Bay Room at ICC Sydney.
 
 ## Day 1: Monday 9 November 2026
 
@@ -16,6 +16,8 @@ Pre-conference workshops. Times and details to be announced.
 
 | Time | Session | Speakers | Length |
 |---|---|---|---|
+| 8:30 - 9:15 | *Registration* | | 45 min |
+| 9:15 - 9:40 | Welcome | Conference Organisers | 25 min |
 | 9:40 - 10:00 | [Who's Stealing My CPU? Catching Noisy Neighbours with eBPF on Kubernetes](abstracts/2026/OlgaMirensky.md) | Olga Mirensky, Ping Identity | 20 min |
 | 10:00 - 10:20 | [I'm Behind Seven Proxies: Demystifying Envoy on Kubernetes](abstracts/2026/JacobTaylorVasiliosSyrakis.md) | Jacob Taylor, Canva & Vasilios Syrakis | 20 min |
 | 10:20 - 10:40 | [Cloud Native Global Load Balancing with K8gb](abstracts/2026/WohShonPhoon.md) | Woh Shon Phoon | 20 min |
@@ -36,3 +38,4 @@ Pre-conference workshops. Times and details to be announced.
 | 3:20 - 3:40 | [Building Hybrid AI Systems: Edge Inferencing Meets Cloud Reasoning](abstracts/2026/ShengChenFrankFan.md) | Sheng Chen & Frank Fan, AWS | 20 min |
 | 3:40 - 4:00 | [When your circuit breaker backfires — outlier detection in Istio and Envoy](abstracts/2026/MitsuhiroShibuya.md) | Mitsuhiro Shibuya, Mercari | 20 min |
 | 4:00 - 4:05 | [Building a serverless airplane tracker](abstracts/2026/LizFongJones.md) | Liz Fong-Jones, Honeycomb.io | 5 min (lightning) |
+| 4:05 - 4:30 | Prizes and Closing | Conference Organisers | 25 min |

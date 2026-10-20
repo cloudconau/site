@@ -4,66 +4,35 @@ hide:
   - navigation
 ---
 
-## Day 1: Tuesday 9th September 2025
+# Schedule
 
-### Morning Session
+Single track: every talk is in the same room.
 
-| Time  | Title | Speaker | Location |
+## Day 1: Monday 9 November 2026
+
+Pre-conference workshops. Times and details to be announced.
+
+## Day 2: Tuesday 10 November 2026
+
+| Time | Session | Speakers | Length |
 |---|---|---|---|
-| 830 - 930 | Delegate Registration | - | Foyer |
-| 930 - 1230 | [Workshop: GitOps Meets AIOps: Building Next-Gen Kubernetes Platforms](abstracts/AWSWorkshop.md) | AWS | Cockle Bay Room 1 |
-| 930 - 1230 | [Workshop: ClickStack in Action: Building Real-Time Observability for Developers](abstracts/ClickhouseWorkshop.md) | Clickhouse | Cockle Bay Room 2 |
-
-### Afternoon Session
-
-| Time  | Title | Speaker | Location |
-|---|---|---|---|
-| 1230 - 1330 | Networking Lunch | - | Exhibition Hall |
-| 1330 - 1345 | Opening Session | Conference Organisers | Cockle Bay |
-| 1345 - 1400 | ["AI-Powered Platform Engineering: Lessons from Octopus"](abstracts/MatthewCasperson.md) | Matthew Casperson - Octopus Deploy | Cockle Bay |
-| 1400 - 1415 | ["Building AI Agents with Dapr"](abstracts/WillVelida.md) | Will Velida - Microsoft | Cockle Bay |
-| 1415 - 1430 | ["Golden Paths or Spaghetti Pipelines: The Darth Vader of Platformers"](abstracts/PrithviRaj.md) | Prithvi Raj - Mirantis | Cockle Bay |
-| 1430 - 1500 | Afternoon Tea | - | Exhibition Hall |
-| 1500 - 1515 | ["Architecting Production-Ready AI Agents with Open Source on Kubernetes"](abstracts/FrankFanFaisalMasood.md) | Frank Fan & Faisal Masood - AWS | Cockle Bay |
-| 1515 - 1530 | [Maximizing Cloud Efficiency - Minor Tweaks, Bigger Impact](abstracts/PraneetChandra.md) | Praneet Chandra - CloudKeeper | Cockle Bay |
-| 1530 - 1545 | ["Death by Snowflakes"](abstracts/GeraldBachlmayr.md) | Gerald Bachlmayr - Patterned Security | Cockle Bay |
-| 1545 - 1600 | ["Our Journey in AI Platform Engineering"](abstracts/BradMcCoy.md) | Brad McCoy - Cuscal | Cockle Bay |
-| 1630 - 1730 | Welcome Reception | - | Ground Flour outside ICC |
-
-## Day 2: Wednesday 10th September 2025
-
-### Morning Session
-
-| Time  | Title | Speaker | Location |
-|---|---|---|---|
-| 830 - 915 | Delegate Registration | - | Foyer |
-| 915 - 925 | Opening Session | Brendon Thwaites | Cockle Bay |
-| 925 - 950 | Sponsor Panel | Sponsor Panel | Cockle Bay |
-| 950 - 1005 | ["Observability and Agentic AI - From Observability to Answers (and new challenges)"](abstracts/JohnnyMirza.md) | Johnny Mirza - Clickhouse | Cockle Bay |
-| 1005 - 1025 | ["Unseen Risks: A Security Founder’s View of Cloud, AI, and the Gaps That Still Hurt Us"](abstracts/AviShua.md) | Avi Shua - Orca Security | Cockle Bay |
-| 1025 - 1040 | ["The Idle Kubernetes Crisis: Why You're Wasting 70% of Your Compute"](abstracts/AnatolyLitovsky.md) | Anatoly Litovsky - Glasswing | Cockle Bay |
-| 1040 - 1110 | Morning Tea | - | Exhibition Hall |
-| 1110 - 1140 | ["Anatomy of a Kubernetes Release Cycle: A Practical Guide for End Users"](abstracts/WendyHa.md) | Wendy Ha - SEEK | Cockle Bay |
-| 1140 - 1155 | ["Building an observability platform for the future"](abstracts/SamDwyer.md) | Sam Dwyer - Nine | Cockle Bay |
-| 1155 - 1210 | ["Eating the Elephant - How to land and expand your Kubernetes knowledge for a better career"](abstracts/PaulOReilly.md) | Paul O’Reilly - Octopus Deploy | Cockle Bay |
-| 1210 - 1225 | ["AI Observability with Envoy AI Gateway: From Black Box to Glass Box"](abstracts/AdrianCole.md) | Adrian Cole - Tetrate.io | Cockle Bay |
-| 1225 - 1325 | Networking Lunch | - | Exhibition Hall |
-
-### Afternoon Session
-
-| Time  | Title | Speaker | Location |
-|---|---|---|---|
-| 1325 - 1345 | ["Argo at Enterprise Scale: Automating Hundreds of Cluster Deployments with GitOps"](abstracts/CarlosSantana.md) | Carlos Santana - AWS | Cockle Bay |
-| 1345 - 1400 | ["From Failure to Success: Architecting Away Cloud Native Anti-Patterns"](abstracts/BojanZivic.md) | Bojan Zivic - AWS Ambassador | Cockle Bay |
-| 1400 - 1415 | ["Gitless GitOps with FluxCD"](abstracts/MichaelFornaro.md) | Michael Fornaro - EasyGo | Cockle Bay |
-| 1415 - 1430 | ["Don't Pay for Noise: Strategic Traffic Management to Slash Your Cloud Bills"](abstracts/AdamCassar.md) | Adam Cassar - Peakhour.IO | Cockle Bay |
-| 1430 - 1445 | ["Implementing custom rate limiting with Istio"](abstracts/ArturRajski.md) | Artur Rajski - Zepto | Cockle Bay |
-| 1445 - 1500 | ["Cloud at Speed, Security at Scale"](abstracts/RadKanapathipillai.md ) | Rad Kanapathipillai - DevOps1 | Cockle Bay |
-| 1500 - 1530 | Afternoon Tea | - | Exhibition Hall |
-| 1530 - 1545 | ["Gateway API - 5 things about the future of Ingress, in 5"](abstracts/LeonSeng.md) | Leon Seng - F5 | Cockle Bay |
-| 1545 - 1600 | ["Building a scalable Edge Gateway Platform using istio and kubernetes"](abstracts/HarpreetSingh.md) | Harpreet Singh - Staff Software Engineer at Rokt | Cockle Bay |
-| 1600 - 1615 | ["Platform Engineering IS Software Engineering"](abstracts/MiguelEliasdosSantos.md) | Miguel Elias dos Santos - SafetyCulture | Cockle Bay |
-| 1615 - 1630 | ["The Self-Hosted LLMs: Secure & Scalable Inference with Kubernetes"](abstracts/GajanKugamoorthy.md) | Gajan Kugamoorthy - Vivanti | Cockle Bay |
-| 1630 - 1645 | ["The Great Internet Mersenne Prime Search: 30 Years of Citizen Science"](abstracts/JamesBannan.md) | James Bannan - CyberCX | Cockle Bay |
-| 1645 - 1655 | Raffle draw | - | Cockle Bay |
-| 1655 - 1700 | Wrap up and closing | - | Cockle Bay |
+| 9:40 - 10:00 | [Who's Stealing My CPU? Catching Noisy Neighbours with eBPF on Kubernetes](abstracts/2026/OlgaMirensky.md) | Olga Mirensky, Ping Identity | 20 min |
+| 10:00 - 10:20 | [I'm Behind Seven Proxies: Demystifying Envoy on Kubernetes](abstracts/2026/JacobTaylorVasiliosSyrakis.md) | Jacob Taylor, Canva & Vasilios Syrakis | 20 min |
+| 10:20 - 10:40 | Cloud Native Global Load Balancing with K8gb | Woh Shon Phoon | 20 min |
+| 10:40 - 10:45 | [Operators as Data: Why Lifecycle is Not a Separate Problem](abstracts/2026/AlexEze.md) | Alex Eze, NHS | 5 min (lightning) |
+| 10:45 - 11:15 | *Morning Tea* | | 30 min |
+| 11:15 - 11:35 | [Streaming Under Fire](abstracts/2026/MichaelFornaroSamiAlakus.md) | Michael Fornaro & Sami Alakus, Easygo | 20 min |
+| 11:35 - 11:55 | [ArgoCD, 16,000 Apps, and a Trail of Questionable Decisions](abstracts/2026/AndrewJeffree.md) | Andrew Jeffree, SafetyCulture | 20 min |
+| 11:55 - 12:15 | [The Bot Might Be Your Customer - Rethinking Traffic Management](abstracts/2026/AdamCassarDanielDAlessandro.md) | Adam Cassar & Daniel D'Alessandro, Peakhour.io | 20 min |
+| 12:15 - 12:35 | [Telstra's GitOps Journey: Scaling Reliable Mobile Core Operations with Kubernetes](abstracts/2026/AshanSenevirathne.md) | Ashan Senevirathne, Telstra | 20 min |
+| 12:35 - 12:40 | Becoming a CNCF Contributor with 1 Hour a Week | Wendy Ha, SEEK | 5 min (lightning) |
+| 12:40 - 1:25 | *Networking Lunch* | | 45 min |
+| 1:25 - 1:45 | [Platform Patterns for AI on K8s: Admission, Isolation & Observability That Work](abstracts/2026/SaurabhMishra.md) | Saurabh Mishra, Vodafone | 20 min |
+| 1:45 - 2:05 | [The Telemetry Trap: Building Meaningful Open-Source Observability for Multi-Agent Systems](abstracts/2026/AnupamPhoghat.md) | Anupam Phoghat, Core-X | 20 min |
+| 2:05 - 2:10 | [AI and platform maturity: the foundations that help AI deliver](abstracts/2026/CharlotteFleming.md) | Charlotte Fleming, Octopus Deploy | 5 min (lightning) |
+| 2:10 - 2:30 | Provenance for AI Agent Skills | Gajan Kugamoorthy, Vivanti | 20 min |
+| 2:30 - 3:00 | *Afternoon Tea* | | 30 min |
+| 3:00 - 3:20 | [The Day I Found Out My Policies Were Off](abstracts/2026/OsamaOkunbo.md) | Osama Okunbo, Immibuddy | 20 min |
+| 3:20 - 3:40 | Building Hybrid AI Systems: Edge Inferencing Meets Cloud Reasoning | Sheng Chen & Frank Fan, AWS | 20 min |
+| 3:40 - 4:00 | [When your circuit breaker backfires — outlier detection in Istio and Envoy](abstracts/2026/MitsuhiroShibuya.md) | Mitsuhiro Shibuya, Mercari | 20 min |
+| 4:00 - 4:05 | [Building a serverless airplane tracker](abstracts/2026/LizFongJones.md) | Liz Fong-Jones, Honeycomb.io | 5 min (lightning) |

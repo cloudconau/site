@@ -18,7 +18,7 @@ CloudCon will have sessions on the following areas:
 
 # Speakers
 
-16 speakers confirmed so far for CloudCon Sydney 2026, 9-10 November at ICC Sydney.
+17 speakers confirmed so far for CloudCon Sydney 2026, 9-10 November at ICC Sydney.
 
 <div class="grid cards" markdown>
 
@@ -26,6 +26,7 @@ CloudCon will have sessions on the following areas:
 - [![Alex Eze](images/speakers/headshots/AlexEze.png) Alex Eze](abstracts/2026/AlexEze.md)
 - [![Andrew Jeffree](images/speakers/headshots/AndrewJeffree.png) Andrew Jeffree](abstracts/2026/AndrewJeffree.md)
 - [![Anupam Phoghat](images/speakers/headshots/AnupamPhoghat.png) Anupam Phoghat](abstracts/2026/AnupamPhoghat.md)
+- [![Ashan Senevirathne](images/speakers/headshots/AshanSenevirathne.png) Ashan Senevirathne](abstracts/2026/AshanSenevirathne.md)
 - [![Ayush Goyal](images/speakers/headshots/AyushGoyal.png) Ayush Goyal](abstracts/2026/AyushGoyal.md)
 - [![Charlotte Fleming](images/speakers/headshots/CharlotteFleming.png) Charlotte Fleming](abstracts/2026/CharlotteFleming.md)
 - [![Daniel D'Alessandro](images/speakers/headshots/DanielDAlessandro.png) Daniel D'Alessandro](abstracts/2026/AdamCassarDanielDAlessandro.md)
@@ -47,12 +48,13 @@ CloudCon will have sessions on the following areas:
 
 | Session | Speakers | Length |
 |---|---|---|
-| [Building a serverless airplane tracker](abstracts/2026/LizFongJones.md) | Liz Fong-Jones, Honeycomb.io | 20 min |
+| [Building a serverless airplane tracker](abstracts/2026/LizFongJones.md) | Liz Fong-Jones, Honeycomb.io | 5 min |
 | [Who's Stealing My CPU? Catching Noisy Neighbours with eBPF on Kubernetes](abstracts/2026/OlgaMirensky.md) | Olga Mirensky, Ping Identity | 20 min |
 | [When your circuit breaker backfires — outlier detection in Istio and Envoy](abstracts/2026/MitsuhiroShibuya.md) | Mitsuhiro Shibuya, Mercari | 20 min |
 | [AI and platform maturity: the foundations that help AI deliver](abstracts/2026/CharlotteFleming.md) | Charlotte Fleming, Octopus Deploy | 5 min |
 | [The Bot Might Be Your Customer - Rethinking Traffic Management](abstracts/2026/AdamCassarDanielDAlessandro.md) | Adam Cassar, Peakhour.io & Daniel D'Alessandro, Peakhour.io | 20 min |
 | [I'm Behind Seven Proxies: Demystifying Envoy on Kubernetes](abstracts/2026/JacobTaylorVasiliosSyrakis.md) | Jacob Taylor, Canva & Vasilios Syrakis | 20 min |
+| [Telstra's GitOps Journey: Scaling Reliable Mobile Core Operations with Kubernetes](abstracts/2026/AshanSenevirathne.md) | Ashan Senevirathne, Telstra | 20 min |
 | [The Telemetry Trap: Building Meaningful Open-Source Observability for Multi-Agent Systems](abstracts/2026/AnupamPhoghat.md) | Anupam Phoghat, Core-X | 20 min |
 | [Operators as Data: Why Lifecycle is Not a Separate Problem](abstracts/2026/AlexEze.md) | Alex Eze, NHS | 5 min |
 | [Who Load-Tests the Load Tester? 25 Million VUs and Everything That Broke](abstracts/2026/AyushGoyal.md) | Ayush Goyal, Grafana Labs | 20 min |

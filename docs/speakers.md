@@ -18,7 +18,7 @@ CloudCon will have sessions on the following areas:
 
 # Speakers
 
-22 speakers confirmed so far for CloudCon Sydney 2026, 9-10 November at ICC Sydney.
+21 speakers confirmed so far for CloudCon Sydney 2026, 9-10 November at ICC Sydney.
 
 <div class="grid cards" markdown>
 
@@ -27,7 +27,6 @@ CloudCon will have sessions on the following areas:
 - [![Andrew Jeffree](images/speakers/headshots/AndrewJeffree.png) Andrew Jeffree](abstracts/2026/AndrewJeffree.md)
 - [![Anupam Phoghat](images/speakers/headshots/AnupamPhoghat.png) Anupam Phoghat](abstracts/2026/AnupamPhoghat.md)
 - [![Ashan Senevirathne](images/speakers/headshots/AshanSenevirathne.png) Ashan Senevirathne](abstracts/2026/AshanSenevirathne.md)
-- [![Ayush Goyal](images/speakers/headshots/AyushGoyal.png) Ayush Goyal](abstracts/2026/AyushGoyal.md)
 - [![Charlotte Fleming](images/speakers/headshots/CharlotteFleming.png) Charlotte Fleming](abstracts/2026/CharlotteFleming.md)
 - [![Daniel D'Alessandro](images/speakers/headshots/DanielDAlessandro.png) Daniel D'Alessandro](abstracts/2026/AdamCassarDanielDAlessandro.md)
 - [![Frank Fan](images/speakers/headshots/FrankFan.png) Frank Fan](abstracts/2026/ShengChenFrankFan.md)
@@ -62,7 +61,6 @@ CloudCon will have sessions on the following areas:
 | [Telstra's GitOps Journey: Scaling Reliable Mobile Core Operations with Kubernetes](abstracts/2026/AshanSenevirathne.md) | Ashan Senevirathne, Telstra | 20 min |
 | [The Telemetry Trap: Building Meaningful Open-Source Observability for Multi-Agent Systems](abstracts/2026/AnupamPhoghat.md) | Anupam Phoghat, Core-X | 20 min |
 | [Operators as Data: Why Lifecycle is Not a Separate Problem](abstracts/2026/AlexEze.md) | Alex Eze, NHS | 5 min |
-| [Who Load-Tests the Load Tester? 25 Million VUs and Everything That Broke](abstracts/2026/AyushGoyal.md) | Ayush Goyal, Grafana Labs | 20 min |
 | [The Day I Found Out My Policies Were Off](abstracts/2026/OsamaOkunbo.md) | Osama Okunbo, Immibuddy | 20 min |
 | [Streaming Under Fire](abstracts/2026/MichaelFornaroSamiAlakus.md) | Michael Fornaro, Easygo & Sami Alakus, Easygo | 20 min |
 | [Platform Patterns for AI on K8s: Admission, Isolation & Observability That Work](abstracts/2026/SaurabhMishra.md) | Saurabh Mishra, Vodafone | 20 min |

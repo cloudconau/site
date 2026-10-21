@@ -1,8 +1,12 @@
 ---
+title: "Register (CloudCon Sydney 2025)"
 hide:
   - toc
   - navigation
 ---
+
+!!! note "Archived: CloudCon Sydney 2025"
+    This page is from CloudCon Sydney 2025 and is kept for reference only. For CloudCon Sydney 2026 (9-10 November, ICC Sydney), see the [homepage](/).
 
 # Register and Attend CloudCon 2025
 
@@ -10,7 +14,7 @@ hide:
 
 Or scan the QR code below to register:
 
-![Scan to register](images/registration_qr.png){ width="220" }
+![Scan to register](../images/registration_qr.png){ width="220" }
 
 * Dates: 9th and 10th September 2025
 * Location: [International Convention Centre, Sydney, Australia](https://maps.app.goo.gl/L4XpFWBf9BAmkwfW7){target=_blank}

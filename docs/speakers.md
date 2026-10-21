@@ -72,4 +72,4 @@ CloudCon will have sessions on the following areas:
 
 ---
 
-Past speakers from CloudCon Sydney 2025 are listed on the [full speaker archive](full_speakers.md).
+Past speakers from CloudCon Sydney 2025 are listed on the [full speaker archive](2025/speakers.md).

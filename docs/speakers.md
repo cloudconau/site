@@ -18,7 +18,7 @@ CloudCon will have sessions on the following areas:
 
 # Speakers
 
-21 speakers confirmed so far for CloudCon Sydney 2026, 9-10 November at ICC Sydney.
+21 speakers across 17 talks at CloudCon Sydney 2026, 9-10 November at ICC Sydney.
 
 <div class="grid cards" markdown>
 

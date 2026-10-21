@@ -441,3 +441,9 @@ body,
   border-color: var(--cc-blue);
   background: rgba(0, 153, 204, 0.18);
 }
+
+/* CFP is closed for 2026: keep the menu links, struck out */
+.cc-links > a[href$="#cfp"],
+.md-nav__link[href$="#cfp"] {
+  text-decoration: line-through;
+}

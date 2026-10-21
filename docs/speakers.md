@@ -18,7 +18,7 @@ CloudCon will have sessions on the following areas:
 
 # Speakers
 
-21 speakers confirmed so far for CloudCon Sydney 2026, 9-10 November at ICC Sydney.
+21 speakers across 17 talks at CloudCon Sydney 2026, 9-10 November at ICC Sydney.
 
 <div class="grid cards" markdown>
 
@@ -64,7 +64,7 @@ CloudCon will have sessions on the following areas:
 | [The Day I Found Out My Policies Were Off](abstracts/2026/OsamaOkunbo.md) | Osama Okunbo, Immibuddy | 20 min |
 | [Streaming Under Fire](abstracts/2026/MichaelFornaroSamiAlakus.md) | Michael Fornaro, Easygo & Sami Alakus, Easygo | 20 min |
 | [Platform Patterns for AI on K8s: Admission, Isolation & Observability That Work](abstracts/2026/SaurabhMishra.md) | Saurabh Mishra, Vodafone | 20 min |
-| [ArgoCD, 16,000 Apps, and a Trail of Questionable Decisions](abstracts/2026/AndrewJeffree.md) | Andrew Jeffree, SafetyCulture | 20 min |
+| [ArgoCD, 16,000 Apps, One Cluster](abstracts/2026/AndrewJeffree.md) | Andrew Jeffree, Mitti | 20 min |
 | [Cloud Native Global Load Balancing with K8gb](abstracts/2026/WohShonPhoon.md) | Woh Shon Phoon, Nutanix | 20 min |
 | [Becoming a CNCF Contributor with 1 Hour a Week](abstracts/2026/WendyHa.md) | Wendy Ha, SEEK | 5 min |
 | [Provenance for AI Agent Skills](abstracts/2026/GajanKugamoorthy.md) | Gajan Kugamoorthy, Vivanti | 20 min |
@@ -72,4 +72,4 @@ CloudCon will have sessions on the following areas:
 
 ---
 
-Past speakers from CloudCon Sydney 2025 are listed on the [full speaker archive](full_speakers.md).
+Past speakers from CloudCon Sydney 2025 are listed on the [full speaker archive](2025/speakers.md).

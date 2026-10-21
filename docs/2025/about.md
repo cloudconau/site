@@ -1,7 +1,11 @@
 ---
+title: "About (CloudCon Sydney 2025)"
 hide:
   - navigation
 ---
+!!! note "Archived: CloudCon Sydney 2025"
+    This page is from CloudCon Sydney 2025 and is kept for reference only. For CloudCon Sydney 2026 (9-10 November, ICC Sydney), see the [homepage](/).
+
  
 # About  {#about}
 

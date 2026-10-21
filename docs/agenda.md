@@ -24,7 +24,7 @@ Pre-conference workshops. Times and details to be announced.
 | 10:40 - 10:45 | [Operators as Data: Why Lifecycle is Not a Separate Problem](abstracts/2026/AlexEze.md) | Alex Eze, NHS | 5 min (lightning) |
 | 10:45 - 11:15 | *Morning Tea* | | 30 min |
 | 11:15 - 11:35 | [Streaming Under Fire](abstracts/2026/MichaelFornaroSamiAlakus.md) | Michael Fornaro & Sami Alakus, Easygo | 20 min |
-| 11:35 - 11:55 | [ArgoCD, 16,000 Apps, and a Trail of Questionable Decisions](abstracts/2026/AndrewJeffree.md) | Andrew Jeffree, SafetyCulture | 20 min |
+| 11:35 - 11:55 | [ArgoCD, 16,000 Apps, One Cluster](abstracts/2026/AndrewJeffree.md) | Andrew Jeffree, Mitti | 20 min |
 | 11:55 - 12:15 | [The Bot Might Be Your Customer - Rethinking Traffic Management](abstracts/2026/AdamCassarDanielDAlessandro.md) | Adam Cassar & Daniel D'Alessandro, Peakhour.io | 20 min |
 | 12:15 - 12:35 | [Telstra's GitOps Journey: Scaling Reliable Mobile Core Operations with Kubernetes](abstracts/2026/AshanSenevirathne.md) | Ashan Senevirathne, Telstra | 20 min |
 | 12:35 - 12:40 | [Becoming a CNCF Contributor with 1 Hour a Week](abstracts/2026/WendyHa.md) | Wendy Ha, SEEK | 5 min (lightning) |

@@ -26,15 +26,19 @@ The Operator Lifecycle Manager (OLM) exists because operators were binaries. Whe
 
 This lightning talk introduces a different model: operators as declarative patterns—data. When the operator is data, lifecycle is not an external concern to manage; it is a built-in property of the artifact. The same model that bakes test results into the artifact at publish time (simulation gates + e2e gates, proof in OCI annotations) governs upgrade, deprecation, and deletion. The proof of correctness travels with the artifact. There is no separate lifecycle system to install. You write patterns, and the lifecycle comes with them.
 
-We'll walk through the full lifecycle: creation (ork validate), testing (ork simulate and ork e2e), distribution (ork push with gated proof), consumption (ork inspect and ork pull), upgrade (versioned imports), deprecation (metadata with migration target), and deletion (declarative deletion protection). The lifecycle is not a process running somewhere; it is a record traveling with the artifact.
+We'll walk through the full lifecycle: creation (inrun validate), testing (inrun simulate and inrun e2e), distribution (inrun push with gated proof), consumption (inrun inspect and inrun pull), upgrade (versioned imports), deprecation (metadata with migration target), and deletion (declarative deletion protection). The lifecycle is not a process running somewhere; it is a record traveling with the artifact.
 
 Attendees will leave with a new mental model: when the operator is data, lifecycle is not a separate problem. The same artifact that carries your operator carries its own proof, its own version, and its own deprecation notice. The lifecycle is expressed in the same language as the operator itself.
 
-This talk will be demonstrated with Orkestra, an open-source declarative runtime for Kubernetes behaviour (Apache 2.0), built on a single idea: operator behaviour is different from operator infrastructure. You declare the behaviour; the runtime provides the infrastructure. All examples and code are from https://github.com/orkspace/orkestra.
+This talk will be demonstrated with Inrun, an open-source declarative runtime for Kubernetes behaviour (Apache 2.0), built on a single idea: operator behaviour is different from operator infrastructure. You declare the behaviour; the runtime provides the infrastructure. All examples and code are from https://github.com/intentd/inrun.
 
 ## Speaker Bio
 
-Alex Eze is the creator of Orkestra, a declarative runtime for Kubernetes operators. A former clinical pharmacist, currently an Infrastructure Engineer with the NHS. He taught himself to code after a job interview revealed a gap in his Kubernetes operator knowledge — and spent the following years closing that gap, not just for himself but for every engineer who has looked at operator boilerplate and walked away. Orkestra is the result: a runtime built on the idea that your CRD is enough.
+Alex Eze is the creator of Inrun (formerly Orkestra), an intent runner for Kubernetes. A former clinical pharmacist, an Infrastructure Developer at the NHS.
+
+He came to Kubernetes operator development through a job interview that revealed a gap in his knowledge — and spent the following years not just closing that gap but rethinking the problem from the ground up.
+
+Inrun is the result: a runtime built on the idea that Kubernetes reconciliation can be separated from the infrastructure required to run it.
 
 ---
 

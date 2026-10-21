@@ -367,6 +367,13 @@
     .sponsor-logo:hover { border-color: var(--blue); background: rgba(0,153,204,0.07); transform: translateY(-2px); }
     .sponsor-logo img { object-fit: contain; filter: brightness(1.05) saturate(0.9); transition: filter 0.2s; }
     .sponsor-logo:hover img { filter: brightness(1.1) saturate(1.1); }
+    /* 2026 sponsor wall: white tiles so every brand's standard full-colour logo reads */
+    .sponsor-tier { margin-bottom: 2.25rem; }
+    .sponsor-row { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.25rem; }
+    .sponsor-logo.sponsor-tile { background: #fff; border-color: rgba(255,255,255,0.6); min-height: 110px; max-width: 100%; }
+    .sponsor-logo.sponsor-tile:hover { background: #fff; border-color: var(--blue); }
+    .sponsor-logo.sponsor-tile img { filter: none; }
+    .sponsor-extra { font-family: var(--font-head); font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: #5b6b80; }
     .tier-heading {
       font-family: var(--font-head);
       font-size: 0.7rem;
@@ -1665,40 +1672,83 @@
      ============================================================ -->
 <section id="sponsors" class="section reveal">
   <div class="container">
-    <p class="section-tag">SPONSORSHIP</p>
-    <h2 class="section-title">Become a Sponsor</h2>
+    <p class="section-tag">SPONSORS</p>
+    <h2 class="section-title">Our 2026 Sponsors</h2>
     <div class="accent-line"></div>
+    <p class="section-lead" style="text-align:center; margin-left:auto; margin-right:auto;">CloudCon Sydney 2026 is made possible by these organisations. Thank you for supporting the cloud-native community.</p>
 
-    <div style="max-width: 780px; margin: 0 auto; text-align: center;">
+    <div style="margin-top: 2.5rem;">
 
-      <!-- Icon -->
-      <div style="font-size: 3rem; margin-bottom: 1.5rem; opacity: 0.75;">🚀</div>
-
-      <!-- Headline -->
-      <p style="font-family: var(--font-head); font-size: clamp(1.1rem, 2.5vw, 1.35rem); font-weight: 700; color: var(--text); line-height: 1.5; margin-bottom: 1.25rem;">
-        Take your business to new heights by sponsoring CloudCon 2026.
-      </p>
-
-      <!-- Body copy -->
-      <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.85; margin-bottom: 1rem;">
-        Sponsoring CloudCon Sydney is a unique opportunity to showcase your innovative solutions and amplify your brand visibility across our audience of 350+ technology professionals.
-      </p>
-      <p style="color: var(--text-muted); font-size: 1rem; line-height: 1.85; margin-bottom: 2.5rem;">
-        Whether your goal is brand visibility, lead generation, networking, positioning your organisation as a leader within the cloud-native community, or all of the above, CloudCon Sydney has a sponsorship option that will be right for you. Don't miss out on this opportunity to elevate your brand and drive your business forward!
-      </p>
-
-      <!-- Benefit pills -->
-      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.75rem; margin-bottom: 3rem;">
-        <span style="display:inline-flex; align-items:center; gap:0.5rem; background:var(--bg-card); border:1px solid var(--border); border-radius:999px; padding:0.5rem 1.1rem; font-size:0.875rem; color:var(--text-muted); font-family:var(--font-head); font-weight:600;">🎯 Brand Visibility</span>
-        <span style="display:inline-flex; align-items:center; gap:0.5rem; background:var(--bg-card); border:1px solid var(--border); border-radius:999px; padding:0.5rem 1.1rem; font-size:0.875rem; color:var(--text-muted); font-family:var(--font-head); font-weight:600;">🤝 Lead Generation</span>
-        <span style="display:inline-flex; align-items:center; gap:0.5rem; background:var(--bg-card); border:1px solid var(--border); border-radius:999px; padding:0.5rem 1.1rem; font-size:0.875rem; color:var(--text-muted); font-family:var(--font-head); font-weight:600;">🌐 Networking</span>
-        <span style="display:inline-flex; align-items:center; gap:0.5rem; background:var(--bg-card); border:1px solid var(--border); border-radius:999px; padding:0.5rem 1.1rem; font-size:0.875rem; color:var(--text-muted); font-family:var(--font-head); font-weight:600;">🏆 Thought Leadership</span>
-        <span style="display:inline-flex; align-items:center; gap:0.5rem; background:var(--bg-card); border:1px solid var(--border); border-radius:999px; padding:0.5rem 1.1rem; font-size:0.875rem; color:var(--text-muted); font-family:var(--font-head); font-weight:600;">👥 350+ Attendees</span>
+      <div class="sponsor-tier">
+        <div class="tier-heading">Diamond Sponsor</div>
+        <div class="sponsor-row">
+        <a class="sponsor-logo sponsor-tile" href="https://www.nutanix.com" target="_blank" rel="noopener noreferrer" aria-label="Nutanix" style="width:340px;">
+          <img src="images/sponsors/nutanix.svg" alt="Nutanix" style="height:72px; max-width:100%; width:auto;">
+        </a>
+        </div>
       </div>
 
-      <!-- CTA -->
-      <p style="color: var(--text-muted); font-size: 0.975rem; margin-bottom: 1.75rem;">
-        Interested in sponsoring CloudCon Sydney 2026? Reach out to us at
+      <div class="sponsor-tier">
+        <div class="tier-heading">Platinum Sponsors</div>
+        <div class="sponsor-row">
+        <a class="sponsor-logo sponsor-tile" href="https://www.chainguard.dev" target="_blank" rel="noopener noreferrer" aria-label="Chainguard" style="width:280px;">
+          <img src="images/sponsors/chainguard.png" alt="Chainguard" style="height:52px; max-width:100%; width:auto;">
+        </a>
+        <a class="sponsor-logo sponsor-tile" href="https://www.commvault.com" target="_blank" rel="noopener noreferrer" aria-label="Commvault" style="width:280px;">
+          <img src="images/sponsors/commvault.svg" alt="Commvault" style="height:52px; max-width:100%; width:auto;">
+          <span class="sponsor-extra">Workshop Sponsor</span>
+        </a>
+        </div>
+      </div>
+
+      <div class="sponsor-tier">
+        <div class="tier-heading">Gold Sponsors</div>
+        <div class="sponsor-row">
+        <a class="sponsor-logo sponsor-tile" href="https://aws.amazon.com" target="_blank" rel="noopener noreferrer" aria-label="AWS" style="width:280px;">
+          <img src="images/aws_logo.png" alt="AWS" style="height:46px; max-width:100%; width:auto;">
+          <span class="sponsor-extra">Workshop Sponsor</span>
+        </a>
+        <a class="sponsor-logo sponsor-tile" href="https://octopus.com" target="_blank" rel="noopener noreferrer" aria-label="Octopus Deploy" style="width:280px;">
+          <img src="images/sponsors/octopus.svg" alt="Octopus Deploy" style="height:46px; max-width:100%; width:auto;">
+        </a>
+        </div>
+      </div>
+
+      <div class="sponsor-tier">
+        <div class="tier-heading">Silver Sponsors</div>
+        <div class="sponsor-row">
+        <a class="sponsor-logo sponsor-tile" href="https://grafana.com" target="_blank" rel="noopener noreferrer" aria-label="Grafana Labs" style="width:200px;">
+          <img src="images/grafana.png" alt="Grafana Labs" style="height:64px; max-width:100%; width:auto;">
+        </a>
+        <a class="sponsor-logo sponsor-tile" href="https://circumvent.io" target="_blank" rel="noopener noreferrer" aria-label="Circumvent" style="width:200px;">
+          <img src="images/sponsors/circumvent.svg" alt="Circumvent" style="height:38px; max-width:100%; width:auto;">
+        </a>
+        <a class="sponsor-logo sponsor-tile" href="https://www.elastic.co" target="_blank" rel="noopener noreferrer" aria-label="Elastic" style="width:200px;">
+          <img src="images/elastic_logo.png" alt="Elastic" style="height:38px; max-width:100%; width:auto;">
+        </a>
+        </div>
+      </div>
+
+      <div class="sponsor-tier sponsor-row">
+        <div>
+          <div class="tier-heading">Coffee Cart Sponsor</div>
+        <a class="sponsor-logo sponsor-tile" href="https://easygo.io" target="_blank" rel="noopener noreferrer" aria-label="Easygo" style="width:220px;">
+          <img src="images/sponsors/easygo.svg" alt="Easygo" style="height:34px; max-width:100%; width:auto;">
+        </a>
+        </div>
+        <div>
+          <div class="tier-heading">After Party Sponsor</div>
+        <a class="sponsor-logo sponsor-tile" href="https://odysseycloud.io" target="_blank" rel="noopener noreferrer" aria-label="Odyssey Cloud" style="width:220px;">
+          <span style="display:flex; align-items:center; gap:0.6rem;"><img src="images/sponsors/odysseycloud.svg" alt="" style="height:34px; width:auto;"><span style="font-family:var(--font-head); font-weight:700; font-size:1.05rem; color:#0b1626;">Odyssey Cloud</span></span>
+        </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sponsorship enquiries -->
+    <div style="text-align: center; margin-top: 3.5rem;">
+      <p style="color: var(--text-muted); font-size: 0.975rem; margin-bottom: 1.25rem;">
+        Interested in sponsoring CloudCon Sydney? Reach out to us.
       </p>
       <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem;">
         <a href="tel:+61455198736" class="btn-primary" style="font-size: 1rem; padding: 0.9rem 2rem;">
@@ -1708,8 +1758,8 @@
           ✉ team@cloudcon.au
         </a>
       </div>
-
     </div>
+
   </div>
 </section>
 

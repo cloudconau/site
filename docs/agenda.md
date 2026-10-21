@@ -42,4 +42,4 @@ Pre-conference workshops. Times and details to be announced.
 
 ---
 
-The CloudCon Sydney 2025 agenda is kept in the [2025 agenda archive](agenda_2025.md).
+The CloudCon Sydney 2025 agenda is kept in the [2025 agenda archive](2025/agenda.md).

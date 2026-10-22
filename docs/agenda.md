@@ -10,7 +10,13 @@ Single track: every talk is in the Cockle Bay Room at ICC Sydney.
 
 ## Day 1: Monday 9 November 2026
 
-Pre-conference workshops. Times and details to be announced.
+Pre-conference workshops: times and details to be announced.
+
+| Time | Session | Location | Length |
+|---|---|---|---|
+| 4:30 - 6:30 | Welcome Reception | Planar Restaurant, ICC Sydney | 2 hrs |
+
+Kick off CloudCon Sydney 2026 with a relaxed evening of drinks, bites, and conversation at Planar Restaurant. Reconnect with familiar faces, meet fellow attendees, and set the stage for an inspiring conference experience.
 
 ## Day 2: Tuesday 10 November 2026
 

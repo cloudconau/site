@@ -6,11 +6,18 @@ hide:
 
 # Schedule
 
-Single track: every talk is in the Cockle Bay Room at ICC Sydney.
+Day 1 is pre-conference workshops; Day 2 is a single track of talks in the Cockle Bay Room at ICC Sydney.
 
 ## Day 1: Monday 9 November 2026
 
-Pre-conference workshops. Times and details to be announced.
+| Time | Workshop | Facilitators | Length |
+|---|---|---|---|
+| 9:30 - 12:00 | [Hosting and Scaling GenAI Workloads on Amazon EKS](abstracts/2026/AWSWorkshopGenAI.md) (Cockle Bay Room 1) | Frank Fan, Sheng Chen, Navya Srivastava & Parikshit Patel, AWS | 2.5 hours |
+| 9:30 - 12:00 | [Race to Recover: Mission Earth](abstracts/2026/CommvaultWorkshop.md) (Cockle Bay Room 2) | Commvault | 2.5 hours |
+| 12:00 - 1:30 | *Break* | | |
+| 1:30 - 4:00 | [Chainguard Workshop](abstracts/2026/ChainguardWorkshop.md) (Cockle Bay Room) | Chainguard | 2.5 hours |
+
+The two morning workshops run in parallel, so pick one. Bring your own laptop to any workshop.
 
 ## Day 2: Tuesday 10 November 2026
 

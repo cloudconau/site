@@ -80,7 +80,7 @@ Pre-conference workshops run on Day 1, Monday 9 November 2026. Bring your own la
 |---|---|---|
 | [Hosting and Scaling GenAI Workloads on Amazon EKS](abstracts/2026/AWSWorkshopGenAI.md) | Frank Fan, Sheng Chen, Navya Srivastava & Parikshit Patel, AWS | 2.5 hours (9:30 am) |
 | [Race to Recover: Mission Earth](abstracts/2026/CommvaultWorkshop.md) | Commvault | 2.5 hours (9:30 am) |
-| [Chainguard Workshop](abstracts/2026/ChainguardWorkshop.md) | Chainguard | 2.5 hours (1:30 pm) |
+| [Break It, Fix It: Hands-On Container and Library Supply Chain Security](abstracts/2026/ChainguardWorkshop.md) | Andrew Dean, Chainguard | 2.5 hours (1:30 pm) |
 
 ---
 

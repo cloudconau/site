@@ -276,8 +276,11 @@
     }
     .timetable-row:last-child { border-bottom: none; }
     .timetable-row:hover { background: rgba(0,153,204,0.06); }
-    .timetable-row.type-break { background: rgba(255,255,255,0.02); }
-    .timetable-row.type-break .session-title-cell { color: var(--text-dim); font-style: italic; }
+    /* Breaks and the networking lunch share the same recessed row treatment. */
+    .timetable-row.type-break,
+    .timetable-row.type-networking { background: rgba(255,255,255,0.02); }
+    .timetable-row.type-break .session-title-cell,
+    .timetable-row.type-networking .session-title-cell { color: var(--text-dim); font-style: italic; }
     .timetable-row.type-workshop { border-left: 3px solid var(--blue-light); }
     .timetable-row.type-networking { border-left: 3px solid #f59e0b; }
     .session-time { font-size: 0.78rem; color: var(--blue-light); font-weight: 600; font-variant-numeric: tabular-nums; padding-top: 0.85rem; }

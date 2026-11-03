@@ -1,0 +1,203 @@
+# pr-review.yml
+# =============
+# cloudconau's copy of rk8s-ai-lab/homelab's pr-review-agents/workflows/pr-review.yml
+# (template at 7149530 + homelab#49; homelab's README, Phase 5). Only this header and the
+# env: block differ from the template; keep the rest in sync with it.
+#
+# Two triggers, two trust tiers:
+#   pull_request_target -> pr-review-own runner: posts PR comments as each
+#                          agent's GitHub App. Only for PRs from people with
+#                          a role on the repo (OWNER/MEMBER/COLLABORATOR).
+#   workflow_dispatch   -> pr-review-ext runner: reviews a PR in someone
+#                          else's public repo and writes a private write-up.
+#                          No GitHub write token exists on that runner.
+#
+# Why pull_request_target: the workflow and reviewer code always come from
+# the base branch (and /opt/pr-review-agents on the runner), so a PR can't
+# rewrite its own reviewer. PR code is fetched as data and only ever executed
+# by the optional test step, inside a podman container with no network, no
+# tokens and no host mounts beyond a read-only copy of the checkout.
+#
+# Never interpolate ${{ }} expressions into `run:` scripts. Everything goes
+# through env vars, so PR titles, branch names and inputs can't inject shell.
+
+name: pr-review
+
+on:
+  pull_request_target:
+    types: [opened, synchronize, reopened, ready_for_review]
+  workflow_dispatch:
+    inputs:
+      repo:
+        description: External repo to review (owner/name)
+        required: true
+      pr:
+        description: Pull request number
+        required: true
+
+permissions:
+  contents: read
+
+env:
+  # code-hunter's test run. Set both to enable it; leave empty to skip.
+  # TEST_IMAGE must already exist on the runner VM (no registry egress).
+  # The command runs in a writable copy of the PR at /work, with no network.
+  # No test suite (an MkDocs site; deploy.yml checks the build).
+  TEST_IMAGE: ""
+  TEST_CMD: ""
+  TEST_TIMEOUT: "900"
+  AGENT_IMAGE: localhost/pr-review-agent:latest
+  AGENTS_DIR: /opt/pr-review-agents
+
+jobs:
+  review:
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (!github.event.pull_request.draft &&
+       contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.pull_request.author_association))
+    runs-on: [self-hosted, pr-review, "${{ github.event_name == 'workflow_dispatch' && 'pr-review-ext' || 'pr-review-own' }}"]
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        agent: [slop-hunter, code-hunter, threat-hunter, secrets-hunter]
+    concurrency:
+      group: pr-review-${{ inputs.repo || github.repository }}-${{ inputs.pr || github.event.pull_request.number }}-${{ matrix.agent }}
+      cancel-in-progress: true
+    env:
+      AGENT: ${{ matrix.agent }}
+      TIER: ${{ github.event_name == 'workflow_dispatch' && 'ext' || 'own' }}
+      REPO: ${{ inputs.repo || github.repository }}
+      PR: ${{ inputs.pr || github.event.pull_request.number }}
+      BASE_REF: ${{ github.event.pull_request.base.ref }}
+      HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+
+    steps:
+      - name: Check the runner is the right tier
+        run: |
+          set -euo pipefail
+          [[ "${PR_REVIEW_TIER:-}" == "$TIER" ]] || {
+            echo "::error::runner tier '${PR_REVIEW_TIER:-unset}' does not match job tier '$TIER'"; exit 1; }
+          [[ "$REPO" =~ ^[A-Za-z0-9-]+/[A-Za-z0-9._-]+$ && "$PR" =~ ^[0-9]+$ ]] || {
+            echo "::error::bad repo or PR number"; exit 1; }
+
+      - name: Fetch the PR as data
+        env:
+          READ_TOKEN: ${{ github.event_name == 'pull_request_target' && github.token || '' }}
+        run: |
+          set -euo pipefail
+          W="$RUNNER_TEMP/pr-review"; rm -rf "$W"; mkdir -p "$W/out"
+          if [[ "$TIER" == ext ]]; then
+            # Anonymous, read-only. 60 API calls/hour unauthenticated is plenty.
+            meta=$(curl -fsS --retry 3 "https://api.github.com/repos/$REPO/pulls/$PR")
+            BASE_REF=$(jq -r .base.ref <<<"$meta"); HEAD_SHA=$(jq -r .head.sha <<<"$meta")
+            auth=()
+          else
+            auth=(-c "http.extraheader=AUTHORIZATION: basic $(printf 'x-access-token:%s' "$READ_TOKEN" | base64 -w0)")
+          fi
+          [[ "$HEAD_SHA" =~ ^[0-9a-f]{40}$ ]] || { echo "::error::bad head sha"; exit 1; }
+          git init -q "$W/src"
+          # Full fetch, not --filter=blob:none: gitleaks runs with no network and
+          # can't lazily fetch missing blobs from a partial clone.
+          git -C "$W/src" "${auth[@]}" fetch -q --no-tags \
+            "https://github.com/$REPO" "+refs/pull/$PR/head:refs/pr/head" "+refs/heads/$BASE_REF:refs/pr/base"
+          [[ "$(git -C "$W/src" rev-parse refs/pr/head)" == "$HEAD_SHA" ]] || {
+            echo "::error::PR head moved during the run; a newer run will review it"; exit 1; }
+          git -C "$W/src" checkout -q --detach refs/pr/head
+          git -C "$W/src" diff --no-color --no-ext-diff --merge-base refs/pr/base refs/pr/head > "$W/diff.patch"
+          # Nothing to review: fail loudly rather than run the agents on nothing and
+          # report "no findings". secrets-hunter scans commits, not the diff, so a PR
+          # whose changes cancel out still gets its commits scanned.
+          if [[ "$(git -C "$W/src" rev-list --count refs/pr/base..refs/pr/head)" == 0 ]]; then
+            echo "::error::PR has no commits that aren't already on $BASE_REF (already merged?); nothing to review"; exit 1
+          fi
+          if [[ ! -s "$W/diff.patch" && "$AGENT" != secrets-hunter ]]; then
+            echo "::error::PR's changes cancel out against $BASE_REF (empty diff); nothing to review"; exit 1
+          fi
+          echo "$HEAD_SHA" > "$W/head_sha"
+          echo "W=$W" >> "$GITHUB_ENV"
+          echo "diff: $(wc -c < "$W/diff.patch") bytes"
+
+      - name: Run the test suite in a sandbox (code-hunter only)
+        if: matrix.agent == 'code-hunter' && env.TIER == 'own' && env.TEST_IMAGE != '' && env.TEST_CMD != ''
+        run: |
+          set -uo pipefail
+          # GitHub runs this with bash -e, so catch the exit code instead of letting a
+          # failing test run end the step: failures are code-hunter's input.
+          code=0
+          timeout --kill-after=30 "$TEST_TIMEOUT" podman run --rm --network=none --read-only \
+            --cap-drop=all --security-opt=no-new-privileges --pids-limit=1024 --memory=6g \
+            --userns=keep-id:uid=65534,gid=65534 \
+            --tmpfs /tmp:rw,size=1g --tmpfs /work:rw,exec,size=4g,mode=1777 \
+            -v "$W/src:/src:ro,Z" -e TEST_CMD "$TEST_IMAGE" \
+            sh -c 'mkdir /work/pr && cp -a /src/. /work/pr/ && cd /work/pr && eval "$TEST_CMD"' > "$W/tests.full" 2>&1 \
+            || code=$?
+          { echo "exit code: $code$([[ $code == 124 ]] && echo ' (timed out)')"; tail -c 60000 "$W/tests.full"; } > "$W/out/tests.txt"
+          echo "tests exited $code (reported to code-hunter, not a job failure)"
+
+      - name: Scan commits for secrets (secrets-hunter only)
+        if: matrix.agent == 'secrets-hunter'
+        run: |
+          set -euo pipefail
+          # gitleaks reads .gitleaksignore and .gitleaks.toml from the folder it scans,
+          # which is the PR's checkout. Swap in the base branch's copies, so a PR can't
+          # allowlist its own leak: an ignore entry only counts once it's merged.
+          for f in .gitleaksignore .gitleaks.toml; do
+            rm -rf "$W/src/$f"
+            if git -C "$W/src" cat-file -e "refs/pr/base:$f" 2>/dev/null; then
+              git -C "$W/src" show "refs/pr/base:$f" > "$W/src/$f"
+            fi
+          done
+          podman run --rm --network=none --read-only --cap-drop=all --security-opt=no-new-privileges \
+            --userns=keep-id:uid=65534,gid=65534 \
+            -v "$W/src:/src:ro,Z" -v "$W/out:/out:rw,Z" "$AGENT_IMAGE" \
+            gitleaks git /src --log-opts="refs/pr/base..refs/pr/head" --redact --no-banner \
+              --gitleaks-ignore-path /src --report-format json --report-path /out/gitleaks.json --exit-code 0
+          echo "gitleaks results: $(jq length "$W/out/gitleaks.json")"
+
+      - name: Run the agent
+        run: |
+          set -euo pipefail
+          args=(--agent "$AGENT" --tier "$TIER" --repo "$REPO" --pr "$PR" --out /out/findings.json)
+          case "$AGENT" in
+            secrets-hunter) args+=(--gitleaks-report /out/gitleaks.json) ;;
+            code-hunter)    args+=(--diff /w/diff.patch --tests /out/tests.txt) ;;
+            *)              args+=(--diff /w/diff.patch) ;;
+          esac
+          # Only this agent's Strix key goes into the container, as STRIX_API_KEY;
+          # agentgateway lets it use this agent's lane and no other. No GitHub
+          # token goes in here. Egress is limited by the VM's VLAN and Proxmox
+          # firewall to GitHub and the Strix.
+          key_var="STRIX_KEY_$(tr 'a-z-' 'A-Z_' <<<"$AGENT")"
+          STRIX_API_KEY="${!key_var:-}"
+          [[ -n "$STRIX_API_KEY" ]] || { echo "::error::$key_var is not set on this runner"; exit 1; }
+          export STRIX_API_KEY
+          podman run --rm --read-only --cap-drop=all --security-opt=no-new-privileges --tmpfs /tmp \
+            --userns=keep-id:uid=65534,gid=65534 \
+            -v "$AGENTS_DIR:/agents:ro" -v "$W/diff.patch:/w/diff.patch:ro,Z" -v "$W/out:/out:rw,Z" \
+            -e STRIX_API_KEY -e STRIX_URL -e MODEL_RETRIES -e MODEL_TIMEOUT -e MAX_INPUT_BYTES \
+            "$AGENT_IMAGE" python3 /agents/run-agent.py "${args[@]}"
+
+      - name: Publish findings
+        run: |
+          set -euo pipefail
+          args=(--agent "$AGENT" --tier "$TIER" --repo "$REPO" --pr "$PR"
+                --head-sha "$(cat "$W/head_sha")" --findings "$W/out/findings.json")
+          # Every gitleaks result fails secrets-hunter's check, whatever the model made of
+          # it; only an entry in the base branch's .gitleaksignore clears one.
+          if [[ "$AGENT" == secrets-hunter ]]; then args+=(--gitleaks-report "$W/out/gitleaks.json"); fi
+          if [[ "$TIER" == ext ]]; then
+            env -u GH_TOKEN -u GITHUB_TOKEN python3 "$AGENTS_DIR/post-findings.py" "${args[@]}" \
+              --writeup-dir "$WRITEUP_DIR"
+            exit 0
+          fi
+          minted=$("$AGENTS_DIR/mint-app-token.sh" "$AGENT" "$REPO")
+          GH_TOKEN=${minted% *}; APP_SLUG=${minted#* }
+          echo "::add-mask::$GH_TOKEN"
+          export GH_TOKEN APP_SLUG
+          trap 'curl -fsS -X DELETE -H "Authorization: Bearer $GH_TOKEN" https://api.github.com/installation/token || true' EXIT
+          python3 "$AGENTS_DIR/post-findings.py" "${args[@]}"
+
+      - name: Clean up
+        if: always()
+        run: rm -rf "${W:-/nonexistent}"

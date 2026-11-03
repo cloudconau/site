@@ -26,7 +26,6 @@ CloudCon will have sessions on the following areas:
 - [![Alex Eze](images/speakers/headshots/AlexEze.png) Alex Eze](abstracts/2026/AlexEze.md)
 - [![Andrew Jeffree](images/speakers/headshots/AndrewJeffree.png) Andrew Jeffree](abstracts/2026/AndrewJeffree.md)
 - [![Anupam Phoghat](images/speakers/headshots/AnupamPhoghat.png) Anupam Phoghat](abstracts/2026/AnupamPhoghat.md)
-- [![Ashan Senevirathne](images/speakers/headshots/AshanSenevirathne.png) Ashan Senevirathne](abstracts/2026/AshanSenevirathne.md)
 - [![Charlotte Fleming](images/speakers/headshots/CharlotteFleming.png) Charlotte Fleming](abstracts/2026/CharlotteFleming.md)
 - [![Daniel D'Alessandro](images/speakers/headshots/DanielDAlessandro.png) Daniel D'Alessandro](abstracts/2026/AdamCassarDanielDAlessandro.md)
 - [![Frank Fan](images/speakers/headshots/FrankFan.png) Frank Fan](abstracts/2026/ShengChenFrankFan.md)
@@ -40,6 +39,7 @@ CloudCon will have sessions on the following areas:
 - [![Sami Alakus](images/speakers/headshots/SamiAlakus.png) Sami Alakus](abstracts/2026/MichaelFornaroSamiAlakus.md)
 - [![Saurabh Mishra](images/speakers/headshots/SaurabhMishra.png) Saurabh Mishra](abstracts/2026/SaurabhMishra.md)
 - [![Sheng Chen](images/speakers/headshots/ShengChen.png) Sheng Chen](abstracts/2026/ShengChenFrankFan.md)
+- [![Tatiana Selezneva](images/speakers/headshots/TatianaSelezneva.png) Tatiana Selezneva](abstracts/2026/TatianaSelezneva.md)
 - [![Vasilios Syrakis](images/speakers/headshots/VasiliosSyrakis.png) Vasilios Syrakis](abstracts/2026/JacobTaylorVasiliosSyrakis.md)
 - [![Wendy Ha](images/speakers/headshots/WendyHa.png) Wendy Ha](abstracts/2026/WendyHa.md)
 - [![Woh Shon Phoon](images/speakers/headshots/WohShonPhoon.png) Woh Shon Phoon](abstracts/2026/WohShonPhoon.md)
@@ -58,7 +58,7 @@ CloudCon will have sessions on the following areas:
 | [AI and platform maturity: the foundations that help AI deliver](abstracts/2026/CharlotteFleming.md) | Charlotte Fleming, Octopus Deploy | 5 min |
 | [The Bot Might Be Your Customer - Rethinking Traffic Management](abstracts/2026/AdamCassarDanielDAlessandro.md) | Adam Cassar, Peakhour.io & Daniel D'Alessandro, Peakhour.io | 20 min |
 | [I'm Behind Seven Proxies: Demystifying Envoy on Kubernetes](abstracts/2026/JacobTaylorVasiliosSyrakis.md) | Jacob Taylor, Canva & Vasilios Syrakis | 20 min |
-| [Telstra's GitOps Journey: Scaling Reliable Mobile Core Operations with Kubernetes](abstracts/2026/AshanSenevirathne.md) | Ashan Senevirathne, Telstra | 20 min |
+| [How Kubernetes Gets Released: A Contributor’s View from the Release Team](abstracts/2026/TatianaSelezneva.md) | Tatiana Selezneva, REA Group | 20 min |
 | [The Telemetry Trap: Building Meaningful Open-Source Observability for Multi-Agent Systems](abstracts/2026/AnupamPhoghat.md) | Anupam Phoghat, Core-X | 20 min |
 | [Operators as Data: Why Lifecycle is Not a Separate Problem](abstracts/2026/AlexEze.md) | Alex Eze, NHS | 5 min |
 | [The Day I Found Out My Policies Were Off](abstracts/2026/OsamaOkunbo.md) | Osama Okunbo, Immibuddy | 20 min |
@@ -80,7 +80,7 @@ Pre-conference workshops run on Day 1, Monday 9 November 2026. Bring your own la
 |---|---|---|
 | [Hosting and Scaling GenAI Workloads on Amazon EKS](abstracts/2026/AWSWorkshopGenAI.md) | Frank Fan, Sheng Chen, Navya Srivastava & Parikshit Patel, AWS | 2.5 hours (9:30 am) |
 | [Race to Recover: Mission Earth](abstracts/2026/CommvaultWorkshop.md) | Commvault | 2.5 hours (9:30 am) |
-| [Chainguard Workshop](abstracts/2026/ChainguardWorkshop.md) | Chainguard | 2.5 hours (1:30 pm) |
+| [Break It, Fix It: Hands-On Container and Library Supply Chain Security](abstracts/2026/ChainguardWorkshop.md) | Andrew Dean, Chainguard | 2.5 hours (1:30 pm) |
 
 ---
 

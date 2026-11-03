@@ -15,7 +15,7 @@ Day 1 is pre-conference workshops; Day 2 is a single track of talks in the Cockl
 | 9:30 - 12:00 | [Hosting and Scaling GenAI Workloads on Amazon EKS](abstracts/2026/AWSWorkshopGenAI.md) (Cockle Bay Room 1) | Frank Fan, Sheng Chen, Navya Srivastava & Parikshit Patel, AWS | 2.5 hours |
 | 9:30 - 12:00 | [Race to Recover: Mission Earth](abstracts/2026/CommvaultWorkshop.md) (Cockle Bay Room 2) | Commvault | 2.5 hours |
 | 12:00 - 1:30 | *Break* | | |
-| 1:30 - 4:00 | [Chainguard Workshop](abstracts/2026/ChainguardWorkshop.md) (Cockle Bay Room) | Chainguard | 2.5 hours |
+| 1:30 - 4:00 | [Break It, Fix It: Hands-On Container and Library Supply Chain Security](abstracts/2026/ChainguardWorkshop.md) (Cockle Bay Room) | Andrew Dean, Chainguard | 2.5 hours |
 
 The two morning workshops run in parallel, so pick one. Bring your own laptop to any workshop.
 
@@ -33,7 +33,7 @@ The two morning workshops run in parallel, so pick one. Bring your own laptop to
 | 11:15 - 11:35 | [Streaming Under Fire](abstracts/2026/MichaelFornaroSamiAlakus.md) | Michael Fornaro & Sami Alakus, Easygo | 20 min |
 | 11:35 - 11:55 | [ArgoCD, 16,000 Apps, One Cluster](abstracts/2026/AndrewJeffree.md) | Andrew Jeffree, Mitti | 20 min |
 | 11:55 - 12:15 | [The Bot Might Be Your Customer - Rethinking Traffic Management](abstracts/2026/AdamCassarDanielDAlessandro.md) | Adam Cassar & Daniel D'Alessandro, Peakhour.io | 20 min |
-| 12:15 - 12:35 | [Telstra's GitOps Journey: Scaling Reliable Mobile Core Operations with Kubernetes](abstracts/2026/AshanSenevirathne.md) | Ashan Senevirathne, Telstra | 20 min |
+| 12:15 - 12:35 | [How Kubernetes Gets Released: A Contributor’s View from the Release Team](abstracts/2026/TatianaSelezneva.md) | Tatiana Selezneva, REA Group | 20 min |
 | 12:35 - 12:40 | [Becoming a CNCF Contributor with 1 Hour a Week](abstracts/2026/WendyHa.md) | Wendy Ha, SEEK | 5 min (lightning) |
 | 12:40 - 1:25 | *Networking Lunch* | | 45 min |
 | 1:25 - 1:45 | [Platform Patterns for AI on K8s: Admission, Isolation & Observability That Work](abstracts/2026/SaurabhMishra.md) | Saurabh Mishra, Vodafone | 20 min |

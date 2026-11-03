@@ -1,7 +1,7 @@
 # pr-review.yml
 # =============
 # cloudconau's copy of rk8s-ai-lab/homelab's pr-review-agents/workflows/pr-review.yml
-# (template at 7149530; homelab's README, Phase 5). Only this header and the
+# (template at 7149530 + homelab#49; homelab's README, Phase 5). Only this header and the
 # env: block differ from the template; keep the rest in sync with it.
 #
 # Two triggers, two trust tiers:
@@ -105,6 +105,15 @@ jobs:
             echo "::error::PR head moved during the run; a newer run will review it"; exit 1; }
           git -C "$W/src" checkout -q --detach refs/pr/head
           git -C "$W/src" diff --no-color --no-ext-diff --merge-base refs/pr/base refs/pr/head > "$W/diff.patch"
+          # Nothing to review: fail loudly rather than run the agents on nothing and
+          # report "no findings". secrets-hunter scans commits, not the diff, so a PR
+          # whose changes cancel out still gets its commits scanned.
+          if [[ "$(git -C "$W/src" rev-list --count refs/pr/base..refs/pr/head)" == 0 ]]; then
+            echo "::error::PR has no commits that aren't already on $BASE_REF (already merged?); nothing to review"; exit 1
+          fi
+          if [[ ! -s "$W/diff.patch" && "$AGENT" != secrets-hunter ]]; then
+            echo "::error::PR's changes cancel out against $BASE_REF (empty diff); nothing to review"; exit 1
+          fi
           echo "$HEAD_SHA" > "$W/head_sha"
           echo "W=$W" >> "$GITHUB_ENV"
           echo "diff: $(wc -c < "$W/diff.patch") bytes"

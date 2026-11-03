@@ -6,11 +6,11 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Modern telecommunications networks operate some of the largest distributed systems in Australia, where reliability and operational consistency are critical.">
+        <meta name="description" content="A look at how a Kubernetes release moves from planning to shipping, how the Release Signal subteam understands readiness and risk, and how contributors keep releases moving.">
       
       
       
-        <link rel="canonical" href="https://cloudcon.au/abstracts/2026/AshanSenevirathne/">
+        <link rel="canonical" href="https://cloudcon.au/abstracts/2026/TatianaSelezneva/">
       
       
       
@@ -23,7 +23,7 @@
     
     
       
-        <title>Telstra's GitOps Journey: Scaling Reliable Mobile Core Operations with Kubernetes - CloudCon 2026</title>
+        <title>How Kubernetes Gets Released: A Contributor’s View from the Release Team - CloudCon 2026</title>
       
     
     
@@ -65,15 +65,15 @@
 
   <meta property="og:type" content="article" />
   <meta property="og:site_name" content="CloudCon Sydney 2026" />
-  <meta property="og:title" content="Telstra's GitOps Journey: Scaling Reliable Mobile Core Operations with Kubernetes" />
-  <meta property="og:description" content="Modern telecommunications networks operate some of the largest distributed systems in Australia, where reliability and operational consistency are critical." />
-  <meta property="og:url" content="https://cloudcon.au/abstracts/2026/AshanSenevirathne/" />
-  <meta property="og:image" content="https://cloudcon.au/images/speakers/headshots/AshanSenevirathne.png" />
+  <meta property="og:title" content="How Kubernetes Gets Released: A Contributor’s View from the Release Team" />
+  <meta property="og:description" content="A look at how a Kubernetes release moves from planning to shipping, how the Release Signal subteam understands readiness and risk, and how contributors keep releases moving." />
+  <meta property="og:url" content="https://cloudcon.au/abstracts/2026/TatianaSelezneva/" />
+  <meta property="og:image" content="https://cloudcon.au/images/speakers/headshots/TatianaSelezneva.png" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Telstra's GitOps Journey: Scaling Reliable Mobile Core Operations with Kubernetes" />
-  <meta name="twitter:description" content="Modern telecommunications networks operate some of the largest distributed systems in Australia, where reliability and operational consistency are critical." />
-  <meta name="twitter:image" content="https://cloudcon.au/images/speakers/headshots/AshanSenevirathne.png" />
+  <meta name="twitter:title" content="How Kubernetes Gets Released: A Contributor’s View from the Release Team" />
+  <meta name="twitter:description" content="A look at how a Kubernetes release moves from planning to shipping, how the Release Signal subteam understands readiness and risk, and how contributors keep releases moving." />
+  <meta name="twitter:image" content="https://cloudcon.au/images/speakers/headshots/TatianaSelezneva.png" />
 
   </head>
   
@@ -92,7 +92,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#telstras-gitops-journey-scaling-reliable-mobile-core-operations-with-kubernetes" class="md-skip">
+        <a href="#how-kubernetes-gets-released-a-contributors-view-from-the-release-team" class="md-skip">
           Skip to content
         </a>
       
@@ -506,21 +506,21 @@
 
 <div class="cc-header-row">
 <div class="cc-heads">
-<p><img alt="Ashan Senevirathne" class="cc-head" src="../../../images/speakers/headshots/AshanSenevirathne.png" /></p>
+<p><img alt="Tatiana Selezneva" class="cc-head" src="../../../images/speakers/headshots/TatianaSelezneva.png" /></p>
 </div>
-<div class="cc-share-row"><span class="cc-share-label">Share</span><a class="cc-share cc-share--li" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fcloudcon.au%2Fabstracts%2F2026%2FAshanSenevirathne%2F" target="_blank" rel="noopener" aria-label="Share on LinkedIn">in</a><a class="cc-share cc-share--x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fcloudcon.au%2Fabstracts%2F2026%2FAshanSenevirathne%2F&amp;text=Telstra%27s%20GitOps%20Journey%3A%20Scaling%20Reliable%20Mobile%20Core%20Operations%20with%20Kubernetes%20%E2%80%94%20Ashan%20Senevirathne%20at%20CloudCon%20Sydney%202026" target="_blank" rel="noopener" aria-label="Share on X">X</a><a class="cc-share cc-share--fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcloudcon.au%2Fabstracts%2F2026%2FAshanSenevirathne%2F" target="_blank" rel="noopener" aria-label="Share on Facebook">f</a></div>
+<div class="cc-share-row"><span class="cc-share-label">Share</span><a class="cc-share cc-share--li" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fcloudcon.au%2Fabstracts%2F2026%2FTatianaSelezneva%2F" target="_blank" rel="noopener" aria-label="Share on LinkedIn">in</a><a class="cc-share cc-share--x" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fcloudcon.au%2Fabstracts%2F2026%2FTatianaSelezneva%2F&amp;text=How%20Kubernetes%20Gets%20Released%3A%20A%20Contributor%E2%80%99s%20View%20from%20the%20Release%20Team%20%E2%80%94%20Tatiana%20Selezneva%20at%20CloudCon%20Sydney%202026" target="_blank" rel="noopener" aria-label="Share on X">X</a><a class="cc-share cc-share--fb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fcloudcon.au%2Fabstracts%2F2026%2FTatianaSelezneva%2F" target="_blank" rel="noopener" aria-label="Share on Facebook">f</a></div>
 </div>
-<h1 id="telstras-gitops-journey-scaling-reliable-mobile-core-operations-with-kubernetes">Telstra's GitOps Journey: Scaling Reliable Mobile Core Operations with Kubernetes</h1>
+<h1 id="how-kubernetes-gets-released-a-contributors-view-from-the-release-team">How Kubernetes Gets Released: A Contributor’s View from the Release Team</h1>
 <p class="cc-byline">
-<strong>Ashan Senevirathne</strong> &middot; Technical Product Owner, Telstra
+<strong>Tatiana Selezneva</strong> &middot; Engineering Manager, REA Group
 </p>
 <p><em>Full length talk (20 minutes)</em></p>
 <h2 id="abstract">Abstract</h2>
-<p>Modern telecommunications networks operate some of the largest distributed systems in Australia, where reliability and operational consistency are critical.</p>
-<p>As Telstra expanded its cloud-native mobile core on Kubernetes, the challenge was no longer deploying applications. It was onboarding, operating, upgrading, and recovering hundreds of applications consistently without scaling operational effort linearly.</p>
-<p>This talk shares our GitOps journey using Kubernetes, Flux, OpenTelemetry, and reusable platform abstractions to standardise onboarding, observability, and lifecycle management. We'll discuss how declarative workflows reduced deployment lead times, eliminated configuration drift, improved operational reliability, and enabled self-service consumption of common platform capabilities.</p>
+<p>We all know how difficult it is to meet deadlines. And yet this large, global, distributed open source community keeps shipping on time. How does it work?</p>
+<p>In this talk, I'll share what I learned from working on the Kubernetes Release Team in the Release Signal subteam. I'll walk through how a Kubernetes release moves from planning to shipping, how the Release Signal team helps to understand readiness and risk, and how many different contributors work together to keep releases moving.</p>
+<p>If you use Kubernetes and want to better understand the community behind it, or if you have ever wondered how to start contributing in a meaningful way, this talk will give you a clearer picture of the release process and the paths available to make an impact.</p>
 <h2 id="speaker-bio">Speaker Bio</h2>
-<p>Senior technology leader at Telstra with 10+ years of experience in telecommunications, cloud-native transformation, and site reliability engineering. Driving the design and delivery of cloud-scale architectures for 5G and networks, with a focus on automation and zero-touch operations. Proven expertise in Kubernetes, GitOps, and network orchestration, alongside a strong track record in optimizing release engineering and fostering cross-functional collaboration. Active contributor to global industry forums including CNCF and Linux Foundation Networking.</p>
+<p>Tatiana is a part of the Platform Engineering team at REA Group, where she focuses on improving developer productivity through the use of Kubernetes orchestration and cloud-native technologies. She is passionate about streamlining development processes and enabling innovation within the tech community.</p>
 <hr />
 <p><a href="../../../speakers/">&larr; All speakers</a></p>
 

@@ -11,7 +11,7 @@ card: "summary"
 # Race to Recover: Mission Earth
 
 <p class="cc-byline" markdown>
-**Commvault workshop** &middot; Monday 9 November 2026, 9:30 am &ndash; 12:00 pm &middot; Cockle Bay Room 2
+**Commvault workshop** &middot; Monday 9 November 2026, 9:30 am &ndash; 12:00 pm &middot; Cockle Bay Room 2<br>Facilitated by Tirslen Pather and Steve Ng
 </p>
 
 *Pre-conference workshop (2.5 hours)*
@@ -29,6 +29,11 @@ Your final challenge: prove that Mission Earth's application is ready to operate
 - Trace an AI-driven attack's impact on application data and behaviour, and identify the evidence needed to scope and contain the incident.
 - Make justified recovery decisions that balance urgency, data loss, dependencies, and preservation of valid changes.
 - Verify recovery through repeatable data-integrity and application checks, and translate the exercise into a practical recovery checklist.
+
+## Facilitators
+
+- **Tirslen Pather** &middot; Cloud Resilience Architect, Commvault
+- **Steve Ng** &middot; Cloud Resilience Architect, Commvault
 
 ## Prerequisites
 

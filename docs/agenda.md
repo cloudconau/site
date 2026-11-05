@@ -27,7 +27,7 @@ The two morning workshops run in parallel, so pick one. Bring your own laptop to
 | 9:15 - 9:40 | Welcome | Conference Organisers | 25 min |
 | 9:40 - 10:00 | [Who's Stealing My CPU? Catching Noisy Neighbours with eBPF on Kubernetes](abstracts/2026/OlgaMirensky.md) | Olga Mirensky, Ping Identity | 20 min |
 | 10:00 - 10:20 | [I'm Behind Seven Proxies: Demystifying Envoy on Kubernetes](abstracts/2026/JacobTaylorVasiliosSyrakis.md) | Jacob Taylor, Canva & Vasilios Syrakis | 20 min |
-| 10:20 - 10:40 | [Cloud Native Global Load Balancing with K8gb](abstracts/2026/WohShonPhoon.md) | Woh Shon Phoon | 20 min |
+| 10:20 - 10:40 | [Cloud Native Global Load Balancing with K8gb](abstracts/2026/WohShonPhoon.md) | Woh Shon Phoon, Nutanix | 20 min |
 | 10:40 - 10:45 | [Operators as Data: Why Lifecycle is Not a Separate Problem](abstracts/2026/AlexEze.md) | Alex Eze, NHS | 5 min (lightning) |
 | 10:45 - 11:15 | *Morning Tea* | | 30 min |
 | 11:15 - 11:35 | [Streaming Under Fire](abstracts/2026/MichaelFornaroSamiAlakus.md) | Michael Fornaro & Sami Alakus, Easygo | 20 min |

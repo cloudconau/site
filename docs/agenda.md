@@ -16,6 +16,7 @@ Day 1 is pre-conference workshops; Day 2 is a single track of talks in the Cockl
 | 9:30 - 12:00 | [Race to Recover: Mission Earth](abstracts/2026/CommvaultWorkshop.md) (Cockle Bay Room 2) | Tirslen Pather & Steve Ng, Commvault | 2.5 hours |
 | 12:00 - 1:30 | *Break* | | |
 | 1:30 - 4:00 | [Break It, Fix It: Hands-On Container and Library Supply Chain Security](abstracts/2026/ChainguardWorkshop.md) (Cockle Bay Room) | Andrew Dean, Chainguard | 2.5 hours |
+| From 4:15 | *Welcome Drinks* (Planar, downstairs) | | |
 
 The two morning workshops run in parallel, so pick one. Bring your own laptop to any workshop.
 

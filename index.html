@@ -2661,5 +2661,162 @@ function toggleFaq(i) {
 })();
 </script>
 <!-- TALK MODAL END -->
+<!-- LIVE SCHEDULE START -->
+<style>
+  /* Live schedule: the session on now, the one up next, and earlier sessions
+     today faded back. A slow pulse, never flashing, and none at all for
+     people who ask their device for reduced motion. */
+  .live-now-bar {
+    display: none; gap: 0.6rem 1.5rem; flex-wrap: wrap; align-items: center;
+    margin-top: 1.75rem; padding: 0.85rem 1.1rem;
+    background: rgba(0,153,204,0.08); border: 1px solid rgba(0,153,204,0.35); border-radius: 12px;
+  }
+  .live-now-bar.show { display: flex; }
+  .live-now-bar button {
+    all: unset; cursor: pointer; display: inline-flex; align-items: baseline; gap: 0.5rem;
+    font-size: 0.9rem; color: var(--text); line-height: 1.4;
+  }
+  .live-now-bar button:hover .live-now-title, .live-now-bar button:focus-visible .live-now-title { color: var(--blue-light); text-decoration: underline; }
+  .live-now-bar button:focus-visible { outline: 2px solid var(--blue-light); outline-offset: 3px; border-radius: 4px; }
+  .live-now-label { font-family: var(--font-head); font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); white-space: nowrap; }
+  .live-now-title { font-weight: 600; }
+  .live-now-when { color: var(--text-muted); font-size: 0.82rem; white-space: nowrap; }
+
+  .live-badge {
+    display: inline-flex; align-items: center; gap: 0.35rem; margin-left: 0.6rem; vertical-align: 0.1em;
+    font-family: var(--font-head); font-size: 0.62rem; font-weight: 700; font-style: normal;
+    letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap;
+    padding: 0.15rem 0.55rem; border-radius: 999px;
+  }
+  .live-badge--now { color: #fff; background: #dc2626; }
+  .live-badge--next { color: var(--blue-light); border: 1px solid rgba(51,187,238,0.5); }
+  .live-dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; animation: live-pulse 2s ease-in-out infinite; }
+  @keyframes live-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+  .timetable-row.is-live { background: rgba(0,153,204,0.12); box-shadow: inset 4px 0 0 #dc2626; }
+  .timetable-row.is-live .session-title-cell { color: var(--text); font-style: normal; }
+  .timetable-row.is-past { opacity: 0.5; }
+  .timetable-row.is-past:hover { opacity: 0.85; }
+
+  @media (prefers-reduced-motion: reduce) { .live-dot { animation: none; } }
+</style>
+<script>
+(function () {
+  var schedule = document.getElementById('schedule');
+  if (!schedule) return;
+
+  var MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+  // Session times are written 12-hour without am/pm and the day runs from
+  // 8:30 to the evening, so an hour before 8 is the afternoon.
+  function toMinutes(h, m) { h = +h; if (h < 8) h += 12; return h * 60 + (+m); }
+  function fmt(mins) {
+    var h = Math.floor(mins / 60), m = mins % 60;
+    var h12 = h > 12 ? h - 12 : h;
+    return h12 + ':' + (m < 10 ? '0' : '') + m + (h >= 12 ? ' pm' : ' am');
+  }
+
+  // "Now" in Sydney, whatever timezone the visitor is in.
+  // ?now=2026-11-09T10:15 overrides it, for previewing the live view.
+  function sydneyNow() {
+    var q = new URLSearchParams(location.search).get('now');
+    var m = q && q.match(/^(\d{4}-\d{2}-\d{2})T(\d{1,2}):(\d{2})/);
+    if (m) return { date: m[1], mins: (+m[2]) * 60 + (+m[3]) };
+    var parts = new Intl.DateTimeFormat('en-CA', {
+      timeZone: 'Australia/Sydney', year: 'numeric', month: '2-digit', day: '2-digit',
+      hour: '2-digit', minute: '2-digit', hourCycle: 'h23'
+    }).formatToParts(new Date());
+    var get = function (t) { return parts.filter(function (p) { return p.type === t; })[0].value; };
+    return { date: get('year') + '-' + get('month') + '-' + get('day'), mins: (+get('hour')) * 60 + (+get('minute')) };
+  }
+
+  // Read the days and sessions from the schedule itself.
+  var days = [];
+  schedule.querySelectorAll('.schedule-day-label').forEach(function (label) {
+    var d = label.textContent.match(/(\d{1,2})\s+(January|February|March|April|May|June|July|August|September|October|November|December)\s+(\d{4})/);
+    if (!d) return;
+    var date = d[3] + '-' + ('0' + (MONTHS.indexOf(d[2]) + 1)).slice(-2) + '-' + ('0' + d[1]).slice(-2);
+    var table = label.nextElementSibling;
+    while (table && !table.classList.contains('timetable')) table = table.nextElementSibling;
+    if (!table) return;
+    var rows = [];
+    table.querySelectorAll('.timetable-row').forEach(function (row) {
+      var t = row.querySelector('.session-time'), title = row.querySelector('.session-title-cell');
+      if (!t || !title) return;
+      var hits = t.textContent.match(/\d{1,2}:\d{2}/g);
+      if (!hits) return;
+      var a = hits[0].split(':'), b = hits[1] && hits[1].split(':');
+      rows.push({
+        el: row, title: title,
+        start: toMinutes(a[0], a[1]),
+        end: b ? toMinutes(b[0], b[1]) : 24 * 60 - 1   // "From 4:15": open-ended, until the end of the day
+      });
+    });
+    if (rows.length) days.push({ date: date, label: label, rows: rows });
+  });
+  if (!days.length) return;
+
+  // The summary bar above the first day.
+  var bar = document.createElement('div');
+  bar.className = 'live-now-bar';
+  bar.setAttribute('role', 'status');
+  bar.setAttribute('aria-live', 'polite');
+  days[0].label.parentNode.insertBefore(bar, days[0].label);
+
+  function badge(kind, text) {
+    var b = document.createElement('span');
+    b.className = 'live-badge live-badge--' + kind;
+    if (kind === 'now') { var dot = document.createElement('span'); dot.className = 'live-dot'; b.appendChild(dot); }
+    b.appendChild(document.createTextNode(text));
+    return b;
+  }
+
+  function jump(row) { row.el.scrollIntoView({ behavior: 'smooth', block: 'center' }); }
+
+  function item(label, rows, when) {
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    var l = document.createElement('span'); l.className = 'live-now-label'; l.textContent = label;
+    var t = document.createElement('span'); t.className = 'live-now-title';
+    t.textContent = rows.map(function (r) { return r.title.firstChild ? r.title.firstChild.textContent.trim() : ''; }).join(' \u00b7 ');
+    btn.appendChild(l); btn.appendChild(t);
+    if (when) { var w = document.createElement('span'); w.className = 'live-now-when'; w.textContent = when; btn.appendChild(w); }
+    btn.addEventListener('click', function () { jump(rows[0]); });
+    return btn;
+  }
+
+  function update() {
+    var now = sydneyNow();
+    var live = [], next = [];
+
+    days.forEach(function (day) {
+      day.rows.forEach(function (r) {
+        r.el.classList.remove('is-live', 'is-next', 'is-past');
+        r.title.querySelectorAll('.live-badge').forEach(function (b) { b.remove(); });
+      });
+      if (day.date !== now.date) return;   // only today's sessions change
+      var nextStart = null;
+      day.rows.forEach(function (r) {
+        if (r.end <= now.mins) r.el.classList.add('is-past');
+        else if (r.start <= now.mins) live.push(r);
+        else if (nextStart === null || r.start < nextStart) nextStart = r.start;
+      });
+      day.rows.forEach(function (r) { if (nextStart !== null && r.start === nextStart) next.push(r); });
+    });
+
+    live.forEach(function (r) { r.el.classList.add('is-live'); r.title.appendChild(badge('now', 'Live now')); });
+    next.forEach(function (r) { r.el.classList.add('is-next'); r.title.appendChild(badge('next', 'Up next')); });
+
+    bar.textContent = '';
+    if (live.length) bar.appendChild(item('Live now', live, live[0].end < 24 * 60 - 1 ? 'until ' + fmt(live[0].end) : ''));
+    if (next.length) bar.appendChild(item('Up next', next, 'at ' + fmt(next[0].start)));
+    bar.classList.toggle('show', live.length > 0 || next.length > 0);
+  }
+
+  update();
+  setInterval(update, 30000);
+})();
+</script>
+<!-- LIVE SCHEDULE END -->
 </body>
 </html>

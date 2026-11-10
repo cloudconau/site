@@ -10,6 +10,8 @@
       window.addEventListener('load', function () {
         var el = document.getElementById('schedule');
         if (el) el.scrollIntoView({ behavior: 'instant', block: 'start' });
+        // During the event, carry on to the session that is live (or up next).
+        if (window.ccScrollToNow) window.ccScrollToNow();
       });
     })();
   </script>
@@ -2840,7 +2842,13 @@ function toggleFaq(i) {
     if (live.length) bar.appendChild(item('Live now', live, live[0].end < 24 * 60 - 1 ? 'until ' + fmt(live[0].end) : ''));
     if (next.length) bar.appendChild(item('Up next', next, 'at ' + fmt(next[0].start)));
     bar.classList.toggle('show', live.length > 0 || next.length > 0);
+    current = live[0] || next[0] || null;
   }
+
+  var current = null;
+  window.ccScrollToNow = function () {
+    if (current) current.el.scrollIntoView({ behavior: 'instant', block: 'center' });
+  };
 
   update();
   setInterval(update, 30000);

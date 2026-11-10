@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>
+    // Landing on the bare homepage goes straight to the full schedule.
+    // Any existing hash (#talk=..., #speakers, ...) is left alone.
+    (function () {
+      if (location.hash) return;
+      history.replaceState(null, '', location.pathname + location.search + '#schedule');
+      window.addEventListener('load', function () {
+        var el = document.getElementById('schedule');
+        if (el) el.scrollIntoView({ behavior: 'instant', block: 'start' });
+      });
+    })();
+  </script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CloudCon Sydney 2026: Australia's Premier Cloud-Native Conference</title>
@@ -2415,6 +2427,12 @@ function toggleFaq(i) {
     border: 1px solid rgba(0,153,204,0.3); border-radius: 999px;
     padding: 0.25rem 0.7rem; margin-bottom: 0.8rem;
   }
+  .talk-modal-timing {
+    display: flex; align-items: center; gap: 0.5rem;
+    font-size: 0.85rem; color: var(--text-muted); margin: 0 0 0.7rem;
+  }
+  .talk-modal-timing svg { color: var(--blue-light); flex: none; }
+  .talk-modal-timing strong { color: var(--text); font-family: var(--font-head); }
   #talk-title {
     font-family: var(--font-head); font-weight: 800; font-size: 1.5rem;
     line-height: 1.25; color: var(--text); margin: 0 0 0.85rem;
@@ -2517,6 +2535,16 @@ function toggleFaq(i) {
   var lastFocus = null;      // element to restore focus to on close
   var pushedState = false;   // did we add a history entry for this modal?
 
+  // Time comes from the schedule row so the timetable stays the single source.
+  function timingHtml(talk) {
+    var cell = document.querySelector('.timetable-row[data-talk="' + talk.hash + '"] .session-time');
+    if (!cell) return '';
+    var when = cell.textContent.replace(/\s+/g, ' ').trim();
+    return '<div class="talk-modal-timing">' +
+      '<svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>' +
+      '<span>Tuesday 10 November 2026 &middot; <strong>' + when + '</strong> &middot; Cockle Bay Room</span></div>';
+  }
+
   function render(talk) {
     var heads = talk.speakers.map(function (s) {
       return '<img src="' + s.img + '" alt="' + s.name + '" loading="lazy">';
@@ -2554,6 +2582,7 @@ function toggleFaq(i) {
     body.innerHTML =
       '<div class="talk-modal-top"><div class="talk-modal-heads">' + heads + '</div>' + actions + '</div>' +
       '<div id="talk-badge">' + talk.badge + '</div>' +
+      timingHtml(talk) +
       '<h2 id="talk-title">' + talk.title + '</h2>' +
       '<div class="talk-modal-byline">' + byline + '</div>' +
       '<h4>Abstract</h4>' + talk.abstract + bios;

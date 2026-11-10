@@ -41,12 +41,12 @@ The two morning workshops run in parallel, so pick one. Bring your own laptop to
 | 1:45 - 2:05 | [The Telemetry Trap: Building Meaningful Open-Source Observability for Multi-Agent Systems](abstracts/2026/AnupamPhoghat.md) | Anupam Phoghat, Core-X | 20 min |
 | 2:05 - 2:10 | [AI and platform maturity: the foundations that help AI deliver](abstracts/2026/CharlotteFleming.md) | Charlotte Fleming, Octopus Deploy | 5 min (lightning) |
 | 2:10 - 2:30 | [Provenance for AI Agent Skills](abstracts/2026/GajanKugamoorthy.md) | Gajan Kugamoorthy, Vivanti | 20 min |
-| 2:30 - 3:00 | *Afternoon Tea* | | 30 min |
-| 3:00 - 3:20 | [AI Writes the Code. Who Checks it? (Panel)](abstracts/2026/SponsorPanel.md) | Tirslen Pather, Commvault; Andrew Dean, Chainguard; Woh Shon Phoon, Nutanix | 20 min |
-| 3:20 - 3:40 | [Building Hybrid AI Systems: Edge Inferencing Meets Cloud Reasoning](abstracts/2026/ShengChenFrankFan.md) | Sheng Chen & Frank Fan, AWS | 20 min |
-| 3:40 - 4:00 | [When your circuit breaker backfires — outlier detection in Istio and Envoy](abstracts/2026/MitsuhiroShibuya.md) | Mitsuhiro Shibuya, Mercari | 20 min |
-| 4:00 - 4:05 | [Building a serverless airplane tracker](abstracts/2026/LizFongJones.md) | Liz Fong-Jones, Honeycomb.io | 5 min (lightning) |
-| 4:05 - 4:30 | Prizes and Closing | Conference Organisers | 25 min |
+| 2:30 - 3:15 | *Afternoon Tea* | | 45 min |
+| 3:15 - 3:35 | [Building Hybrid AI Systems: Edge Inferencing Meets Cloud Reasoning](abstracts/2026/ShengChenFrankFan.md) | Sheng Chen & Frank Fan, AWS | 20 min |
+| 3:35 - 3:55 | [When your circuit breaker backfires — outlier detection in Istio and Envoy](abstracts/2026/MitsuhiroShibuya.md) | Mitsuhiro Shibuya, Mercari | 20 min |
+| 3:55 - 4:00 | [Building a serverless airplane tracker](abstracts/2026/LizFongJones.md) | Liz Fong-Jones, Honeycomb.io | 5 min (lightning) |
+| 4:00 - 4:20 | [Sponsor Panel](abstracts/2026/SponsorPanel.md) | Tirslen Pather, Commvault; Andrew Dean, Chainguard; Woh Shon Phoon, Nutanix | 20 min |
+| 4:20 - 4:30 | Prizes and Closing | Conference Organisers | 10 min |
 
 ---
 
